@@ -1,0 +1,18 @@
+this section will help you get started with django
+django is a python framework designed for web development and is the leading python framework of that field.
+through this we will also cover postresql database
+
+learning resource material:
+    https://docs.djangoproject.com/en/1.11/intro/tutorial01/
+
+    https://docs.djangoproject.com/en/1.11/howto/windows/
+    //virtual env commands
+        pip install virtualenvwrapper-win
+        mkvirtualenv myproject
+        workon myproject
+        lsvirtualenv -b
+
+superuser:
+    username: admin
+    password: maplestory
+    email: yonada.barilan@gmail.com

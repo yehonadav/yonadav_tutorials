@@ -1,0 +1,4 @@
+2018-01-23 18:22:40,882 - log2 - INFO - info message
+2018-01-23 18:22:40,882 - log2 - WARNING - warn message
+2018-01-23 18:22:40,882 - log2 - ERROR - error message
+2018-01-23 18:22:40,882 - log2 - CRITICAL - critical message

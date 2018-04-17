@@ -1,0 +1,3 @@
+pip install -U pytest
+cd C:\Users\yonad\PycharmProjects\learning\learn_python\learn_pytest
+python -m pytest

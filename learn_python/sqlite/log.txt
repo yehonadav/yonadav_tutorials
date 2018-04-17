@@ -1,0 +1,3 @@
+2018-01-18 11:22:05,762:[INFO]:connecting to database
+2018-01-18 11:22:05,768:[INFO]:connection success
+2018-01-18 11:22:05,769:[INFO]:sqlite3 version 2.6.0

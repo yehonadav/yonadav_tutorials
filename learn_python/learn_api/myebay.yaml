@@ -1,0 +1,27 @@
+name: ebay_api_config
+
+# Trading API Sandbox - https://www.x.com/developers/ebay/products/trading-api
+api.sandbox.ebay.com:
+    compatability: 719
+    appid: yonadavb-yonadavk-SBX-66e078fcf-85d56108
+    certid: SBX-6e078fcf0f6c-034b-4011-a28e-91c6
+    devid: 13dbe546-9782-48e9-a295-c07e222fa513
+    token: AgAAAA**AQAAAA**aAAAAA**npG3WQ**nY+sHZ2PrBmdj6wVnY+sEZ2PrA2dj6wFk4GkAZmHpwydj6x9nY+seQ**ylIEAA**AAMAAA**JUXIdDtRDdrp9rHCeA1W4lt2rexbURUGvxAFUZMhxHn/V0peR6BxCr4FGBeqMY0VitJgRB9JogoIadYaj7iOk1JA4jbkZKWwdBlpTGqb7mGLcZ2W7UlsYT57+BOdrbZzqKNBX31ySvSHS517kjZHMTkOwWT/x1cwPs/jAG8K3GAdNEekNOaEWKzP1tFpRqHO3HE6ML7IMgUXoDSbOrhygCjtOP0Fmn3e6LVFA47+9gJZumCArouk0b6zbTh4DNvEk0DKh58F6+E91bBM0y7SL1Mr3JE2vt8Eoj6UF4c6jHjnBhzQQa2zHrk+33JtRA2aE/Tmu2WQVs8RHMnBxJ8WrUE0+51cRU1v30BH7lG9KKjtoo/Kjq5uHzim8oi3r/JQ0hUykxlHYkKrVu7Xp9i8Bz/zOnxiI8k8HR8QFeo9aQ9IS4YpFZHerF/5g080ps7mWGn+NDa+ZDJ2Q36Fi/Ci3RVjfmVNNBYDtPf7shD6uoDpFUKzQNs3+qnzbSS3wbFo+h/pOFpuGTE3X0AWhL/Mshz2FO2dzBgFQHSoEQW3vMX6UIxFkfj77u3XRU0lqnjluVwLre4G9QfX3L29DmICKy5J6GXHAGdD6JmwypcFMJs/B3t7UTaqftRyfmkhHSIS2Szmzz+rKhqp/r7IP+MNWEALKRoebOt0l35oywCCF6W36/clldyM52WGUKyOBPcDSVhycJI1h+WBUIVvUbe/9ZtElxgbgIf0y+W9Yvn3YdjkqgGZqEHlUI4fHPaYVQdZ
+
+# Trading API - https://www.x.com/developers/ebay/products/trading-api
+api.ebay.com:
+    compatability: 719
+    appid: yonadavb-yonadavk-SBX-66e078fcf-85d56108
+    certid: SBX-6e078fcf0f6c-034b-4011-a28e-91c6
+    devid: 13dbe546-9782-48e9-a295-c07e222fa513
+    token: AgAAAA**AQAAAA**aAAAAA**npG3WQ**nY+sHZ2PrBmdj6wVnY+sEZ2PrA2dj6wFk4GkAZmHpwydj6x9nY+seQ**ylIEAA**AAMAAA**JUXIdDtRDdrp9rHCeA1W4lt2rexbURUGvxAFUZMhxHn/V0peR6BxCr4FGBeqMY0VitJgRB9JogoIadYaj7iOk1JA4jbkZKWwdBlpTGqb7mGLcZ2W7UlsYT57+BOdrbZzqKNBX31ySvSHS517kjZHMTkOwWT/x1cwPs/jAG8K3GAdNEekNOaEWKzP1tFpRqHO3HE6ML7IMgUXoDSbOrhygCjtOP0Fmn3e6LVFA47+9gJZumCArouk0b6zbTh4DNvEk0DKh58F6+E91bBM0y7SL1Mr3JE2vt8Eoj6UF4c6jHjnBhzQQa2zHrk+33JtRA2aE/Tmu2WQVs8RHMnBxJ8WrUE0+51cRU1v30BH7lG9KKjtoo/Kjq5uHzim8oi3r/JQ0hUykxlHYkKrVu7Xp9i8Bz/zOnxiI8k8HR8QFeo9aQ9IS4YpFZHerF/5g080ps7mWGn+NDa+ZDJ2Q36Fi/Ci3RVjfmVNNBYDtPf7shD6uoDpFUKzQNs3+qnzbSS3wbFo+h/pOFpuGTE3X0AWhL/Mshz2FO2dzBgFQHSoEQW3vMX6UIxFkfj77u3XRU0lqnjluVwLre4G9QfX3L29DmICKy5J6GXHAGdD6JmwypcFMJs/B3t7UTaqftRyfmkhHSIS2Szmzz+rKhqp/r7IP+MNWEALKRoebOt0l35oywCCF6W36/clldyM52WGUKyOBPcDSVhycJI1h+WBUIVvUbe/9ZtElxgbgIf0y+W9Yvn3YdjkqgGZqEHlUI4fHPaYVQdZ
+
+# Finding API - https://www.x.com/developers/ebay/products/finding-api
+svcs.ebay.com:
+    appid: yonadavb-yonadavk-SBX-66e078fcf-85d56108
+    version: 1.0.0
+
+# Shopping API - https://www.x.com/developers/ebay/products/shopping-api
+open.api.ebay.com:
+    appid: yonadavb-yonadavk-SBX-66e078fcf-85d56108
+    version: 671

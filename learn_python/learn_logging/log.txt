@@ -1,0 +1,49 @@
+2017-11-08 14:38:31,186:[INFO]:hi
+2017-11-08 14:38:31,186:[ERROR]:division by zero
+Traceback (most recent call last):
+  File "C:/Users/YehonaDb/PycharmProjects/learning/learn_python/learn_logging/log_function.py", line 26, in <module>
+    a = 1/0
+ZeroDivisionError: division by zero
+2017-11-08 14:39:08,220:[INFO]:hi
+2017-11-08 14:39:50,546:[INFO]:hi
+2017-11-08 14:39:50,546:[ERROR]:division by zero
+Traceback (most recent call last):
+  File "C:/Users/YehonaDb/PycharmProjects/learning/learn_python/learn_logging/log_function.py", line 26, in <module>
+    a = 1/0
+ZeroDivisionError: division by zero
+2017-11-08 14:41:40,740:[INFO]:hi
+2017-11-08 14:41:40,740:[ERROR]:division by zero
+Traceback (most recent call last):
+  File "C:/Users/YehonaDb/PycharmProjects/learning/learn_python/learn_logging/log_function.py", line 26, in <module>
+    a = 1/0
+ZeroDivisionError: division by zero
+2017-11-08 14:42:34,067:[INFO]:hi
+2017-11-08 14:42:34,067:[ERROR]:division by zero
+Traceback (most recent call last):
+  File "C:/Users/YehonaDb/PycharmProjects/learning/learn_python/learn_logging/log_function.py", line 26, in <module>
+    a = 1/0
+ZeroDivisionError: division by zero
+2017-11-08 14:43:29,091:[INFO]:hi
+2017-11-08 14:43:29,091:[ERROR]:division by zero
+Traceback (most recent call last):
+  File "C:/Users/YehonaDb/PycharmProjects/learning/learn_python/learn_logging/log_function.py", line 26, in <module>
+    a = 1/0
+ZeroDivisionError: division by zero
+2017-11-08 14:44:33,878:[INFO]:hi
+2017-11-08 14:44:33,878:[ERROR]:division by zero
+Traceback (most recent call last):
+  File "C:/Users/YehonaDb/PycharmProjects/learning/learn_python/learn_logging/log_function.py", line 26, in <module>
+    a = 1/0
+ZeroDivisionError: division by zero
+2017-11-08 14:44:40,640:[INFO]:hi
+2017-11-08 14:44:40,640:[ERROR]:division by zero
+Traceback (most recent call last):
+  File "C:/Users/YehonaDb/PycharmProjects/learning/learn_python/learn_logging/log_function.py", line 26, in <module>
+    a = 1/0
+ZeroDivisionError: division by zero
+2017-11-08 17:42:26,180:[INFO]:hi
+2017-11-08 17:42:26,180:[ERROR]:division by zero
+Traceback (most recent call last):
+  File "C:/Users/YehonaDb/PycharmProjects/learning/learn_python/learn_logging/log_function.py", line 27, in <module>
+    a = 1/0
+ZeroDivisionError: division by zero

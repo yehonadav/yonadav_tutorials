@@ -11,15 +11,14 @@
 #
 # [pypi]
 # repository=https://pypi.python.org/pypi
-# username=yonadav
-# password=DeV1lm@9Cry
+# username=********
+# password=********
 #
 # [pypitest]
 # repository=https://testpypi.python.org/pypi
-# username=yonadav
-# password=DeV1lm@9Cry
+# username=********
+# password=********
 
-# twine upload dist/*
 # python setup.py sdist
 # # pip install wheel
 # # python setup.py bdist_wheel --universal

@@ -1,3 +1,7 @@
 pip install -U pytest
 cd C:\Users\yonad\PycharmProjects\learning\learn_python\learn_pytest
 python -m pytest
+
+pip install pytest-cov
+pip install pytest-xdist
+python -m pytest --cov=mypkg -n 2 tests/

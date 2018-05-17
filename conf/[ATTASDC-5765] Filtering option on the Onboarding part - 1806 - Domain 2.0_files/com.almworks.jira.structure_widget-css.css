@@ -1,0 +1,6691 @@
+/* module-key = 'com.almworks.jira.structure:widget-css', location = 'css/structure/structure-widget.css' */
+.structureBorder {
+  background-color: #FFFFFF;
+  padding: 0;
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+body.st-fixed-height .structureBorder {
+  border-bottom: 1px solid #e8e8e8;
+}
+
+#structure {
+  clear: both;
+  position: relative;
+  z-index: 10;
+}
+
+#structure,
+#structure input {
+  font-family: arial, Helvetica, sans-serif;
+  font-size: 14px; /* =: fontSize */
+  line-height: 18px; /* =: lineHeight */
+}
+
+#structure textarea {
+  font-family: arial, Helvetica, sans-serif;
+  outline: none;
+}
+
+#structure .s-notes-editor {
+  font-family: arial, Helvetica, sans-serif;
+  font-size: 14px;
+  min-width: 300px;
+  width: 100%;
+  margin-top: 4px;
+  box-sizing: border-box;
+  resize: vertical;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  overflow: auto;
+}
+
+#structure textarea:focus {
+  border-color: #98d9ff;
+  box-shadow: 0 0 3px #98d9ff;
+}
+
+.structureBorder #structure .head {
+  overflow-y: visible;
+  position: relative;
+  margin: 17px 20px;
+  height: 30px;
+}
+
+#structure .sechead {
+  border-bottom: 1px solid #ddd;
+  overflow-y: visible;
+  position: relative;
+}
+
+#structure .secbody {
+  position: relative;
+}
+
+#structure .foot {
+  border-top: 1px solid #e0e0e0;
+  overflow-x: hidden;
+  overflow-y: visible;
+  position: relative;
+  font-size: 12px;
+  color: #6f6f6f;
+  padding: 6px 15px;
+}
+
+.structureBorder #structure .foot {
+  background-color: #f5f5f5;
+}
+
+.structureBorder #structure .foot > * {
+  color: #353535;
+}
+
+#structure .main {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  position: relative;
+  min-height: 66px;
+}
+
+#structure.ie7 .st-page .sechead {
+  z-index: 1;
+}
+
+#structure.ie7 .st-page .main {
+  z-index: 0;
+}
+
+#structuremodule .mod-header {
+  z-index: 11;
+}
+
+#structure .tableHeader {
+  margin: 0 0 0;
+  padding: 0;
+  position: relative;
+  height: 22px;
+  clear: both;
+  width: 100%;
+  visibility: hidden;
+}
+
+#structure .tableHeader.drag {
+  cursor: col-resize;
+}
+
+#structure.ie .tableHeader.drag {
+  cursor: e-resize;
+}
+
+#structure .tableHeader .st-hc {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+  background-color: transparent;
+}
+
+#structure .tableHeader .st-hc .st-hc-d {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+#structure .th-ctls {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+#structure .tableHeader .col-sort {
+  font-size: 16px;
+  margin-right: 2px;
+  color: #3572b0;
+}
+
+#structure .tableHeader .th-ctl {
+  height: 100%;
+  min-height: 22px;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  margin: 0;
+  padding: 0;
+}
+
+#structure .tableHeader .th-ctl > div {
+  display: none;
+}
+
+#structure .tableHeader .th-ctl.active > div {
+  display: block;
+}
+
+#structure .tableHeader .th-ctl .th-ctl-hi {
+  height: 22px;
+  z-index: 98;
+  overflow: hidden;
+  background-color: #eee;
+}
+
+#structure .tableHeader .th-ctl-mv-helper {
+  height: 22px;
+  z-index: 198;
+  overflow: hidden;
+  background-color: #f3f3f3;
+  color: #6F6F6F;
+}
+
+#structure .th-ctl-mv-helper .celldiv {
+  padding: 2px 10px;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+#structure .th-ctl-hi .celldiv {
+  color: #6F6F6F;
+  font-weight: bold;
+  font-size: 12px;
+  float: left;
+  padding: 2px 1px 2px 10px;
+}
+
+#structure .th-ctl-mv {
+  height: 100%;
+  overflow-x: hidden;
+  cursor: pointer;
+}
+
+#structure.ie .th-ctl-mv {
+}
+
+#structure a.th-ctl-cfg {
+  margin-top: 3px;
+  height: 22px;
+  width: 22px;
+  overflow: hidden;
+  text-decoration:none;
+  display: block;
+  color: #6f6f6f;
+  float: right;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+}
+
+#structure a.th-ctl-cfg:hover {
+  color: #333;
+}
+
+#structure .th-ctl.s-last-col-but-not-actions a.th-ctl-cfg {
+  margin-right: 26px;
+}
+
+#structure .th.s-last-col-but-not-actions .grad {
+  display: none;
+}
+
+#structure .th-ctls > div.s-resizer {
+  position: absolute;
+  bottom: 0;
+  height: 22px;
+  width: 1px;
+  z-index: 100;
+}
+
+#structure .th-ctls > div.s-resizer.s-rs-active {
+  width: 5px;
+  margin-left: -2px;
+  background-color: #98D9FF;
+}
+
+#structure .th-ctls > div.s-resizer a.handle {
+  display: block;
+  text-decoration: none;
+  text-indent: -9999px;
+  overflow: hidden;
+  background-color: #cccccc;
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+  cursor: col-resize;
+}
+
+#structure.ie .th-ctls > div.s-resizer a.handle {
+  cursor: e-resize;
+}
+
+#structure .th-ctls > div.s-resizer.s-rs-active a.handle {
+  background-color: #98D9FF;
+}
+
+#structure .th-ctls > div.s-resizer.s-rs-active.s-rs-snapped a.handle,
+#structure .th-ctls > div.s-resizer.s-rs-active.s-rs-moving a.handle {
+  background-color: #58Aee0;
+}
+
+#structure .th-ctls > div.s-resizer.s-rs-nomove a.handle {
+  cursor: default;
+}
+
+#structure .resizeIndicator {
+  z-index: 100;
+  position: absolute;
+  left: 0;
+  top: -1px;
+  width: 8px;
+  height: 100%;
+  display: none;
+  border-left: 1px solid #58Aee0;
+  /*margin-left: 1px;*/
+}
+
+#structure .resizeIndicator.s-rs-snapped {
+  border-left: 1px solid #58Aee0;
+}
+
+#structure .tableHeader .th {
+  white-space: nowrap;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  margin: 0;
+  padding: 0;
+}
+
+#structure .tableHeader .th.s-cl-rs-helper {
+  background-color: #eee;
+}
+
+#structure .tableHeader .th.s-cl-rs-helper .grad {
+  visibility: hidden;
+}
+
+#structure .tableHeader .th .celldiv {
+  color: #6F6F6F;
+  font-weight: bold;
+  font-size: 12px;
+  padding-bottom: 2px;
+  padding-top: 2px;
+  margin-right: 7px;
+  padding-left: 10px;
+
+  background: transparent;
+}
+
+#structure .tr {
+  position: relative;
+  height: 32px; /* =: rowHeight */
+  border-bottom: 1px solid #eeeeee;
+  margin: 0;
+  padding: 0;
+}
+
+/*z-index needed by IE */
+#structure.ie .tr {
+  z-index: 0;
+}
+#structure.ie .tr.s-edited {
+  z-index: 1;
+}
+#structure.ie7 .tr.s-edited #s-edited-td {
+  z-index: 2;
+}
+#structure.ie7 .tr .td {
+  z-index: 0;
+}
+
+
+/*conflict*/
+#structure .main .aui-shadow .tr {
+  position: absolute;
+  height: auto;
+  border: none;
+  background-color: transparent;
+}
+
+#structure .td {
+  height: 31px;
+  min-height: 31px; /* = rowHeight - 1 */
+  position: absolute;
+  top: 0;
+  margin: 0;
+  padding: 0;
+}
+
+#structure .celldiv {
+  white-space: nowrap !important;
+  padding-top: 7px; /* (rowHeight - lineHeight)/2 */
+  padding-bottom: 7px;
+  padding-left: 12px;
+  position: relative;
+  height: 18px;
+  line-height: 18px;
+  min-height: 18px;
+  max-height: 18px;
+  overflow: hidden;
+}
+#structure .celldiv .value {
+  display: inline-block;
+  white-space: nowrap;
+  padding: 0;
+  background: transparent;
+  max-width: none;
+}
+
+#structure .tr .celldiv .value * {
+  display: inline;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+#structure .celldiv.s-f-thumbnail {
+  height: 30px;
+  max-height: 30px;
+  padding-top: 1px;
+  padding-bottom: 1px;
+}
+
+#structure .celldiv.s-f-thumbnail .value a {
+  text-decoration: none;
+}
+
+/* hide replaced and implicitly non-inline elements - except images and some tags */
+#structure .value input, #structure .value textarea, #structure .value select,
+#structure .value br {
+  display: none !important;
+}
+
+/* hide images and most everything in the main column */
+#structure .value .s-item-description img, #structure .value .s-item-description pre,
+#structure .value .s-item-description table {
+  display: none !important;
+}
+
+#structure .celldiv .value ul.labels li {
+  float: none;
+  margin-right: 0;
+}
+
+#structure .celldiv .s-icons > img {
+  width: 16px;
+  height: 16px;
+}
+
+.celldiv .s-parent-page:not(:last-of-type) {
+  padding-right: 3px;
+}
+
+.celldiv .s-parent-page:not(:first-of-type) {
+  padding-left: 3px;
+}
+
+/* prevent <sup> in item descriptions from affecting line-height */
+#structure .celldiv .value .s-item-description sup {
+  vertical-align: baseline;
+  font-size: smaller;
+  position: relative;
+  top: -0.4em;
+}
+
+#structure .celldiv .value .s-item-description sub {
+  font-size: smaller
+}
+
+/* **** */
+/* ROW BACKGROUND COLORS AND GRADIENTS --- THE ORDER OF RULES IS IMPORTANT! */
+/* **** */
+
+#structure .tr {
+  background-color: #ffffff;
+}
+
+#structure .tr.s-h-added,
+#structure .tr.s-h-copied,
+#structure .tr.s-h-movedTo {
+  background-color: #f3fff3;
+}
+
+#structure .tr.s-h-removed,
+#structure .tr.s-h-movedFrom {
+  background-color: #fff3f3;
+}
+
+#structure .tr.rootpath {
+  background-color: #fafafa;
+}
+
+#structure .tr.hrowf {
+  background-color: #f0f0f0;
+}
+
+/* , #structure .st-focused .tr.s-focused.hrowf */
+#structure .st-focused .tr.s-focused,
+#structure .st-details-focused .tr.s-focused {
+  background-color: #EAF1FD;
+}
+
+#structure .tr.dragged {
+  background-color: #ffffff !important;
+  opacity: 0.75;
+}
+
+#structure .grad {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 32px;
+  width: 20px;
+  z-index: 100;
+  background: -moz-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%); /* FF 3.6+ */
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(255,255,255,0)), color-stop(100%,rgba(255,255,255,1))); /* Chrome, Safari 4+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00FFFFFF', endColorstr='#FFFFFF',GradientType=1 ); /* IE 6-9 */
+  background: -ms-linear-gradient(left, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%); /* IE 10+ */
+  background: linear-gradient(left, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%); /* W3C */
+}
+
+#structure .s-h-added .grad,
+#structure .s-h-copied .grad,
+#structure .s-h-movedTo .grad {
+  background: -moz-linear-gradient(left, rgba(243, 255, 243, 0) 0%, rgba(243, 255, 243, 1) 100%); /* FF 3.6+ */
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(243, 255, 243, 0)), color-stop(100%, rgba(243, 255, 243, 1))); /* Chrome, Safari 4+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = '#00F3FFF3', endColorstr = '#F3FFF3', GradientType = 1); /* IE 6-9 */
+  background: -ms-linear-gradient(left, rgba(243, 255, 243, 0) 0%, rgba(243, 255, 243, 1) 100%); /* IE 10+ */
+  background: linear-gradient(left, rgba(243, 255, 243, 0) 0%, rgba(243, 255, 243, 1) 100%); /* W3C */
+}
+
+#structure .s-h-removed .grad,
+#structure .s-h-movedFrom .grad {
+  background: -moz-linear-gradient(left, rgba(255, 243, 243, 0) 0%, rgba(255, 243, 243, 1) 100%); /* FF 3.6+ */
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(255, 243, 243, 0)), color-stop(100%, rgba(255, 243, 243, 1))); /* Chrome, Safari 4+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = '#00FFF3F3', endColorstr = '#FFF3F3', GradientType = 1); /* IE 6-9 */
+  background: -ms-linear-gradient(left, rgba(255, 243, 243, 0) 0%, rgba(255, 243, 243, 1) 100%); /* IE 10+ */
+  background: linear-gradient(left, rgba(255, 243, 243, 0) 0%, rgba(255, 243, 243, 1) 100%); /* W3C */
+}
+
+#structure .rootpath .grad {
+  background: -moz-linear-gradient(left, rgba(250, 250, 250, 0) 0%, rgba(250, 250, 250, 1) 100%); /* FF 3.6+ */
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(250, 250, 250, 0)), color-stop(100%, rgba(250, 250, 250, 1))); /* Chrome, Safari 4+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = '#00FAFAFA', endColorstr = '#FAFAFA', GradientType = 1); /* IE 6-9 */
+  background: -ms-linear-gradient(left, rgba(250, 250, 250, 0) 0%, rgba(250, 250, 250, 1) 100%); /* IE 10+ */
+  background: linear-gradient(left, rgba(250, 250, 250, 0) 0%, rgba(250, 250, 250, 1) 100%); /* W3C */
+}
+
+#structure .hrow .grad {
+  visibility: visible;
+  background: -moz-linear-gradient(left, rgba(240,240,240,0) 0%, rgba(240,240,240,1) 100%);
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(240,240,240,0)), color-stop(100%,rgba(240,240,240,1)));
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00F0F0F0', endColorstr='#F0F0F0',GradientType=1 );
+  background: -ms-linear-gradient(left, rgba(240,240,240,0) 0%,rgba(240,240,240,1) 100%);
+  background: linear-gradient(left, rgba(240,240,240,0) 0%,rgba(240,240,240,1) 100%);
+}
+
+#structure .s-bganimation .grad {
+  visibility: hidden;
+}
+
+#structure .st-focused .tr.s-focused .s-editorpanel .s-editorborder .grad {
+  background: -moz-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%); /* FF 3.6+ */
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(255,255,255,0)), color-stop(100%,rgba(255,255,255,1))); /* Chrome, Safari 4+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00FFFFFF', endColorstr='#FFFFFF',GradientType=1 ); /* IE 6-9 */
+  background: -ms-linear-gradient(left, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%); /* IE 10+ */
+  background: linear-gradient(left, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%); /* W3C */
+}
+
+#structure .st-focused .tr.s-focused .grad,
+#structure .st-details-focused .tr.s-focused .grad {
+  background: -moz-linear-gradient(left, rgba(234,241,253,0) 0%, rgba(234,241,253,1) 100%); /* FF 3.6+ */
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(234,241,253,0)), color-stop(100%,rgba(234,241,253,1))); /* Chrome, Safari 4+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00EAF1FD', endColorstr='#EAF1FD',GradientType=1 ); /* IE 6-9 */
+  background: -ms-linear-gradient(left, rgba(234,241,253,0) 0%,rgba(234,241,253,1) 100%); /* IE 10+ */
+  background: linear-gradient(left, rgba(234,241,253,0) 0%,rgba(234,241,253,1) 100%); /* W3C */
+}
+
+#structure .th .grad {
+  z-index: 90;
+}
+#structure.ie8 .th .grad, #structure.ie7 .th .grad {
+  height: 20px;
+}
+
+#structure .issueArea {
+  position: relative;
+  display: none;
+}
+
+#structure .cacheTable {
+  position: absolute;
+  left: 0;
+  z-index: 0;
+}
+
+#structure .s-masterhint {
+  position: absolute;
+  z-index: 50;
+  display: none;
+  height: 100%;
+  width: 100%;
+}
+
+#structure .s-masterhint span {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  padding: 15px 2em 0;
+  color: #bbb;
+  font-size: 130%;
+  line-height: 1.35;
+}
+
+#structure .s-item-description, #structure .descriptionSeparator {
+  color: #909090;
+}
+
+#structure .s-item-description a, #structure .s-item-description a:visited, #structure .s-item-description a:active {
+  color: #91a2b5;
+}
+
+#structure .value p {
+  display: inline;
+}
+
+#structure .s-ds {
+  padding: 0 0.5em;
+}
+
+#structure .issueKey {
+  padding-right: 0.5em;
+}
+
+/* .ghx-label-NNN are excluded because that breaks how Epic Links are displayed in a column */
+.st-page a,
+.st-page a:visited:not([class*='ghx-label-']),
+.st-page a:active,
+.foot a,
+.foot a:visited,
+.foot a:active {
+  color: #3b73af;
+}
+
+#structure .tr.rootpathlast {
+  border-color: #bbbbbb;
+}
+
+#structure .tr.root .offset {
+  font-weight: bold;
+}
+
+#structure .rootpath .value {
+  opacity: 0.7;
+  background-color: inherit;
+}
+
+#structure .dimmed.hrow .value, #structure .dimmed.hrowf .value {
+  /*opacity: 1;*/
+}
+
+#structure .s-summary-icon {
+  float: left;
+  height: 16px; /* =: iconMaxHeight */
+  width: 18px;  /* =: iconMaxWidth */
+
+  /* compensating differences in .value line-height and .s-summary-icon line-height to make icons appear at the center */
+  position: relative;
+  top: 1px;     /* = (lineHeight - iconMaxHeight) / 2 */
+
+  /* gap before the text, but reduce gap to the expander, picked manually */
+  margin-right: 4px;
+  margin-left: -1px;
+
+  overflow: hidden;
+  text-align: center;
+
+  /* default color for font icons */
+  color: #6F6F6F;
+}
+
+/*todo review and either remove or make optional or make default*/
+#structure.dim-icons .s-summary-icon {
+  color: #ccc;
+}
+
+#structure .s-summary-icon .s-generator-icon {
+  color: #aa5500;
+}
+
+#structure .tr .celldiv .value .s-summary-icon {
+  /* overrides generic rule for all elements in .value */
+  display: block;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+#structure .tr .celldiv .value .s-summary-icon .s-no-summary-icon {
+  /* overrides generic rule for all elements in .value */
+  font-size: 10px;
+}
+
+.s-summary-icon > img {
+  /* scale down the image */
+  max-width: 16px;
+  max-height: 16px;
+}
+
+.s-summary-icon.s-dimmed-icons > img {
+  filter: grayscale(100%);
+  filter: url("data:image/svg+xml;utf8,&lt;svg xmlns=\'http://www.w3.org/2000/svg\'&gt;&lt;filter id=\'grayscale\'&gt;&lt;feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/&gt;&lt;/filter&gt;&lt;/svg&gt;#grayscale"); /* Firefox 10+, Firefox on Android */
+  filter: gray; /* IE6-9 */
+  -webkit-filter: grayscale(100%); /* Chrome 19+, Safari 6+, Safari 6+ iOS */
+  opacity: 0.35;
+}
+
+.hrow .s-summary-icon.s-dimmed-icons > img, .s-focused .s-summary-icon.s-dimmed-icons > img {
+  /* images become visible on hovered / focused row */
+  filter: none;
+  -webkit-filter: none;
+  opacity: 1;
+}
+
+#structure .s-expander {
+  visibility: hidden;
+  display: inline;
+  height: 14px; /* =: expanderHeight */
+  font-size: 14px; /* = expanderHeight */
+  line-height: 1;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  color: #888888;
+  /* using padding and margin to set different taken area and clickable area */
+  padding: 10px 0 9px 0; /* top=bottom=(rowHeight - expanderHeight) / 2 */
+  margin: 0 3px; /* left=right=(levelOffset - expanderWidth) / 2 */
+}
+#structure .s-expander:before {
+  content: " ";
+  display: inline-block;
+  width: 26px; /* =: expanderWidth */
+  /* center vertically with baseline, but it results in a slightly lower icon */
+  position: relative;
+  top: -1px;
+}
+#structure .s-expander:hover {
+  color: #222222;
+}
+
+#structure .collapsed .s-expander, #structure .expanded .s-expander {
+  visibility: visible;
+}
+#structure div.dragged .s-expander {
+  visibility: hidden;
+}
+#structure div.rootpath .s-expander {
+  color: #cecece;
+  cursor: default;
+}
+
+#structure .collapsed .s-expander:before {
+  /* fa-caret-right */
+  content: "\f0da";
+}
+#structure .expanded .s-expander:before {
+  /* fa-caret-down */
+  content: "\f0d7";
+}
+
+/* currently unused, but we'll get back to those */
+#structure .tr .celldiv .value > span.aui-lozenge {
+  /* manually picked parameters to make lozenges show nicely next to summary */
+  font-size: 11px;
+  vertical-align: baseline;
+}
+
+#structure .tr .celldiv .value > .s-summary + span.aui-lozenge {
+  margin-left: 5px;
+  margin-right: 2px;
+}
+
+/* IE displays text cursor because it's, well, text */
+.s-fa, .alm {
+  cursor: default;
+}
+
+#structure .im {
+  position: absolute;
+  line-height: 0;
+}
+
+#structure .im div {
+  display: inline-block;
+  position: relative;
+  height: 33px;  /* todo WTF? for some reason, if height is < 4px, :before element with top = 0 starts with some vertical gap from the top depending on the height; the less height, the larger the gap o_O */
+}
+
+#structure .im > div:before, #structure .im > div:after {
+  content: "";
+
+  background: #aa5500;
+  color: #aa5500;
+
+  position: absolute;
+  z-index: 1;
+}
+
+#structure .im .attached-row:before {
+  top: 3px;
+  right: 9px;
+  width: 1px;
+  height: 3px;
+  box-shadow: 0px 6px 0px 0px, 0px 12px 0px 0px, 0px 18px 0px 0px;
+}
+
+#structure .im .detached-row:before {
+  top: 11px;
+  right: 9px;
+  width: 1px;
+  height: 5px;
+}
+
+#structure .im .detached-row:after {
+  top: 13px;
+  right: 7px;
+  width: 5px;
+  height: 1px;
+}
+
+#structure .im .attached-detached-row:before {
+  top: 3px;
+  right: 9px;
+  width: 1px;
+  height: 3px;
+  box-shadow: 0px 8px 0px 0px, 0px 10px 0px 0px, 0px 18px 0px 0px;
+}
+
+#structure .im .attached-detached-row:after {
+  top: 13px;
+  right: 7px;
+  width: 5px;
+  height: 1px;
+}
+
+#structure .im .attached-end:before {
+  top: 3px;
+  right: 9px;
+  width: 1px;
+  height: 3px;
+  box-shadow: 0px 6px 0px 0px, 0px 12px 0px 0px, 0px 18px 0px 0px;
+}
+
+#structure .im .attached-end:after {
+  top: 23px;
+  right: 4px;
+  width: 5px;
+  height: 1px;
+}
+
+#structure .im .attached-end-nested:before {
+  top: 3px;
+  right: 9px;
+  width: 1px;
+  height: 3px;
+  box-shadow: 0px 6px 0px 0px, 0px 12px 0px 0px, 0px 18px 0px 0px, 0px 20px 0px 0px;
+}
+
+#structure .im .attached-end-nested:after {
+  top: 23px;
+  right: 4px;
+  width: 5px;
+  height: 1px;
+}
+
+#structure .im .attached-detached-end:before {
+  top: 3px;
+  right: 9px;
+  width: 1px;
+  height: 3px;
+  box-shadow: 0px 8px 0px 0px, 0px 10px 0px 0px, 0px 18px 0px 0px;
+}
+
+#structure .im .attached-detached-end:after {
+  top: 23px;
+  right: 4px;
+  width: 5px;
+  height: 1px;
+  box-shadow: -3px -10px 0px 0px;
+}
+
+#structure .im .attached-detached-end-nested:before {
+  top: 3px;
+  right: 9px;
+  width: 1px;
+  height: 3px;
+  box-shadow: 0px 8px 0px 0px, 0px 10px 0px 0px, 0px 18px 0px 0px, 0px 20px 0px 0px;
+}
+
+#structure .im .attached-detached-end-nested:after {
+  top: 23px;
+  right: 4px;
+  width: 5px;
+  height: 1px;
+  box-shadow: -3px -10px 0px 0px;
+}
+
+#structure .im .inserter-attached:before {
+  top: 13px;
+  right: 9px;
+  width: 1px;
+  height: 3px;
+  box-shadow: 0px 6px 0px 0px, 0px 12px 0px 0px;
+}
+
+#structure .im .inserter-attached:after {
+  top: 13px;
+  right: 4px;
+  width: 6px;
+  height: 1px;
+}
+
+#structure .im .attached-inserter-attached:before {
+  top: 3px;
+  right: 9px;
+  width: 1px;
+  height: 3px;
+  box-shadow: 0px 6px 0px 0px, 0px 9px 0px 0px, 0px 12px 0px 0px, 0px 18px 0px 0px;
+}
+
+#structure .im .attached-inserter-attached:after {
+  top: 13px;
+  right: 4px;
+  width: 6px;
+  height: 1px;
+}
+
+#structure .im .detached-inserter-detached:before {
+  top: 11px;
+  right: 9px;
+  width: 1px;
+  height: 5px;
+}
+
+#structure .im .detached-inserter-detached:after {
+  top: 13px;
+  right: 7px;
+  width: 5px;
+  height: 1px;
+}
+
+#structure .im .attached-inserter-detached:before {
+  top: 3px;
+  right: 9px;
+  width: 1px;
+  height: 3px;
+  box-shadow: 0px 8px 0px 0px, 0px 10px 0px 0px, 0px 18px 0px 0px;
+}
+
+#structure .im .attached-inserter-detached:after{
+  top: 13px;
+  right: 7px;
+  width: 5px;
+  height: 1px;
+}
+
+#structure .tr .celldiv span.generator-summary {
+  color: #AA5500;
+  /*color: #C69A08;*/
+}
+
+#structure .generator-parameter, .st-cgen-hint .generator-parameter {
+  font-weight: bolder;
+}
+
+#structure .generator-parameter.invalid, .st-cgen-hint .generator-parameter.invalid {
+  font-style: italic;
+  color: #D04437;
+}
+
+.s-tooltip-box-heavy div.tipsy-inner {
+  padding: 10px;
+  max-width: 500px;
+  text-align: left;
+}
+
+.st-cgen-hint p:first-child {
+  font-size: 13px;
+  margin-left: 4px;
+  margin-right: 4px;
+}
+
+.st-cgen-hint ul {
+  list-style: none;
+  padding-left: 0;
+  margin-left: 2.6em;
+  text-indent: -2.6em;
+  margin-top: 4px;
+  margin-right: 4px;
+}
+
+.st-cgen-hint .s-summary-icon {
+  display: inline-block;
+  width: 2.5em;
+  text-align: center;
+  text-indent: 0;
+}
+
+#structure .dimmed .value {
+  opacity: 0.4;
+  background-color: inherit;
+}
+
+#structure.ie7 .dimmed .value, #structure.ie8 .dimmed .value {
+  filter: alpha(opacity=40);
+}
+
+#structure .celldiv, #structure .td {
+  background-color: inherit;
+}
+
+/* workaround for https://bugs.webkit.org/show_bug.cgi?id=4059 */
+#structure.webkit .s-bganimation .celldiv, #structure.webkit .s-bganimation .td, #structure.webkit .s-bganimation .value {
+  background-color: transparent;
+}
+#structure.ie .s-bganimation .celldiv, #structure.ie .s-bganimation .td, #structure.ie .s-bganimation .value {
+  background-color: transparent;
+}
+
+#structure .dimmed.hrow .value, #structure .dimmed.hrowf .value {
+  opacity: 1;
+}
+
+#structure.ie7 .dimmed.hrow .value, #structure.ie7 .dimmed.hrowf .value,
+#structure.ie8 .dimmed.hrow .value, #structure.ie8 .dimmed.hrowf .value {
+  filter:;
+}
+
+#structure .tr span.s-aggr-own {
+  margin-left: 1em;
+  color: #aaa;
+}
+
+#structure .head > .mousePanel {
+  position: relative;
+}
+
+#structure .st-tb {
+  display: block;
+  float: left;
+  height: 20px;
+  min-width: 20px;
+  border: 1px solid #ffffff;
+  border-radius: 3px;
+}
+
+#structure .st-tb.s-disabled, #structure .st-tb.s-disabled.hover, #structure .st-tb.s-disabled.hover.pressed, #structure .st-tb.s-disabled.pressed {
+  background-color: transparent;
+  border-color: #ffffff;
+  background: none;
+}
+
+#structure .mousePanel.hover .st-tb.s-disabled .st-tbi {
+  background: transparent url(/s/-ypg77/73012/9eb9dd8ae4f919067487c81cb86eaf6d/4.1.0/_/download/resources/com.almworks.jira.structure:widget-css/img/ui-icons_888888_256x240.png) no-repeat;
+}
+#structure .mousePanel.hover .st-tb.s-disabled .st-tbi.s-extra {
+  background-image: url(/s/-ypg77/73012/9eb9dd8ae4f919067487c81cb86eaf6d/4.1.0/_/download/resources/com.almworks.jira.structure:widget-css/img/extraicons.png);
+}
+
+#structure .mousePanel.hover .st-tb.s-disabled .st-tbt {
+  color: #888888;
+}
+
+#structure .st-tb.first {
+  margin-left: 8px;
+}
+
+#structure .st-tb.hover {
+  border-color: #cccccc;
+  background-color: #eaeaea;
+  background: -moz-linear-gradient(center top, #FDFDFD, #EAEAEA) repeat scroll 0 0; /* FF 3.6+ */
+  background: -webkit-gradient(linear, center top, center bottom, color-stop(0%,#FDFDFD), color-stop(100%,#EAEAEA)) repeat scroll 0 0; /* Chrome, Safari 4+ */
+  background: -ms-linear-gradient(center top, #FDFDFD, #EAEAEA) repeat scroll 0 0; /* IE 10+ */
+  background: linear-gradient(center top, #FDFDFD, #EAEAEA) repeat scroll 0 0; /* W3C */
+}
+
+#structure .st-tb.hover:active, #structure .st-tb:active {
+  background: #dedede;
+}
+
+#structure .st-tb.toggled {
+  border-color: #abceff;
+}
+
+#structure .mousePanel.hover .st-tbi {
+  background: transparent url(/s/-ypg77/73012/9eb9dd8ae4f919067487c81cb86eaf6d/4.1.0/_/download/resources/com.almworks.jira.structure:widget-css/img/ui-icons_222222_256x240.png) no-repeat;
+}
+#structure .mousePanel.hover .st-tbi.s-extra {
+  background-image: url(/s/-ypg77/73012/9eb9dd8ae4f919067487c81cb86eaf6d/4.1.0/_/download/resources/com.almworks.jira.structure:widget-css/img/extraicons_222222.png);
+}
+#structure .mousePanel.hover .st-tbt {
+  color: #222222;
+}
+
+#structure .st-tbi {
+  background: transparent url(/s/-ypg77/73012/9eb9dd8ae4f919067487c81cb86eaf6d/4.1.0/_/download/resources/com.almworks.jira.structure:widget-css/img/ui-icons_888888_256x240.png) no-repeat;
+  position: relative;
+  height: 16px;
+  width: 16px;
+  left: 2px;
+  top: 2px;
+  float: left;
+}
+#structure .st-tbi.s-extra {
+  background-image: url(/s/-ypg77/73012/9eb9dd8ae4f919067487c81cb86eaf6d/4.1.0/_/download/resources/com.almworks.jira.structure:widget-css/img/extraicons.png);
+}
+
+#structure .st-tbt {
+  float: left;
+  font-family: "segoe ui",helvetica,arial,sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+  height: 16px;
+  padding-right: 6px;
+  padding-top: 2px;
+  -moz-user-select:none;
+  -webkit-user-select: none;
+  white-space:nowrap;
+  cursor: default;
+  color: #888888;
+}
+
+#structure.webkit.mac .st-tbt, #structure.ie8 .st-tbt, #structure.mac.mozilla .st-tbt {
+  padding-top: 3px;
+}
+
+#structure .button.first {
+  border-bottom-left-radius: 0.25em;
+  border-top-left-radius: 0.25em;
+  border-left-color: #dddddd;
+}
+
+#structure .button.last {
+  border-bottom-right-radius: 0.25em;
+  border-top-right-radius: 0.25em;
+}
+
+#structure .button.hover, #structure .button.on.hover {
+  border-color: #aaaaaa !important;
+}
+
+#structure .button.pressed, #structure .button.hover.pressed, #structure .button.on.pressed {
+  border-color: #777777 !important;
+  background-color: #fafafa;
+  padding: 1px 0 0 1px;
+
+}
+
+#structure .button.on {
+  background-color: #ffffff;
+  border-color: #999999 !important;
+}
+
+#structure div.simpleProgress {
+  float: left;
+  width: 95%;
+  margin-top: 5px;
+  height: 7px;
+  border-radius: 2px;
+  background-color: #e7e6e6;
+}
+
+#structure div.simpleProgress > div {
+  float: left;
+  height: 7px;
+  background-color: #6FAA56;
+  border-radius: 2px;
+}
+
+#st-error-panel {
+  position: fixed;
+  bottom: -3em;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  z-index: 1000;
+  padding: 0;
+}
+
+#st-error-panel .st-top-error, #st-error-panel .st-more-errors {
+  background-color: #ebc7c1;
+  color: #000000;
+  font-weight: bolder;
+  padding: 0.6em 1em 0.5em;
+  float: left;
+}
+
+#st-error-panel .s-ui-icon-alert {
+  margin-right: 0.5em;
+  float: left;
+  background-image: url(/s/-ypg77/73012/9eb9dd8ae4f919067487c81cb86eaf6d/4.1.0/_/download/resources/com.almworks.jira.structure:widget-css/img/ui-icons_cd0a0a_256x240.png);
+}
+
+#st-error-panel .s-ui-icon-circle-close {
+  margin-left: 0.5em;
+}
+
+#st-error-panel .st-error-actions {
+  float: right;
+  white-space: nowrap;
+  margin-left: 2em;
+}
+
+#st-error-panel .st-error-actions > * {
+  float: right;
+}
+
+#st-error-panel span {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+#st-error-panel .st-more-errors {
+  border-left: 1px solid #ffffff;
+}
+
+#st-error-panel div.st-error-details-link {
+  display: none;
+}
+
+#st-error-panel div.st-error-details {
+  clear: both;
+  height: 0;
+  overflow: hidden;
+  background-color: #ebc7c1;
+  display: none;
+}
+
+#st-error-panel .st-error-details-view {
+  margin: 0 1em 0.5em;
+  background-color: #000000;
+  color: #ffffff;
+  font-family: Consolas, Courier New, monospace;
+  border: none;
+  font-size: 85%;
+  line-height: 1.4;
+  height: 15em;
+  white-space: pre;
+  display: block;
+  resize: none;
+}
+
+#st-error-panel div.st-error-details-content {
+  white-space: pre;
+}
+
+#st-error-panel .s-ui-icon.st-hover {
+  background-image: url(/s/-ypg77/73012/9eb9dd8ae4f919067487c81cb86eaf6d/4.1.0/_/download/resources/com.almworks.jira.structure:widget-css/img/ui-icons_454545_256x240.png);
+}
+
+#structure #issuetable .st-focused .s-focused .issue_actions div, #structure #issuetable .hrow .issue_actions div {
+  visibility: visible;
+}
+
+#structure #issuetable .issue_actions a.active,
+#structure #issuetable .hrow .issue_actions a.aui-dd-link,
+#structure #issuetable .st-focused .s-focused .issue_actions a.aui-dd-link {
+  left: 0;
+  top: 0;
+}
+
+#structure #issuetable .issue_actions {
+  padding: 7px 0 7px 12px;
+}
+
+#structure #issuetable .issue_actions .aui-dd-parent {
+  width: 32px;
+  height: 18px;
+}
+
+#structure #issuetable .issue-actions-trigger {
+  display: block;
+  border: none;
+  visibility: hidden;
+  background: url(/s/-ypg77/73012/9eb9dd8ae4f919067487c81cb86eaf6d/4.1.0/_/download/resources/com.almworks.jira.structure:widget-css/img/atlasicons.png) transparent no-repeat 1px -113px;
+}
+
+#structure #issuetable .issue-actions-trigger:hover,
+#structure #issuetable .issue-actions-trigger.active {
+  color: #fff;
+  background-color: #3b73af;
+  background-position: -30px -113px;
+}
+
+#structure #issuetable .st-focused .s-focused .issue-actions-trigger,
+#structure #issuetable .hrow .issue-actions-trigger {
+  visibility: visible;
+}
+
+#structure #issuetable .issue_actions a.aui-dd-link span {
+  display: block;
+  width: 15px;
+  height: 18px;
+  overflow: hidden;
+  text-indent: -9000px;
+}
+
+#structure #st-glass {
+  position: absolute;
+  z-index: 1999;
+  width: 0;
+  height: 0;
+}
+
+#structure .st-act-cn {
+  position: absolute;
+}
+
+/* Handle column */
+
+.s-handles {
+  white-space: nowrap;
+  position: relative;
+  height: 32px; /* = rowHeight */
+  min-height: 32px;
+  max-height: 32px;
+  overflow: hidden;
+  padding: 4px 0;
+  box-sizing: border-box;
+}
+
+/*todo remake with icon font*/
+.s-ms-mark {
+  height: 14px;
+  width: 12px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  display: block;
+  float: left;
+  margin-top: 3px;
+}
+
+/*icons in the handle*/
+.s-handles > .s-fa {
+  font-size: 12px;
+  line-height: 24px;
+  display: inline-block;
+  min-width: 14px;
+  text-align: center;
+  color: #999;
+}
+
+.s-handles > .alm {
+  line-height: 22px;
+  display: inline-block;
+  min-width: 14px;
+  text-align: center;
+  color: #999;
+}
+
+.s-handles .s-done-mark {
+  visibility: hidden;
+  color: #090;
+  font-size: 14px;
+}
+.s-item-done .s-handles .s-done-mark {
+  visibility: visible;
+}
+
+.s-handles .s-dirty-mark {
+  color: #2e83ff;
+}
+.s-handles .s-ro-mark {
+  color: #dc9d9d;
+}
+.s-handles .s-generator-hint:hover {
+  color: #aa5500;
+}
+.s-handles .s-row-error {
+  color: #cd0a0a;
+}
+
+
+
+.s-h-added-mark, .s-h-copied-mark, .s-h-removed-mark, .s-h-empty-mark,
+.s-h-movedFrom-mark, .s-h-movedUpFrom-mark, .s-h-movedDownFrom-mark, .s-h-movedLeftFrom-mark, .s-h-movedRightFrom-mark,
+.s-h-movedTo-mark, .s-h-movedUpTo-mark, .s-h-movedDownTo-mark, .s-h-movedLeftTo-mark, .s-h-movedRightTo-mark {
+  height: 14px;
+  width: 16px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  display: none;
+  float: left;
+  margin-top: 3px;
+}
+
+.s-history-mode .s-h-added-mark, .s-history-mode .s-h-copied-mark, .s-history-mode .s-h-removed-mark, .s-history-mode .s-h-empty-mark,
+.s-history-mode .s-h-movedFrom-mark, .s-history-mode .s-h-movedUpFrom-mark, .s-history-mode .s-h-movedDownFrom-mark,
+.s-history-mode .s-h-movedLeftFrom-mark, .s-history-mode .s-h-movedRightFrom-mark,
+.s-history-mode .s-h-movedTo-mark, .s-history-mode .s-h-movedUpTo-mark, .s-history-mode .s-h-movedDownTo-mark,
+.s-history-mode .s-h-movedLeftTo-mark, .s-history-mode .s-h-movedRightTo-mark {
+  display: block;
+}
+
+.s-history .s-h-header {
+  border-top: 1px solid #e8e8e8;
+}
+
+.s-history .s-h-toolbar {
+  height: 20px;
+  padding: 5px;
+  background-color: #e6ebf2;
+}
+
+.s-history .s-h-title {
+  float: left;
+  height: 100%;
+  line-height: 20px;
+  font-weight: bold;
+  font-size: 14px;
+  color: #333;
+  padding-left: 5px;
+  font-family: arial, san-serif;
+}
+
+.s-history .s-h-title:before {
+  padding-right: 5px;
+  font-family: structure;
+  font-weight: normal;
+  font-size: 16px;
+  color: #636363;
+}
+
+.s-history .st-focus-decoration {
+  top: 1px;
+}
+
+.s-history .s-h-close {
+  float: right;
+  margin-right: 10px;
+}
+
+a.close-panel-btn {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  background-image: url(/s/-ypg77/73012/9eb9dd8ae4f919067487c81cb86eaf6d/4.1.0/_/download/resources/com.almworks.jira.structure:widget-css/img/structure_close_details_btn_sprite.svg);
+}
+
+a.close-panel-btn:hover {
+  background-position: 0 -24px;
+}
+
+a.close-panel-btn:active {
+  background-position: 0 -48px;
+}
+
+#close-history-btn {
+  right: 9px;
+  top: 4px;
+}
+
+/* --- drag handles --- */
+/* These are a bit tricky, because some of these rules are meant to override others - beware! */
+.st-dh {
+  float: left;
+  height: 28px;
+  width: 13px;
+  padding: 2px 6px 2px 5px;
+  cursor: move;
+  background: url(/s/-ypg77/73012/9eb9dd8ae4f919067487c81cb86eaf6d/4.1.0/_/download/resources/com.almworks.jira.structure:widget-css/img/mover.svg) no-repeat 13px 0 content-box;
+}
+
+.structureBorder .st-dh.e-generated {
+  margin-left: 2px;
+  border-left: 2px solid mediumseagreen;
+  padding-left: 1px;
+}
+
+.structureBorder .st-dh.g-generated {
+  margin-left: 2px;
+  border-left: 2px solid mediumseagreen;
+  padding-left: 1px;
+}
+
+.structureBorder .st-dh.i-generated {
+  margin-left: 2px;
+  border-left: 2px solid #AA5500;
+  padding-left: 1px;
+}
+
+.structureBorder .st-dh.s-generated {
+  margin-left: 2px;
+  border-left: 2px solid mediumseagreen;
+  padding-left: 1px;
+}
+
+#structure .s-forest-panel.ro .st-dh {
+  visibility: hidden;
+}
+
+.tr.hrowf .st-dh, .st-focused .s-focused .st-dh {
+  background-position: 0 0;
+  padding-top: 2px;
+}
+
+/* todo copy icon for mover */
+.tr.copy .st-dh {
+  background-position: -42px 0;
+}
+
+.tr.cut .st-dh {
+  background-position: -28px 0;
+}
+
+.tr.cut.hrowf .st-dh, .st-focused .cut.s-focused .st-dh {
+  background-position: -14px 0;
+}
+
+.tr.copy.hrowf .st-dh, .st-focused .copy.s-focused .st-dh {
+  background-position: -56px 0;
+}
+
+#structure .s-forest-panel.ro .copy .st-dh  {
+  visibility: visible;
+  background-position: -42px 0;
+  cursor: default;
+}
+
+.tr.dragging {
+  background-color: #ffffff !important;
+  opacity: 0.65;
+}
+
+#structure .s-forest-panel.ro .cut .st-dh  {
+  visibility: visible;
+  background-position: -42px 0;
+  cursor: default;
+}
+
+#structure .rootpath .st-dh {
+  visibility: hidden;
+  cursor: default;
+}
+
+#structure .rootpath.cut .st-dh {
+  visibility: visible;
+  background-position: -28px 0;
+}
+
+#structure .s-forest-panel.ro .rootpath.cut .st-dh {
+  visibility: visible;
+  background-position: -42px 0;
+}
+
+#structure .tr.root .st-dh {
+  background-position: -70px 0;
+  cursor: default;
+}
+
+#structure .s-forest-panel.ro .tr.root .st-dh {
+  visibility: visible;
+}
+
+#structure .tr.root.cut .st-dh {
+  background-position: -84px 0;
+}
+
+#structure .tr.root.copy .st-dh {
+  background-position: -98px 0;
+}
+
+#structure .s-forest-panel.ro .tr.root.cut .st-dh {
+  background-position: -98px 0;
+}
+
+/* Keep the padding in the dragged row in the Structure Board */
+.structureBorder .st-dnd-content .p1fullwidth .st-dh {
+  padding: 0 5px;
+}
+
+/* --- selection --- */
+
+.s-ms-mark {
+  visibility: hidden;
+  width: 16px;
+  height: 18px;
+  background: url(/s/-ypg77/73012/9eb9dd8ae4f919067487c81cb86eaf6d/4.1.0/_/download/resources/com.almworks.jira.structure:widget-css/img/select.svg) no-repeat 0 0;
+  cursor: default;
+  outline: 0;
+}
+
+.s-ms-mark:hover,
+.s-ms-toggle-all:hover {
+  background-image: url(/s/-ypg77/73012/9eb9dd8ae4f919067487c81cb86eaf6d/4.1.0/_/download/resources/com.almworks.jira.structure:widget-css/img/select-hover.svg);
+}
+.s-ms-mark:hover:active,
+.s-ms-mark:active,
+.s-ms-toggle-all:active,
+.s-ms-toggle-all:hover:active {
+  background-image: url(/s/-ypg77/73012/9eb9dd8ae4f919067487c81cb86eaf6d/4.1.0/_/download/resources/com.almworks.jira.structure:widget-css/img/select-active.svg);
+}
+
+.s-ms-toggle-all {
+  width: 100%;
+  height: 100%;
+  background: url(/s/-ypg77/73012/9eb9dd8ae4f919067487c81cb86eaf6d/4.1.0/_/download/resources/com.almworks.jira.structure:widget-css/img/select.svg) no-repeat 0 0;
+  display: block;
+  cursor: default;
+  outline: 0;
+}
+
+.s-ms-mark.s-ms-on, .s-ms-mark.s-ms-some, .s-ms-mark.s-ms-all, .tr.hrowf .s-ms-mark, .tr.s-hrow-0 .s-ms-mark {
+  visibility: visible;
+}
+
+.s-ms-mark.s-ms-auto {
+  opacity: 0.5;
+}
+
+.s-ms-mark.s-ms-some {
+  background-position: -16px 0;
+}
+
+.s-ms-mark.s-ms-all {
+  background-position: -32px 0;
+}
+
+.s-ms-mark.s-ms-on {
+  background-position: -48px 0;
+}
+
+.s-ms-mark.s-ms-on.s-ms-some {
+  background-position: -64px 0;
+}
+
+.s-ms-mark.s-ms-on.s-ms-all {
+  background-position: -80px 0;
+}
+
+.s-ms-mark.s-ms-on.s-ms-none {
+  background-position: -96px 0;
+}
+
+.s-th-handle {
+  position: absolute;
+  left: 24px;
+  bottom: 0;
+  width: 10px;
+  height: 18px;
+  background-color: #FFFFFF;
+}
+
+.structureBorder .st-master .s-th-handle {
+  left: 24px;
+}
+
+.s-ms-t-a-th {
+  visibility: hidden;
+}
+
+.s-ms-t-a-th.s-ms-t-a-some {
+  visibility: visible;
+}
+
+.s-ms-toggle-all.s-ms-t-a-all {
+  background-position: -48px 0;
+}
+
+/* ---------------- */
+
+#structure .s-forest-panel.ro .s-ro-hide {
+  display: none;
+}
+
+#structure.s-nocreate .s-nocreate-hide {
+  display: none;
+}
+
+#structure .s-ro-show {
+  display: none;
+}
+
+#structure .s-forest-panel.ro .s-ro-show {
+  display: block;
+}
+
+#structure.s-nobulk .s-bulk-show {
+  display: none;
+}
+
+.s-h-added-mark,
+.s-h-copied-mark {
+  background: url(/s/-ypg77/73012/9eb9dd8ae4f919067487c81cb86eaf6d/4.1.0/_/download/resources/com.almworks.jira.structure:widget-css/img/ui-icons_538e27_256x240.png) -32px -128px;
+}
+
+.s-h-movedTo-mark {
+  /* todo icon? */
+}
+
+.s-h-movedUpTo-mark {
+  background: url(/s/-ypg77/73012/9eb9dd8ae4f919067487c81cb86eaf6d/4.1.0/_/download/resources/com.almworks.jira.structure:widget-css/img/ui-icons_538e27_256x240.png) -192px -48px;;
+}
+
+.s-h-movedDownTo-mark {
+  background: url(/s/-ypg77/73012/9eb9dd8ae4f919067487c81cb86eaf6d/4.1.0/_/download/resources/com.almworks.jira.structure:widget-css/img/ui-icons_538e27_256x240.png) -224px -48px;
+}
+
+.s-h-movedLeftTo-mark {
+  background: url(/s/-ypg77/73012/9eb9dd8ae4f919067487c81cb86eaf6d/4.1.0/_/download/resources/com.almworks.jira.structure:widget-css/img/ui-icons_538e27_256x240.png) -240px -48px;
+}
+
+.s-h-movedRightTo-mark {
+  background: url(/s/-ypg77/73012/9eb9dd8ae4f919067487c81cb86eaf6d/4.1.0/_/download/resources/com.almworks.jira.structure:widget-css/img/ui-icons_538e27_256x240.png) -208px -48px;
+}
+
+.s-h-movedFrom-mark {
+  /* todo icon? */
+}
+
+.s-h-movedUpFrom-mark {
+  background: url(/s/-ypg77/73012/9eb9dd8ae4f919067487c81cb86eaf6d/4.1.0/_/download/resources/com.almworks.jira.structure:widget-css/img/ui-icons_cd0a0a_256x240.png) 0 -48px;
+}
+
+.s-h-movedDownFrom-mark {
+  background: url(/s/-ypg77/73012/9eb9dd8ae4f919067487c81cb86eaf6d/4.1.0/_/download/resources/com.almworks.jira.structure:widget-css/img/ui-icons_cd0a0a_256x240.png) -64px -48px;
+}
+
+.s-h-movedLeftFrom-mark {
+  background: url(/s/-ypg77/73012/9eb9dd8ae4f919067487c81cb86eaf6d/4.1.0/_/download/resources/com.almworks.jira.structure:widget-css/img/ui-icons_cd0a0a_256x240.png) -96px -48px;
+}
+
+.s-h-movedRightFrom-mark {
+  background: url(/s/-ypg77/73012/9eb9dd8ae4f919067487c81cb86eaf6d/4.1.0/_/download/resources/com.almworks.jira.structure:widget-css/img/ui-icons_cd0a0a_256x240.png) -32px -48px;
+}
+
+.s-h-removed-mark {
+  background: url(/s/-ypg77/73012/9eb9dd8ae4f919067487c81cb86eaf6d/4.1.0/_/download/resources/com.almworks.jira.structure:widget-css/img/ui-icons_cd0a0a_256x240.png) -96px -128px;
+}
+
+#issuetable.fake {
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+}
+
+#st-dd-active {
+  position: absolute;
+}
+
+#st-body-glass {
+  position: absolute;
+  z-index: 9999;
+}
+
+#structure .br, #s-manage-views .br {
+  clear: both;
+}
+
+#st-tb-tg {
+  position: absolute;
+  z-index: 199;
+  top: -4px;
+  left: 1px;
+}
+
+#structure #st-tb-tg .st-tb {
+  margin: 0;
+  padding: 0;
+}
+
+#structure #st-tb-tg .st-tb {
+  height: 15px;
+  min-width: 15px;
+  border-radius: 9px;
+  cursor: default;
+}
+
+#structure #st-tb-tg .st-tbi {
+  background: transparent url(/s/-ypg77/73012/9eb9dd8ae4f919067487c81cb86eaf6d/4.1.0/_/download/resources/com.almworks.jira.structure:widget-css/img/ui-icons_2e83ff_256x240.png) no-repeat -65px 0;
+  height: 15px;
+  width: 15px;
+  left: 0px;
+  top: 0;
+}
+
+#structure .st-tb-h #st-tb-tg .st-tbi {
+  background-position: 0px -1px;
+}
+
+#st-tgp {
+  margin: 0 6px 0 20px;
+  overflow: hidden;
+  background-color: #ffffff;
+  display: none;
+}
+
+.st-stat, .st-progress, .s-footer-warning, .s-undo-redo {
+  float: left;
+  margin-right: 25px;
+}
+
+.s-undo-redo > a.short {
+  display: none;
+}
+
+.st-stat > .short {
+  display: none;
+}
+
+#structure .s-footer-warning a,
+#structure .s-footer-warning a:visited,
+.s-footer-warning a,
+.s-footer-warning a:visited {
+  color: #F05C75;
+  font-weight: bolder;
+}
+
+.s-footer-warning i {
+  color: #F05C75;
+  font-size: 10px;
+  margin-right: 5px;
+}
+
+.s-footer-confluence-warning {
+  margin-top: -2px;
+}
+
+#structure .s-footer-confluence-warning a,
+#structure .s-footer-confluence-warning a:visited,
+.s-footer-confluence-warning a,
+.s-footer-confluence-warning a:visited {
+  color: #F05C75;
+  font-weight: bolder;
+}
+
+.s-footer-confluence-warning i.alm {
+  color: #F05C75;
+}
+
+.s-frlink, .s-footer-confluence-warning {
+  float: right;
+  margin-left: 25px;
+}
+
+#structure .s-frlink a, #st-footer .s-frlink a,
+#structure .s-frlink a:visited, #st-footer .s-frlink a:visited {
+  color: #6f6f6f;
+}
+
+.structureBorder #structure .s-frlink a, .structureBorder #st-footer .s-frlink a,
+.structureBorder #structure .s-frlink a:visited, .structureBorder #st-footer .s-frlink a:visited {
+  color: #454545;
+}
+
+#structure .s-frlink a:hover, #st-footer .s-frlink a:hover,
+#structure .s-frlink a:focus, #st-footer .s-frlink a:focus,
+#structure .s-frlink a:active, #st-footer .s-frlink a:active {
+  color: #3b73af;
+}
+
+.structureBorder #structure .s-frlink a:hover, .structureBorder #st-footer .s-frlink a:hover,
+.structureBorder #structure .s-frlink a:focus, .structureBorder #st-footer .s-frlink a:focus,
+.structureBorder #structure .s-frlink a:active, .structureBorder #st-footer .s-frlink a:active {
+  color: #3b73af;
+}
+
+.s-info-link a i,
+.s-board-link a i {
+  margin-right: 5px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.s-small .s-g-view-adjusted {
+  display: none;
+}
+
+.foot.s-small div:not(.s-board-link):not(.s-info-link) i {
+  padding-right: 0;
+}
+
+.foot.s-small .s-undo-redo > a.short {
+  display: block;
+}
+
+.foot.s-small .s-undo-redo > a.long {
+  display: none;
+}
+
+.foot.s-small .st-stat > .short {
+  display: block;
+}
+
+.foot.s-small .st-stat > .long {
+  display: none;
+}
+
+.foot.s-small .s-frlink,
+.foot.s-small .s-footer-confluence-warning {
+  margin-left: 15px;
+}
+
+.foot.s-small .st-stat,
+.foot.s-small .st-progress,
+.foot.s-small .s-footer-warning,
+.foot.s-small .s-undo-redo {
+  margin-right: 15px;
+}
+
+.foot.s-small .s-footer-warning a,
+.foot.s-small .s-footer-confluence-warning a {
+  display: none;
+}
+
+.st-progress-icon {
+  height: 16px;
+  padding-right: 16px;
+  background: url(/s/-ypg77/73012/9eb9dd8ae4f919067487c81cb86eaf6d/4.1.0/_/download/resources/com.almworks.jira.structure:widget-css/img/loading.gif) no-repeat 0 0;
+}
+
+.foot .st-progress-icon {
+  position: relative;
+  top: -1px;
+}
+
+.foot .s-sec-panel-status {
+  float: right;
+  margin-left: 25px;
+}
+
+#structure.ie7 .st-progress-icon {
+  display: inline-block;
+}
+
+#st-drag {
+  position: absolute;
+  z-index: 1;
+  border-top: 2px solid #cccccc;
+  border-bottom: 2px solid #cccccc;
+}
+
+#st-dragcover {
+  position: absolute;
+  left: 0; top: 0; right: 0; bottom: 0;
+  z-index: 9999;
+}
+
+#structure.dragactive .issueArea {
+  background-color: #eeeeee;
+}
+
+#structure .st-col-choose {
+  position: absolute;
+  top: 100%;
+  background-color: #ffffff; /* alternative: #f5f5f5 */
+  border: 1px solid #ccc;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  min-width: 100px;
+  box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.18);
+  box-sizing: border-box;
+}
+
+#structure .st-col-choose.s-wide form.aui .text,
+#structure .st-col-choose.s-wide form.aui .aui-ss
+{
+  max-width: 350px;
+}
+
+#structure.ie7 .st-col-choose {
+  width: 15em;
+}
+
+#structure.ie7 .st-col-choose > div {
+  width: 100%;
+}
+
+.st-col-add {
+  position: absolute;
+  top: 100%;
+  border: 1px solid #ccc;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  width: 250px;
+  box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.18);
+  background-color: #fff;
+  padding-bottom: 5px;
+}
+
+.st-col-add .st-col-list {
+  max-height: 20em;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.st-col-add .st-col-nf {
+  padding: 10px;
+}
+
+.st-col-add .st-col-nf input {
+  box-sizing: border-box;
+  font-size: 14px;
+  color: #333;
+  padding: 0 5px;
+  height: 28px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.st-col-add .st-col-nf input:focus {
+  outline: none;
+  border-color: #98d9ff;
+  box-shadow: 0 0 3px #98d9ff;
+}
+
+.st-col-add .st-col-list ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.st-col-add .st-col-list ul li {
+  margin: 0;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.st-col-add .st-col-list .col-gr-mark {
+  border-top: 1px solid #ccc;
+  padding: 10px 10px 5px 10px;
+  cursor: default;
+  text-transform: uppercase;
+}
+
+.st-col-add .st-col-list .col-gr-mark:first-of-type {
+  border-top: none;
+  padding-top: 0;
+}
+
+.st-col-add li.col-gr-mark a {
+  font-size: 12px;
+  color: #333;
+  font-weight: bold;
+}
+
+.s-not-found {
+  font-style: italic;
+  color: #333;
+  font-weight: normal;
+  text-transform: none;
+  font-size: 14px;
+}
+
+.st-col-add .st-col-list li.st-dis.s-not-found a {
+  color: #333;
+}
+
+.st-col-add .st-col-list ul li a {
+  text-decoration: none;
+  color: #333;
+  white-space: nowrap;
+  overflow: hidden;
+  display: block;
+}
+
+.st-col-add .st-col-list ul li.st-dis a {
+  color: #707070;
+}
+
+.st-col-add .st-col-list ul li.s-hover {
+  background-color: #3b73af;
+}
+
+.st-col-add .st-col-list ul li.s-hover a {
+  color: #fff;
+}
+
+#structure .s-issue-cover {
+  position: absolute;
+  height: 100%;
+  z-index: 50;
+  display: none;
+  top: 0;
+}
+
+#structure .s-ic-left,
+#structure .s-ic-right {
+  background: #596A7B;
+  opacity: 0.24;
+}
+
+#structure.ie7 .s-ic-left, #structure.ie8 .s-ic-left,
+#structure.ie7 .s-ic-right, #structure.ie8 .s-ic-right {
+  filter: alpha(opacity=15);
+}
+
+#structure .s-ic-left {
+  left: 0;
+}
+
+#structure .s-ic-right {
+  right: 0;
+}
+
+#structure .s-ic-middle {
+  background: none;
+  opacity: 1;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+}
+
+#structure.ie7 .s-ic-middle, #structure.ie8 .s-ic-middle {
+  filter:;
+}
+
+#structure .s-ic-middle-fill {
+  background: #fff;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#structure.ie7 .s-ic-middle-fill, #structure.ie8 .s-ic-middle-fill {
+  filter: alpha(opacity=0);
+}
+
+#structure .th-ccnf {
+  position: absolute;
+  height: 22px;
+  background-color: #fff;
+}
+
+#structure .th-ccnf.hover {
+  border-color: #bbb;
+}
+
+#structure .th-ccnf.pressed {
+  background: #dedede;
+}
+
+#structure a.th-ccnf-add-icon,
+#structure a.th-ccnf-asz-icon {
+  display: block;
+  position: relative;
+  height: 16px;
+  top: 2px;
+  width: 100%;
+}
+
+#structure .th .th-ccnf-add {
+  position: relative;
+  float: right;
+  width: 26px;
+}
+
+#structure .tableHeader .st-hc .th-ccnf-add {
+  height: 22px;
+  background-color: #fff;
+}
+
+#structure .tableHeader .st-hc .th-ccnf-add a {
+  color: #6f6f6f;
+  /*background-color: #fff;*/
+}
+
+#structure .tableHeader .st-hc .th-ccnf-add a.th-ccnf-loading {
+  color: transparent;
+}
+
+#structure .tableHeader .th-ccnf-add a {
+  color: #ccc;
+}
+
+#structure a.th-ccnf-asz-icon {
+  top: 4px;
+}
+
+#structure .th-ccnf-add {
+  top: 0;
+  right: 1px;
+  width: 26px;
+  text-align: center;
+  font-size: 14px;
+}
+
+#structure .tableHeader .st-hc .th-ccnf-add a:hover:not(.th-ccnf-loading) {
+  color: #333;
+}
+
+
+#structure .tableHeader .st-hc .th-ccnf-add.pressed {
+  background-color: #e5e5e5;
+}
+
+#structure .th-ccnf-asz {
+  top: 0;
+  left: 25px;
+  width: 17px;
+}
+
+#structure a.th-ccnf-asz-icon {
+  background: url("/s/-ypg77/73012/9eb9dd8ae4f919067487c81cb86eaf6d/4.1.0/_/download/resources/com.almworks.jira.structure:widget-css/img/ui-icons_888888_256x240.png") no-repeat -112px -80px;
+}
+
+#structure .th-ccnf-asz.hover > a.th-ccnf-asz-icon {
+  background-image: url("/s/-ypg77/73012/9eb9dd8ae4f919067487c81cb86eaf6d/4.1.0/_/download/resources/com.almworks.jira.structure:widget-css/img/ui-icons_222222_256x240.png");
+}
+
+#structure a.th-ccnf-loading,
+#structure a.th-ccnf-loading:hover {
+  margin-left: 5px;
+  background: url(/s/-ypg77/73012/9eb9dd8ae4f919067487c81cb86eaf6d/4.1.0/_/download/resources/com.almworks.jira.structure:widget-css/img/loading.gif) no-repeat 0 0;
+  color: transparent;
+}
+
+#structure .s-vc {
+  position: absolute;
+  background: white;
+  top: 0;
+  right: 1px;
+  height: 19px;
+  width: 16px;
+}
+
+#structure .s-vc > a {
+  display: block;
+  background: url("/s/-ypg77/73012/9eb9dd8ae4f919067487c81cb86eaf6d/4.1.0/_/download/resources/com.almworks.jira.structure:widget-css/img/extraicons.png") no-repeat 0 -47px;
+  position: relative;
+  height: 16px;
+  top: 2px;
+  width: 100%;
+  text-decoration: none;
+  text-indent: -9999px;
+  overflow: hidden;
+}
+
+#structure .s-vc > a:hover, #structure .s-vc > a:active {
+  background-position: -16px -47px;
+}
+
+#structure .foot.hidden {
+  display: none;
+}
+
+#structure #issuetable {
+  margin: 0;
+  padding: 0;
+}
+
+#structure .st-unavailable #issuetable {
+  display: none;
+}
+
+#structure .st-unavailable {
+  padding: 1em;
+  text-align: center;
+  color: #bbb;
+  font-size: 130%;
+  line-height: 1.35;
+  display: none;
+}
+
+#open_jscoverage {
+  display: block;
+  position: fixed;
+  left: 49%;
+  top: 0;
+  padding: 3px 8px;
+  background: #fff;
+  font-family: "segoe ui", helvetica, arial, sans-serif;
+  font-size: 12px;
+  border: 2px solid #ccc;
+  opacity: 0.4;
+  z-index: 9999;
+}
+
+a#open_jscoverage:hover {
+  opacity: 1;
+}
+
+#structure .st-page {
+  position: relative;
+  overflow: visible;
+  min-height: 117px;
+}
+
+#structure .st-page > .vcol {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  overflow: visible;
+}
+
+#structure .st-splitter {
+  width: 5px;
+  background-color: #f5f5f5;
+  border-left: 1px solid #e8e8e8;
+  border-right: 1px solid #e8e8e8;
+  cursor: ew-resize;
+  display: none;
+  z-index: 1000;
+}
+
+#structure .st-splitter:active {
+  border-left-color: #d3d9e0;
+  border-right-color: #d3d9e0;
+  background-color: #d3d9e0;
+}
+
+#structure.ie .st-splitter {
+  cursor: e-resize;
+}
+
+#structure .st-master {
+  left: 0;
+  width: 100%;
+}
+
+.s-forest-panel {
+  border-top: 1px solid #e9e9e9;
+}
+
+/* no border on issue page and */
+#structuremodule .s-forest-panel, #st-gh-tab-content .s-forest-panel {
+  border-top: none;
+}
+
+/* override GH's overriding AUI */
+#st-gh-tab-content .aui-button.aui-button-compact {
+  font-size: 14px;
+  padding: 0;
+  height: 30px;
+  line-height: 14px;
+  color: #333333;
+}
+
+#structure .st-slave {
+  display: none;
+}
+
+.s-history {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  font-family: arial, Helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  z-index: 10;
+}
+
+.s-history .s-h-entries {
+  overflow-x: hidden;
+  overflow-y: auto;
+  outline: none;
+}
+
+.s-history .s-h-entry {
+  border-bottom: 1px solid #eeeeee;
+  cursor: default;
+  position: relative;
+  overflow: hidden;
+  padding: 8px;
+}
+
+.s-history .s-h-entry.s-h-selected {
+  background-color: #EAF1FD;
+}
+
+.s-history .s-h-entry .s-h-e-avatar {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 10px;
+  left: 8px;
+}
+
+.s-history .s-h-entry .s-h-e-body {
+  padding-left: 22px;
+  white-space: nowrap;
+  overflow-x: hidden;
+}
+
+.s-history .s-h-after-entries {
+  text-align: center;
+}
+
+.s-history .s-h-show-more {
+  margin: 4px 2px;
+  display: none;
+}
+
+.s-history .s-h-nothing-more {
+  padding: 8px 0;
+  /*font-size: 11px;*/
+  line-height: 20px;
+  color: #777777;
+  width: 100%;
+  display: none;
+}
+
+.s-history .s-h-e-timestamp {
+  margin-bottom: 5px;
+  color: #999;
+}
+
+.s-history .s-h-e-toggle {
+  float: right;
+  position: absolute;
+  top: 50%;
+  margin-top: -10px;
+  right: 4px;
+  width: 52px;
+  height: 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: inset 1px 1px 3px 0 rgba(0,0,0,.2);
+}
+
+.s-history .s-h-e-ops {
+  position: relative;
+}
+
+.s-h-entry:not(.s-h-selected) .s-h-e-toggle {
+  display: none;
+}
+
+.s-h-e-toggle * {
+  cursor: pointer;
+}
+
+.s-h-e-toggle.s-h-e-t-before {
+  background-color: #a9463f;
+}
+
+.s-h-e-toggle:not(.s-h-e-t-before) {
+  background-color: #268631;
+}
+
+.s-h-e-toggle:hover .s-h-e-toggle-knob {
+  background-color: #f5f5f5;
+}
+
+.s-h-e-toggle .s-h-e-toggle-knob {
+  width: 23px;
+  height: 18px;
+  border-radius: 3px;
+  background-color: #eee;
+  position: absolute;
+  z-index: 1;
+  top: 1px;
+}
+
+.s-h-e-toggle:not(.s-h-e-t-before) .s-h-e-toggle-knob {
+  left: 28px;
+}
+
+.s-h-e-toggle.s-h-e-t-before .s-h-e-toggle-knob {
+  left: 1px;
+}
+
+.s-h-e-toggle .s-h-e-t-from,
+.s-h-e-toggle .s-h-e-t-to {
+  color: #fff;
+  width: 16px;
+}
+
+.s-h-e-toggle .s-h-e-t-from {
+  margin-left: 6px;
+}
+
+.s-h-e-toggle .s-h-e-t-to {
+  margin-left: 8px;
+}
+
+#structure .s-h-position {
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  display: none;
+}
+
+#structure .s-h-marker {
+  height: 2px;
+}
+
+#structure .s-h-pos-to {
+  background-color: #538e27;
+}
+
+#structure .s-h-pos-from {
+  background-color: #cd0a0a;
+}
+
+#structure .s-h-bracket {
+  height: 4px;
+  border-style: solid;
+}
+
+#structure .s-h-pos-to-start, #structure .s-h-pos-from-start {
+  border-width: 1px 1px 0 1px;
+}
+
+#structure .s-h-pos-to-end, #structure .s-h-pos-from-end {
+  border-width: 0 1px 1px 1px;
+}
+
+#structure .s-h-pos-to-start, #structure .s-h-pos-to-end {
+  border-color: #538e27;
+}
+
+#structure .s-h-pos-from-start, #structure .s-h-pos-from-end {
+  border-color: #cd0a0a;
+}
+
+#structure .st-page.resizeActive {
+  cursor: ew-resize;
+}
+
+#structure.ie .st-page.resizeActive {
+  cursor: e-resize;
+}
+
+span.s-dnd-n {
+  position: absolute;
+  left: 10px;
+  bottom: -10px;
+  padding: 4px;
+}
+
+#structure #st-drag.s-nodrop .s-dnd-nodrop-ind {
+  display: block;
+}
+
+
+#structure .st-dnd-content {
+  z-index: 0;
+}
+
+#st-structure-name {
+  background-color: #ffffff;
+  color: #666;
+}
+
+.s-single-structure .s-hide-single-structure,
+.s-single-structure #pcv-structure-selector {
+  display: none;
+}
+
+#structure .st-ssel {
+  float: right;
+  margin-left: 2em;
+}
+
+#ghx-tab-com-almworks-jira-structure-greenhopper-tab {
+  margin-bottom: 0;
+  padding-bottom: 32px;
+}
+
+.st-pcv-head {
+  margin: -5px 0 15px 0;
+}
+
+#pcv-structure-selector {
+  display: block;
+  float: left;
+  margin: 8px 24px 0 8px;
+}
+
+#st-gh-tab-content .st-ssel {
+  display: none;
+}
+
+#st-gh-tab-content .s-editor .jira-multi-select .representation .value-item {
+  padding: 0 20px 0 5px;
+}
+
+#st-gh-tab-content .s-editor textarea#description {
+  max-width: 300px;
+}
+
+#st-gh-tab-content #structure.ie8 .s-editor textarea#description {
+  width: 300px !important;
+}
+
+#structure-shortcuts-dialog #shortcutsmenu .module:nth-child(2n+1) {
+  clear: left;
+}
+
+#s-structure-fixed-empty {
+  display: none;
+}
+
+#structuremodule .s-blockingcover {
+  padding: 0;
+}
+
+.s-blockingcover {
+  font-size: 14px;
+  line-height: 20px;
+  padding: 1em;
+}
+
+#structure .s-blockingcover table {
+  width: auto;
+  margin: 0;
+  padding: 0;
+  border-collapse: collapse;
+}
+
+.s-blockingcover-desc, .s-action-desc {
+  color: #666;
+}
+
+.s-action-desc {
+  padding-top: 3px;
+}
+
+.s-blockingcover-action {
+  margin: 4px 0 0 1em;
+}
+
+#structure .s-blockingcover-action .st-tb {
+  border-color: #cccccc;
+  margin-right: 1em;
+}
+
+#structure .s-blockingcover-action .st-tbi {
+  background-image: url(/s/-ypg77/73012/9eb9dd8ae4f919067487c81cb86eaf6d/4.1.0/_/download/resources/com.almworks.jira.structure:widget-css/img/ui-icons_2e83ff_256x240.png);
+}
+
+#structure .s-blockingcover-action .st-tbt {
+  color: #2e83ff;
+  margin-left: 2px;
+}
+
+.s-fixed-miss-title {
+  font-weight: bolder;
+}
+
+.s-fixed-miss-desc {
+  margin-bottom: 1em;
+}
+
+#structure .s-forest-panel.ro #s-add-target-issue, #structure.s-unstructured-issue-pinned #s-add-target-issue {
+  display: none;
+}
+
+#structure .s-extra-action {
+  display: none;
+}
+
+.s-editorpanel {
+  position: absolute;
+  z-index: 110;
+  display: inline-block;
+  background-color: #fff;
+
+  border-radius: 0 0 5px 5px;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .3);
+
+  /* for whatever stupid reason IE does not display shadow if border-collapse is 'collapse' */
+  border-collapse: separate;
+}
+
+.s-editorpanel:not(.s-e-create) {
+  background-color: #f5f5f5;
+}
+
+.s-editorpanel:not(.s-e-complex):not(.s-e-error) {
+  box-shadow: 0 0 7px 0 rgba(0, 0, 0, .3);
+  border-radius: 0;
+}
+
+.s-editorpanel .s-topbar fieldset {
+  padding-left: 4px;
+}
+
+.s-editorpanel .s-topbar .aui-ss {
+  margin-top: 2px;
+}
+
+.s-editorpanel .s-topbar .aui-ss input.aui-ss-field {
+  height: auto;
+}
+
+.s-editorpanel .s-topbar .aui input[type="text"]:focus,
+.s-editorpanel .s-topbar .aui input.text:focus {
+  outline: none;
+
+  border-color: #98d9ff;
+  box-shadow: 0 0 3px #98d9ff;
+}
+
+.s-editorpanel .s-topbar .aui-ss .aui-ss-entity-icon {
+  margin-top: -7px;
+}
+
+.s-editorpanel .s-topbar .textarea.long-field {
+  margin: 3px 0;
+}
+
+.s-editorpanel .s-topbar .ajax_autocomplete input.text {
+  height: 26px;
+}
+
+.s-editorpanel .s-topbar .ajax_autocomplete {
+  white-space: nowrap;
+}
+
+.s-editorpanel.s-e-loading {
+  width: 100%;
+}
+
+.s-editorpanel .s-editorparams {
+  padding-right: 18px;
+}
+
+.s-editorpanel.s-e-create {
+  background-color: #f5f5f5;
+}
+
+.s-editorpanel .s-new-project-spinner {
+  margin-left: 10px;
+  padding: 18px 0;
+}
+
+.s-editorpanel.s-e-create {
+  left: -91px;
+  padding-left: 95px;
+}
+
+.s-editor-celldiv {
+  background-color: #EAF1FD;
+  display: none;
+  position: absolute;
+  left: 0;
+  width: 100%;
+}
+
+.s-editor-sidebar {
+  display: none;
+}
+
+.s-editorpanel.s-e-create .s-editor-sidebar {
+  display: block;
+  position: absolute;
+  width: 95px;
+  left: 0;
+  top: 0;
+}
+
+.s-editor-sidebar .s-menu {
+  margin-top: 3px;
+  height: 26px;
+  margin-right: 10px;
+  float: right;
+}
+
+.s-editor-sidebar .s-menu button {
+  width: 30px;
+  height: 26px;
+  line-height: 20px;
+  border: 1px solid transparent;
+  background-color: transparent;
+  outline: none;
+  color: #636363;
+
+  border-radius: 3px;
+}
+
+.s-editor-sidebar .s-menu button[aria-disabled="true"] {
+  color: #999;
+  border-color: #ddd;
+  background-color: #f5f5f5;
+}
+
+.s-editor-sidebar .s-menu button:hover:not([aria-disabled="true"]) {
+  background-color: #e9e9e9;
+  border: 1px solid #999999;
+}
+
+.s-editor-sidebar .s-tabs {
+  margin-top: 33px;
+}
+
+.s-editor-sidebar .s-tabs .s-tab {
+  padding-left: 18px;
+  height: 32px;
+  border-bottom: 1px solid #f5f5f5;
+  line-height: 33px;
+  color: #3571AF;
+}
+
+.s-editor-sidebar .s-tabs .s-tab:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.s-editor-sidebar .s-tabs .s-tab.active:last-child {
+  border-bottom-left-radius: 5px;
+  border-bottom: 1px solid #fff;
+}
+
+.s-editor-sidebar .s-tabs .s-tab.active:hover {
+  text-decoration: none;
+  cursor: auto;
+}
+
+.s-editor-sidebar .s-tab:before,
+.s-editor-sidebar .s-tab:after {
+  content: " ";
+  clear: both;
+  display: table;
+}
+
+.s-editor-sidebar .s-tab.active {
+  background-color: #FFF;
+  color: #000;
+  font-weight: bold;
+}
+
+.s-editorpanel .s-topbar {
+  background-color: #f5f5f5;
+  padding: 0 4px;
+}
+
+.s-editorpanel:not(.s-e-complex) .s-topbar {
+  padding: 0 90px 0 4px;
+}
+
+.s-editorpanel.s-e-create .s-topbar {
+  padding-left: 0;
+  margin-left: -91px;
+}
+
+.s-editor {
+  min-height: 33px;
+}
+
+.s-editorpanel:not(.s-e-complex) .s-editor {
+  min-height: 32px;
+}
+
+.s-editorpanel.s-e-error:not(.s-e-complex) .s-editor {
+  min-height: 29px;
+}
+
+.s-editorpanel.s-e-create .s-editor {
+  margin-left: 91px;
+}
+
+.s-editorpanel .s-paramscache {
+  display: none;
+}
+
+.s-editorpanel.s-e-noeditor {
+  background-color: #fff;
+}
+
+.s-editorpanel:not(.s-e-complex):not(.s-e-error) .s-editor-revert {
+  margin-right: 10px;
+  text-decoration: none;
+  color: #c5c5c5;
+  cursor: default;
+  outline: none;
+}
+
+.s-editorpanel:not(.s-e-complex):not(.s-e-error) .s-editor-revert.active {
+  color: #6f6f6f;
+  cursor: pointer;
+}
+
+.s-editorpanel:not(.s-e-complex):not(.s-e-error) .s-editor-revert:before {
+  content: "\f0e2";
+}
+
+.s-editorpanel.s-e-noeditor .s-editor-revert {
+  display: none;
+}
+
+.s-editorpanel.s-e-complex .s-oneline-buttons {
+  display: none;
+}
+
+.s-editorpanel:not(.s-e-complex) {
+  white-space: nowrap;
+}
+
+.s-editorpanel .s-oneline-buttons {
+  position: absolute;
+  bottom: 0;
+  right: 4px;
+}
+
+#structure .s-editorpanel:not(.s-e-complex) .textarea {
+  vertical-align: bottom;
+}
+
+.s-editorpanel:not(.s-e-complex) .s-editor {
+  display: inline-block;
+}
+
+.s-e-noeditor .s-editor-celldiv {
+  display: block;
+  border-bottom: 1px solid #eee;
+}
+
+.s-e-loading .s-editerror, .s-e-loading .s-editbuttons, .s-e-loading .s-editor {
+  display: none;
+}
+
+.s-editor INPUT[type=text]:not(.aui-ss-field) {
+  height: 20px;
+  margin-top: 3px;
+  padding: 2px 5px;
+}
+
+#structure .s-editorpanel INPUT[type="text"]:not([role="combobox"]) {
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  line-height: inherit;
+  box-sizing: content-box;
+}
+
+#structure .s-editorpanel INPUT[type=text]:not([role="combobox"]):focus {
+  outline: none;
+
+  border-color: #98d9ff;
+  box-shadow: 0 0 3px #98d9ff;
+}
+
+.s-editorborder {
+  white-space: nowrap;
+  border-bottom-right-radius: 5px;
+
+  /* for whatever stupid reason IE does not display shadow if border-collapse is 'collapse' */
+  border-collapse: separate;
+}
+
+.s-editorpanel:not(.s-e-complex):not(.s-e-error) .s-editorborder {
+  display: none;
+}
+
+.s-editorpanel.s-e-create .s-editorborder {
+  min-height: 100px;
+}
+
+.s-editorpanel.s-e-create .s-editorborder {
+  background-color: #fff;
+}
+
+.s-editor-decor1 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-left: 1px solid #EAF1FD;
+  width: 1px;
+  height: 33px;
+  display: none;
+}
+
+.s-cellerror {
+  position: absolute;
+  left: 0;
+  top: 1px;
+  padding: 0 10px 10px 0;
+}
+.s-error-triangle {
+  border-left: 5px solid #cd0a0a;
+  border-bottom: 5px solid transparent;
+}
+
+.s-cellerror-div {
+  position: absolute;
+  display: none;
+  top: 0;
+}
+
+.s-editorpanel.s-e-create .s-cellerror-div {
+  top: -1px;
+  left: 0;
+}
+
+.s-e-error.s-e-editor .s-cellerror-div {
+  display: block;
+}
+
+.s-editor-loading {
+  position: absolute;
+  left: 7px;
+  top: 0;
+  z-index: 1;
+  width: 2px;
+  height: 32px;
+  background: url(/s/-ypg77/73012/9eb9dd8ae4f919067487c81cb86eaf6d/4.1.0/_/download/resources/com.almworks.jira.structure:widget-css/img/field-loader.gif) 0 0 no-repeat;
+}
+
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (min-resolution: 192dpi) {
+  .s-editor-loading {
+    background: url(/s/-ypg77/73012/9eb9dd8ae4f919067487c81cb86eaf6d/4.1.0/_/download/resources/com.almworks.jira.structure:widget-css/img/field-loader@2x.gif) 0 0 no-repeat;
+  }
+}
+
+#structure .s-editor-celldiv .grad {
+ right: 1px;
+}
+
+#structure .s-editerror {
+  display: none;
+  white-space: normal;
+  color: #cd0a0a;
+  margin-top: 0.6em;
+  padding: 0 7px 0 27px;
+  position: relative;
+}
+
+#structure .s-editerror div {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  left: 7px;
+  top: 0;
+  background: url(/s/-ypg77/73012/9eb9dd8ae4f919067487c81cb86eaf6d/4.1.0/_/download/resources/com.almworks.jira.structure:widget-css/img/ui-icons_cd0a0a_256x240.png) 0 -144px no-repeat;
+}
+
+#structure .s-editerror-description,
+#structure .s-editor-cancel-confirm {
+  padding: 0 7px 0 27px;
+  color: #666;
+  white-space: normal;
+  margin-top: 5px;
+}
+
+#structure .s-editerror-description a {
+  white-space: nowrap;
+}
+
+.s-editor-cancel-confirm .s-answer {
+  margin-top: 2px;
+}
+
+.s-editor-cancel-confirm .s-answer a {
+  white-space: nowrap;
+}
+
+.s-editor-cancel-yes {
+  font-weight: bolder;
+}
+
+#structure .s-e-error .s-editerror {
+  display: block;
+}
+
+#s-focus-placeholder {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  display: block;
+  left: -9999px;
+}
+
+.s-editbuttons, .s-editerrors {
+  clear: both;
+}
+
+#structure .s-editorpanel.s-notes-editor-panel .s-editbuttons {
+  padding-top: 4px;
+  padding-left: 8px;
+}
+
+#structure .s-editorpanel .s-editbuttons {
+  padding: 8px;
+  overflow: hidden;
+  line-height: 30px;
+}
+
+#structure .s-editorpanel.s-e-create .s-editbuttons {
+  padding-left: 32px;
+}
+
+#structure .s-editorpanel.s-e-create .s-editerrors {
+  padding-left: 140px;
+  width: 250px;
+}
+
+#structure .s-editorpanel.s-e-create .s-editerror-description {
+  font-size: 14px;
+}
+
+#structure .s-editbuttons.s-with-dialog {
+  min-width: 19em;
+}
+
+#structure .s-editbuttons > a {
+  margin-right: 1em;
+  display: inline-block;
+  visibility: hidden;
+}
+
+#structure .s-editorpanel .s-oneline-buttons {
+  margin: 3px 0 3px 10px;
+}
+
+#structure .s-editorpanel.s-e-error .s-oneline-buttons {
+  display: none;
+}
+
+#structure .s-editorpanel .s-oneline-buttons .s-editor-save {
+  padding: 3px 10px;
+  height: auto;
+}
+
+.s-editorpanel-posmarker {
+  position: absolute;
+  display: none;
+  top: 0;
+  left: 0;
+  width: 7px;
+  height: 3px;
+  background: url(/s/-ypg77/73012/9eb9dd8ae4f919067487c81cb86eaf6d/4.1.0/_/download/resources/com.almworks.jira.structure:widget-css/img/extraicons.png) no-repeat -16px 0;
+}
+
+#structure .s-editorpanel .short-field,
+#structure .s-editorpanel .medium-field,
+#structure .s-editorpanel .long-field {
+  max-width: none;
+}
+
+#structure .s-editorpanel .long-field {
+  width: 200px;
+  min-width: 100px;
+  white-space: normal;
+}
+
+#structure .s-editorpanel textarea.long-field {
+  white-space: pre;
+}
+
+#structure .s-editorpanel .jira-multi-select {
+  min-width: 100px;
+  white-space: normal;
+  margin: 2px 0;
+}
+
+#structure .s-editorpanel:not(.s-e-complex) .jira-multi-select {
+  margin: 3px 0;
+}
+
+#structure .s-editorpanel:not(.s-e-complex) .jira-multi-select > textarea {
+  vertical-align: bottom;
+}
+
+#structure .s-editorpanel .jira-multi-select .long-field {
+  width: 100%;
+  padding: 4px 2px;
+}
+
+#structure .s-editorpanel .jira-multi-select > .representation .item-row {
+  padding-top: 0;
+  height: 20px;
+}
+
+#structure .s-editorpanel .long-field.userpickerfield {
+  width: auto;
+}
+
+#structure .s-editorpanel .wiki-edit-content .content-inner {
+  display: none;
+}
+#structure .s-editorpanel .wiki-edit-content.previewClass .content-inner {
+  display: block;
+  margin: 0;
+  overflow: auto;
+}
+
+#structure .s-editorpanel .wiki-edit-content.previewClass {
+  width: auto;
+  background-color: #f5f5f5;
+  padding: 4px 5px;
+  margin: 3px 0;
+  white-space: normal;
+  line-height: 20px;
+}
+
+#structure .s-editorpanel .field-group .wiki-edit + .field-tools {
+  margin: 5px 0;
+}
+
+#structure .tableHeader .th.s-col-edited .celldiv {
+  color: #333;
+  font-weight: bolder;
+}
+
+#s-tb-automation i.alm {
+  line-height: 18px;
+}
+
+#s-tb-generator-type i.alm {
+  line-height: 18px;
+}
+
+/* override JIRA aui styles */
+
+#s-board-toolbar #s-tb-item-selector > i {
+  margin-right: 5px;
+}
+
+.s-board-header .aui-toolbar2 .aui-buttons:first-child {
+  margin-right: 3px;
+}
+
+.s-board-header .aui-toolbar2 .aui-button {
+  outline: none; /*avoid toolbar buttons outline flickering*/
+}
+
+.s-board-header .aui-toolbar2 .aui-buttons.alm-icons .aui-button {
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+#structure .s-editorpanel .wiki-edit-toolbar {
+  border: none;
+}
+
+#structure .s-editorpanel.s-e-create .field-group .help-lnk {
+  display: none;
+}
+
+#structure .s-editorpanel .short-field {
+  width: initial;
+  height: 26px;
+}
+
+#structure .s-editorpanel:not(.s-e-complex) .short-field:not(.textarea):not(.aui-ss):not(.jira-multi-select),
+#structure .s-editorpanel:not(.s-e-complex) .medium-field:not(.textarea):not(.aui-ss):not(.jira-multi-select),
+#structure .s-editorpanel:not(.s-e-complex) .long-field:not(.textarea):not(.aui-ss):not(.jira-multi-select) {
+  height: 20px;
+}
+
+#structure .s-editorpanel .s-topbar .field-group {
+  padding: 0;
+  margin: 0;
+}
+
+#structure .s-editor > form.aui > .field-group > label {
+  float: none;
+  display: inline;
+  left: 0;
+  margin-right: 0;
+  margin-left: 0;
+  position: static;
+}
+#structure .s-editor > form.aui > .field-group > label:after {
+  content: ":";
+}
+#structure .s-editor > form.aui > .field-group:nth-child(n+2) {
+  white-space: normal;
+}
+#structure.ie8 .s-editor > form.aui > .field-group {
+  white-space: normal;
+}
+#structure.ie8 .s-editor > form.aui > .field-group:first-child {
+  white-space: nowrap;
+}
+
+#structure .td .issue_actions .aui-dropdown-trigger span {
+  padding-right: 0;
+}
+#structure.webkit .s-h-show-more {
+  padding: 1px 4px;
+}
+
+#structure .s-editorpanel .aui-ss .aui-ss-field {
+  width: 100% !important;
+  max-width: none;
+}
+
+#structure.ie7 .s-editorpanel .aui-ss-has-entity-icon.aui-ss .aui-ss-field,
+#structure.ie8 .s-editorpanel .aui-ss-has-entity-icon.aui-ss .aui-ss-field {
+  padding-left: 20px !important;
+}
+
+#structure.ie7 .s-editorpanel textarea,
+#structure.ie8 .s-editorpanel textarea,
+#structure.ie7 .s-editorpanel input[type="text"],
+#structure.ie8 .s-editorpanel input[type="text"] {
+  max-width: none !important;
+}
+
+#structure.ie9 .s-editorpanel .aui-ss-has-entity-icon.aui-ss .aui-ss-field,
+#structure.ie10 .s-editorpanel .aui-ss-has-entity-icon.aui-ss .aui-ss-field {
+  line-height: 14px;
+}
+
+#tt_use_structure label {
+  color: #666;
+  margin-left: 0.5em;
+}
+
+ul.s-ops a.s-atlas-cog {
+  width: 16px;
+  height: 17px;
+  display: block;
+  position: relative;
+}
+
+ul.s-ops a.s-atlas-cog {
+  background: url(/s/-ypg77/73012/9eb9dd8ae4f919067487c81cb86eaf6d/4.1.0/_/download/resources/com.almworks.jira.structure:widget-css/img/atlasicons.png) transparent no-repeat 0 0;
+}
+
+ul.s-ops a.s-atlas-cog span {
+  position: absolute;
+  visibility: hidden;
+  right: 0;
+}
+
+ul.s-ops a.s-atlas-cog:hover, ul.s-ops a.s-atlas-cog.active {
+  background-position: -25px 0;
+}
+
+.s-inline-dialog, .s-inline-dialog input {
+  line-height: 15px;
+}
+
+.s-inline-dialog.perspective-link-dialog, .s-inline-dialog.perspective-link-dialog input {
+  font-size: 12px;
+}
+
+/*todo remake project page settings dialog*/
+.s-uioptions-dialog, .s-uioptions-dialog input {
+  vertical-align: top;
+}
+.s-uioptions-dialog input {
+  margin-right: 4px;
+}
+
+
+
+/* BEGIN - UI Settings Dialog v.2 (on issue / project page) */
+.s-uiopts {
+  padding: 20px 16px 12px;
+}
+
+/* overrides large left padding for forms */
+.s-uiopts form.aui .group {
+  padding: 4px 16px;
+}
+
+/* needs highly specific selector to override AUI margin */
+.s-uiopts form.aui div.radio.s-indent {
+  margin-left: 20px;
+}
+
+/* separates options that follow indented sub-options (could be done without additional class, but too much hassle) */
+.s-uiopts form.aui div.checkbox.s-m10 {
+  margin-top: 10px;
+}
+
+.s-uiopts .buttons {
+  text-align: right;
+  margin: 8px 0 0;
+}
+
+#s-uid-working-icon {
+  float: left;
+  height: 16px;
+  width: 16px;
+  background: transparent url(/s/-ypg77/73012/9eb9dd8ae4f919067487c81cb86eaf6d/4.1.0/_/download/resources/com.almworks.jira.structure:widget-css/img/loading.gif);
+  visibility: hidden;
+  margin-top: 6px;
+}
+
+.s-disabled #s-uid-defaultname {
+  color: #999;
+}
+
+
+/* END - UI Settings Dialog v.2 (on issue / project page) */
+
+.s-inline-dialog p {
+  margin: 2px 0;
+}
+
+.s-inline-dialog-header {
+  font-weight: bolder;
+  color: #444;
+  border-bottom: 1px solid #ddd;
+  padding: 6px 8px 5px;
+}
+
+.s-inline-dialog-content {
+  padding: 4px 8px 4px;
+}
+
+.s-inline-dialog-footer {
+  border-top: 1px solid #ddd;
+  padding: 4px 8px 4px;
+  text-align: right;
+}
+
+.s-disabled label, form.aui .s-disabled label,
+form.aui div.s-disabled.checkbox label,
+form.aui div.s-disabled.radio label {
+  color: #999;
+}
+
+#s-uid-defaultname {
+  font-weight: bolder;
+}
+
+#unstructured-warning {
+  display: none;
+  color: #888;
+  background: #fff;
+  cursor: default;
+  padding: 0 4px;
+  overflow: hidden;
+  font-size: 11px;
+  position: relative;
+  font-family: "segoe ui", helvetica, arial, sans-serif;
+  top: 1px;
+}
+
+/*todo currently not showing "(does not include XYZ-123)" on the issue page because we don't know for sure*/
+/*
+#structuremodule.collapsed.s-unstructured #unstructured-warning {
+  display: inline-block;
+}
+*/
+
+#structure .s-newp-pt .field-group label {
+  display: none;
+}
+
+#structure .s-newp {
+  padding-top: 18px;
+}
+
+#structure .s-newp .button-spinner {
+  display: inline-block;
+}
+
+#structure .s-newp table {
+  padding: 30px 32px 0 32px;
+  margin: 0;
+  border-spacing: 0;
+  width: 100%;
+}
+
+#structure .s-newp table tr {
+  height: 32px;
+}
+
+#structure .s-newp table td {
+  padding: 2px 8px 2px 0;
+  border: none;
+  border-collapse: collapse;
+  vertical-align: middle;
+  min-height: 25px;
+  height: 25px;
+}
+
+#structure .s-newp-cbl {
+  position: absolute;
+}
+
+#structure .s-newp-clone {
+  position: relative;
+  overflow: hidden;
+}
+
+#structure .s-newp-clone-key {
+  font-style: italic;
+  color: #444;
+}
+
+.s-newp-new {
+  margin-top: 0.6em;
+}
+.s-newp-pt.s-disabled {
+  color: #888;
+}
+#structure .s-newp-pt .aui-ss, #structure .s-newp-pt .aui-ss-field {
+  width: 200px;
+}
+
+.s-newp-pt-err {
+  font-style: italic;
+  color: #966;
+  padding: 4px 0 4px 145px;
+  display: block;
+}
+
+.s-newp-pt-err:before, .s-newp-pt-err:after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+
+#s-info-dialog-contents {
+  padding: 0.3em 0.8em;
+  font-family: "segoe ui",helvetica,arial,sans-serif;
+  /*font-size: 12px;*/
+  line-height: 16px;
+}
+
+#s-info-dialog-contents ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#s-info-dialog-contents ul ul {
+  margin-left: 1em;
+}
+
+#s-info-dialog-contents li {
+  margin: 0;
+  padding: 0;
+}
+
+#s-info-dialog-contents li.s-section {
+  margin-top: 0.5em;
+}
+#s-info-dialog-contents li.s-section > div {
+  color: #666;
+  font-style: italic;
+  margin-left: 1em;
+  margin-bottom: 0.2em;
+}
+#s-info-dialog-contents li.s-section > span {
+  font-weight: bolder;
+  color: #222;
+}
+
+#s-info-dialog-contents .s-info-header {
+  font-weight: bolder;
+  color: #222;
+  margin-bottom: 0.8em;
+}
+
+#s-info-dialog-contents .s-info-header .s-info-node-id {
+  font-size: 12px;
+  font-weight: normal;
+}
+
+#s-info-dialog-contents .s-info-footer {
+  margin-top: 1em;
+  font-size: 10px;
+  font-weight: bolder;
+  color: #aaa;
+}
+
+#s-license-warning {
+  float: right;
+  font-weight: bolder;
+}
+
+/* override generic color setting */
+.structureBorder #structure .foot #s-license-warning {
+  color: #cd0a0a;
+}
+
+#s-license-warning span {
+  display: block;
+  float: left;
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+  background: url(/s/-ypg77/73012/9eb9dd8ae4f919067487c81cb86eaf6d/4.1.0/_/download/resources/com.almworks.jira.structure:widget-css/img/ui-icons_cd0a0a_256x240.png) no-repeat 0 -143px;
+}
+
+#tt_use_structure {
+  margin: -4px 0 8px 0;
+}
+
+.tt_no_non_structure {
+  color: #666;
+}
+
+.s-tb-gen-options {
+  z-index: 20;
+}
+
+.s-tb-search-container {
+  margin: 0;
+  padding: 10px 10px 5px 10px;
+}
+
+.s-tb-search-container input[type="text"] {
+  max-width: none;
+}
+
+.s-tb-search-container input[type="text"]:focus {
+  outline: none;
+  border-color: #98d9ff;
+  box-shadow: 0 0 3px #98d9ff;
+}
+
+.s-tb-gen-container {
+  max-height: 250px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.s-tb-layout-container .aui-button {
+  background-color: #fff;
+}
+
+.s-tb-layout-container .aui-button-split-main {
+  padding-left: 7px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+.s-tb-layout-container .aui-button-split-more,
+.s-tb-layout-container .aui-button-split-more.active {
+  padding-top: 4px;
+  padding-bottom: 2px;
+}
+
+.s-tb-layout-container > .aui-button {
+  /* override `.aui-button { vertical-align: baseline }`, because we have adjacent icons with different font-size
+     (14px .aui and 16px .alm), so precision rendering will shift 16px icon upward, resulting in element height mismatch.
+  */
+  vertical-align: middle;
+}
+
+/* Panel Header modifications on the issue page */
+#structuremodule .s-ph-container {
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: 0;
+  margin-right: -5px;
+}
+
+#structuremodule .s-ph-options {
+  display: none;
+}
+
+/* Panel Header modifications on Agile page */
+#st-gh-tab-content .s-ph-container {
+  padding-left: 0;
+  padding-right: 0;
+}
+#st-gh-tab-content .s-ph-view-container, #st-gh-tab-content .s-ph-transforms-container {
+  display: none;
+}
+
+.s-ph-cb-size {
+  vertical-align: text-bottom;
+}
+
+#structure .s-ph-primary-input {
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  padding: 4px 10px 4px 10px;
+  min-height: 30px; /* =: panelHeader.inputHeight */
+  max-height: 110px;
+  overflow: hidden;
+  line-height: 20px;
+}
+
+.s-ph-filter-remove {
+  padding: 0 6px 0 6px;
+  margin-right: -4px;
+  color: #606060;
+}
+
+.s-ph-filter-remove:hover {
+  color: #000000;
+}
+
+.s-ph-dropdown {
+  z-index: 1000;
+}
+
+.s-ph-dropdown .aui-dropdown2-section.s-not-found {
+  border-top: none;
+}
+
+.s-ph-view-selector.s-small > span.s-view-name {
+  display: none;
+}
+
+.s-ph-container .s-ph-view-selector.s-small.s-view-adjusted {
+  color: #3572b0;
+}
+
+.s-ph-view-selector > span.s-adjusted-mark {
+  display: none;
+}
+
+.s-ph-view-selector.s-view-adjusted:not(.s-small) > span.s-adjusted-mark {
+  display: inline;
+}
+
+.s-ph-transform-controls {
+  display: inline-block;
+}
+
+.s-ph-tr-icon {
+  padding-right: 5px;
+  cursor: move;
+}
+
+.s-ph-tr-icon > i, .s-ph-tr-icon > i:before {
+  cursor: move;
+}
+
+.s-ph-transforms-container .aui-button {
+  margin-left: 0;
+}
+
+.s-ph-options {
+  overflow: hidden; /* must be so in order for this div width to respect float blocks */
+  height: 100%;
+}
+
+.s-ph-options > .st-query-input {
+  z-index: 1000;
+}
+
+.s-ph-options-container {
+  z-index: 20;
+  width: 250px;
+  min-width: 250px !important; /* JIRA code sets min-width to be the same as the button width -- which can be really large */
+}
+
+.s-ph-options-container.aui-dropdown2 li a.active {
+  background-color: #3572b0;
+  color: #fff;
+}
+.s-ph-options-container.aui-dropdown2:hover li a:hover:not(.active) {
+  background-color: #fff;
+  color: #333;
+}
+
+.s-ph-search-container {
+  margin: 0;
+  padding: 10px 10px 0 10px;
+}
+
+.s-ph-search-container input[type="text"] {
+  max-width: none;
+}
+
+.s-ph-search-container input[type="text"]:focus {
+  outline: none;
+  border-color: #98d9ff;
+  box-shadow: 0 0 3px #98d9ff;
+}
+
+.s-ph-gen-container {
+  max-height: 200px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.s-view-dd {
+  position: absolute;
+  right: 0;
+  top: -3px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.18);
+  border-radius: 0 0 3px 3px;
+  border-collapse: separate;
+  max-width: 320px;
+  min-width: 250px;
+  white-space: normal;
+  padding-bottom: 3px;
+}
+
+.s-view-dd-top {
+  background-color: #f5f5f5;
+}
+
+.s-view-dd-current {
+  padding: 10px;
+}
+
+.s-view-dd-stripes > div {
+  border-top: 1px solid #ddd;
+  padding: 8px 10px;
+  font-family: "segoe ui",helvetica,arial,sans-serif;
+  font-size: 12px;
+  line-height: 14px;
+}
+
+.s-view-dd-stripes .s-stripe-modified,
+.s-view-dd-stripes .s-stripe-saveas {
+  border-top-color: transparent;
+  padding-top: 0;
+}
+
+.s-view-dd-stripes .s-stripe-saveas input[type="text"] {
+  box-sizing: border-box;
+  font-size: 12px;
+  line-height: 14px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  height: 26px;
+  padding: 0 5px;
+  width: 100%;
+}
+
+.s-view-dd-stripes .s-stripe-saveas form {
+  display: table;
+  width: 100%;
+}
+
+.s-view-dd-stripes .s-stripe-saveas form > div {
+  display: table-row;
+}
+
+.s-view-dd-stripes .s-stripe-saveas form > div > * {
+  vertical-align: middle;
+  display: table-cell;
+}
+
+.s-view-dd-stripes .s-stripe-saveas form input[type="submit"] {
+  width: 100%;
+  background-color: #3571AF;
+  color: #fff;
+  padding: 2px 0;
+  border: none;
+  border-radius: 3px;
+  outline: none;
+  height: 24px;
+  line-height: 20px;
+}
+.msie .s-view-dd-stripes .s-stripe-saveas form input[type="submit"] {
+  padding-top: 1px;
+}
+
+.mozilla .s-view-dd-stripes .s-stripe-saveas form input[type="submit"] {
+  line-height: 22px;
+}
+
+.s-view-dd-stripes .s-stripe-saveas form input[type="submit"]:hover {
+  background-color: #2e649c;
+  cursor: pointer;
+}
+
+.s-view-dd-stripes .s-stripe-saveas form > div > span {
+  width: 5px;
+}
+
+.s-view-dd .s-view-dd-stripes input {
+  font-family: "segoe ui",helvetica,arial,sans-serif;
+  font-size: 12px;
+}
+
+span.s-view-dd-stripe-actions {
+  float: right;
+}
+
+span.s-view-dd-stripe-actions a ~ a {
+  margin-left: 10px;
+}
+
+span.s-view-dd-stripe-actions > a {
+  white-space: nowrap;
+  display: inline;
+}
+
+.s-view-dd.aui-dropdown2 .s-view-dd-stripe-actions a {
+  padding: 0;
+  background-color: transparent;
+  color: #3b73af;
+}
+
+.s-view-dd.aui-dropdown2:hover .s-view-dd-stripe-actions a:hover,
+.s-view-dd.aui-dropdown2 .s-view-dd-stripe-actions a.active:hover {
+  text-decoration: underline;
+  background-color: transparent;
+  color: #3b73af;
+}
+
+.s-view-dd.aui-dropdown2 .s-view-dd-stripe-actions a.active {
+  text-decoration: none;
+  color: #3b73af;
+  background-color: transparent;
+}
+
+.s-view-dd-current-name {
+  font-size: 18px;
+  color: #262626;
+  line-height: 21px;
+}
+
+.s-view-dd-controls {
+  border-top: 1px solid #ddd;
+  padding: 10px 10px 5px 10px;
+  position: relative;
+}
+
+.s-view-dd-controls label {
+  color: #777;
+}
+div.s-view-dd-progress {
+  position: absolute;
+  right: 1px;
+  top: 3px;
+  width: 16px;
+  height: 16px;
+  background-color: #fff;
+  padding: 2px;
+}
+div.s-view-dd-progress .st-progress-icon {
+  display: inline-block;
+}
+
+.s-view-dd .s-view-dd-controls input[type="text"] {
+  width: 100%;
+  height: 30px;
+}
+
+.s-view-dd input[type="text"] {
+  max-width: none; /* override aui */
+  font-size: 14px;
+}
+
+.s-view-dd input[type="text"]:focus {
+  outline: none;
+
+  border-color: #98d9ff;
+  box-shadow: 0 0 3px #98d9ff;
+}
+
+.s-view-dd input[type="checkbox"] {
+  vertical-align: middle;
+}
+
+.s-view-dd input {
+  line-height: normal;
+}
+
+.s-view-dd-preview span {
+  position: relative;
+  top: 1px;
+}
+
+.s-view-dd .s-view-dd-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.s-view-dd .s-view-dd-menu ul li {
+  margin: 0;
+  padding: 0;
+}
+
+.s-view-dd .s-view-dd-menu .aui-dropdown2-radio {
+  padding: 0 0 0 20px;
+}
+
+.s-view-dd .s-view-dd-menu .aui-dropdown2-radio.checked:before {
+  top: 6px;
+}
+
+.s-view-dd .s-view-dd-menu ul li a {
+  padding: 4px 10px;
+  display: block;
+  text-decoration: none;
+  color: #454545;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.s-view-dd .s-view-dd-menu ul li.s-view-adjusted a:after {
+  content: ' *';
+}
+span.s-adjusted-mark,
+.s-view-dd .s-view-dd-menu ul li.s-view-adjusted a:after {
+  color: #2e83ff;
+  font-family: "segoe ui", helvetica, arial, sans-serif;
+  font-size: 17px;
+  font-weight: bolder;
+  line-height: 10px; /* otherwise the main line gets high */
+  cursor: default;
+}
+
+.s-view-dd .s-view-dd-menu ul li.s-view-adjusted.s-hover a:after {
+  color: #fff;
+}
+
+.s-view-dd:hover .s-view-dd-menu ul li.s-hover,
+.s-view-dd .s-view-dd-menu ul li.s-hover {
+  background-color:#3b73af;
+  color:#fff;
+}
+
+.s-view-dd .s-view-dd-menu ul li a.active {
+  background-color: transparent;
+  color: inherit;
+}
+
+.s-view-dd .s-view-dd-menu ul li.s-hover a {
+  color:#fff;
+  background-color: transparent;
+}
+
+.s-view-dd-menu > div.s-view-list {
+  border-top: 1px solid #ddd;
+}
+
+.s-view-dd-menu > div.s-view-list:first-child {
+  border-top: none;
+}
+
+.s-view-dd-menu > div.s-view-list.s-view-dd-found {
+  border-top: none;
+}
+
+.s-view-dd-actions {
+  border-top: 1px solid #ddd;
+  margin-top: 10px;
+}
+
+span.s-view-dd-notfound {
+  padding-top: 10px;
+  display: inline-block;
+}
+
+span.s-generator-notfound {
+  padding-bottom: 10px;
+  margin-left: 10px;
+  display: inline-block;
+}
+
+.s-view-dd .s-view-dd-menu .s-view-dd-actions ul a {
+  padding-left: 7px;
+}
+
+.s-view-dd-actions i {
+  padding-right: 5px;
+}
+
+.s-view-list:not(:first-of-type) {
+  padding-top: 5px;
+}
+
+.s-view-list > strong {
+  padding: 0 10px 5px 10px;
+}
+
+#s-board-options {
+  float: right;
+  /* VAlign text in buttons with the structure name */
+  position: relative;
+  top: 2px;
+}
+
+#s-board-options > div {
+  position: relative;
+  float: left;
+  margin-left: 7px;
+}
+
+.s-view-dd-container {
+  position: absolute;
+  z-index: 20;
+  right: 0;
+  top: 100%;
+}
+
+#s-board-options button.s-board-option {
+  color: #333;
+  display: block;
+  font-size: 14px;
+  line-height: 18px;
+  padding: 3px 7px 3px 7px;
+  text-decoration: none;
+}
+
+#s-board-options button.s-board-option.st-disable {
+  /* Fix older AUI bug — could "press" a disabled button, not present in ADG 1.4 */
+  box-shadow: none;
+}
+
+button.s-board-option span.s-icon {
+  background: url(/s/-ypg77/73012/9eb9dd8ae4f919067487c81cb86eaf6d/4.1.0/_/download/resources/com.almworks.jira.structure:widget-css/img/extraicons.png) no-repeat;
+  height: 16px;
+  padding-left: 16px;
+}
+
+#s-board-options a.s-no-bganim.s-board-option:hover, #s-board-options a.s-no-bganim.s-board-option.s-active {
+  background-color:#3b73af;
+  color:#fff;
+}
+
+#s-issueDetails-menu-trigger {
+  /* Override AUI's "important" rule to make the button narrower  */
+  padding-right: 20px !important;
+}
+
+#s-issueDetails-menu-trigger:after {
+  margin-left: -15px;
+}
+
+#s-issueDetails-menu-trigger.st-disable:after {
+  border-top-color: #C5C5C5;
+}
+
+#s-issueDetails-menu {
+  z-index: 100;
+}
+div.s-view-dd-stripe span.s-adjusted-mark {
+  position: relative;
+  top: 3px;
+}
+
+/* Style the triangle icon after AJS Dropdown2 */
+#s-board-options .s-board-option span.s-dd {
+  border: 4px solid transparent;
+  border-top-color: #333333;
+  position: relative;
+  top: 11px;
+  margin-left: 1px;
+  margin-right: 4px;
+}
+
+#s-manage-views .dialog-components {
+  top: 0;
+  height: 490px;
+  width: 100%;
+  position: absolute;
+}
+#s-manage-views {
+  height: 490px;
+}
+#s-manage-views .field-group .checkbox {
+  padding-left: 0;
+}
+.s-manageview-list {
+  margin-top: 1em;
+  border-top: 1px solid #69c;
+}
+div.s-manage-view {
+  border-bottom: 1px solid #ddd;
+  padding: 4px 8px 4px 8px;
+  clear: both;
+}
+.s-manage-viewlist-empty {
+  padding: 4px 8px 4px 8px;
+}
+.s-manage-view.s-active {
+  background-color: #EAF1FD;
+}
+div.s-manage-view .s-name {
+  padding-left: 40px;
+}
+div.s-manage-view .s-description {
+  color: #666;
+  padding-left: 40px;
+  margin-bottom: 0.4em;
+}
+div.s-manage-view span.s-sharing, div.s-manage-view span.s-current-icon {
+  display: inline-block;
+  color: #666;
+  width: 16px;
+  height: 16px;
+  position: relative;
+  top: 1px;
+}
+div.s-manage-view span.s-sharing {
+  margin-right: 8px;
+}
+div.s-manage-view span.s-current-icon {
+  background: url(/s/-ypg77/73012/9eb9dd8ae4f919067487c81cb86eaf6d/4.1.0/_/download/resources/com.almworks.jira.structure:widget-css/img/ui-icons_454545_256x240.png) no-repeat -64px -142px;
+  margin-left: -40px;
+}
+div.s-manage-view span.s-current-icon.s-notcurrent {
+  visibility: hidden;
+}
+.s-manage-view .s-sharing.s-shared {
+  background: url(/s/-ypg77/73012/9eb9dd8ae4f919067487c81cb86eaf6d/4.1.0/_/download/resources/com.almworks.jira.structure:widget-css/img/atlasicons.png) no-repeat -16px -74px;
+}
+.s-manage-view .s-sharing.s-public {
+  background: url(/s/-ypg77/73012/9eb9dd8ae4f919067487c81cb86eaf6d/4.1.0/_/download/resources/com.almworks.jira.structure:widget-css/img/atlasicons.png) no-repeat 1px -74px;
+}
+.s-manage-view .s-current {
+  margin-right: 2em;
+}
+.s-manage-view .s-current > span {
+  color: #999;
+  font-style: italic;
+}
+div.s-manage-view div.s-view-details {
+  text-align: right;
+  visibility: hidden;
+  float: right;
+  margin: 0.6em 0 0;
+}
+div.s-manage-view.s-active div.s-view-details {
+  visibility: visible;
+}
+#s-manage-views table {
+  border-collapse: collapse;
+  padding: 0;
+  border-spacing: 0;
+  width: 100%;
+}
+#s-manage-views table th, #s-manage-views table td {
+  text-align: left;
+  vertical-align: top;
+}
+.s-view-det-top {
+  margin: 0 0 1em 7px;
+}
+.s-view-det-top td {
+  padding: 0 4px;
+}
+.s-view-det-name {
+  font-weight: bold;
+}
+.s-view-det-description {
+  color: #666;
+}
+.s-view-det-back-btn {
+  float: left;
+  margin-left: 10px;
+}
+#s-manage-views .s-view-selection-page .dialog-page-menu {
+  width: 18%;
+  margin: 0;
+}
+#s-manage-views .s-view-selection-page .dialog-panel-body {
+  padding-left: 0;
+  padding-right: 0;
+}
+.s-view-abovelist {
+  padding: 0 10px;
+  font-family: "segoe ui", helvetica, arial, sans-serif;
+}
+.s-perm-arrow {
+  padding-left: 16px;
+  height: 16px;
+  background: url(/s/-ypg77/73012/9eb9dd8ae4f919067487c81cb86eaf6d/4.1.0/_/download/resources/com.almworks.jira.structure:widget-css/img/ui-icons_888888_256x240.png) -32px -16px no-repeat;
+}
+.s-subject-add {
+  margin-left: 5px;
+}
+.s-perm-remove > span {
+  padding-left: 20px;
+}
+a.s-perm-remove {
+  display: inline-block;
+  text-indent: -9999px;
+  background: url(/s/-ypg77/73012/9eb9dd8ae4f919067487c81cb86eaf6d/4.1.0/_/download/resources/com.almworks.jira.structure:widget-css/img/atlasicons.png) -20px -94px no-repeat;
+  height: 16px;
+  width: 16px;
+  overflow: hidden;
+  text-decoration:none;
+  margin-left: 4px;
+}
+.s-perm-list {
+  margin-bottom: 0.5em;
+}
+.s-perm-list ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.s-perm-list ol li {
+  margin-bottom: 0.2em;
+}
+.s-unresolved-entity {
+  color: #888;
+}
+.s-perm-marker {
+  font-weight: bolder;
+}
+li.s-perm-list-default {
+  color: #888;
+}
+div.s-perm-add {
+  margin: -0.2em 0 0;
+}
+div.s-view-det-msg {
+  background: #eee;
+  padding: 0.25em 2em;
+  margin-bottom: 1em;
+}
+div.s-view-det-msg a {
+  margin: 0 0.6em;
+}
+div.s-view-perm-uneditable textarea {
+  color:#888;
+}
+.s-view-spec-error > span {
+  color: #800;
+  margin-right: 2em;
+}
+div.s-view-assoc-loading {
+  position: relative;
+}
+div.s-view-assoc-loading > div {
+  position: absolute;
+  left: 50%;
+  top: 100px;
+  margin-left: -8px;
+}
+#s-manage-views #s-view-associations table {
+  width: auto;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+#s-manage-views #s-view-associations table td, #s-manage-views #s-view-associations table th {
+  padding: 0 1.5em 0 0;
+}
+div.s-assoc-manage {
+  margin-bottom: 0.5em;
+}
+a.s-newwindow span {
+  padding-right: 16px;
+  background: url(/s/-ypg77/73012/9eb9dd8ae4f919067487c81cb86eaf6d/4.1.0/_/download/resources/com.almworks.jira.structure:widget-css/img/ui-icons_888888_256x240.png) no-repeat -48px -80px;
+  visibility: hidden;
+}
+a.s-newwindow:hover span, a.s-newwindow:active span, a.s-newwindow:focus span {
+  visibility: visible;
+}
+div.s-view-delete {
+  margin-left: 2em;
+}
+div.s-manageview-search {
+  margin-top: 1em;
+}
+#s-manage-views img.s-avatar {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+}
+#s-manage-views span.s-view-det-user {
+  margin-left: 24px;
+}
+body.s-viewdialog-shown div.aui-inline-dialog {
+  z-index: 5000;
+}
+#s-view-advanced textarea {
+  font-size: 11px;
+  font-family: Courier New, monospace;
+  white-space: pre;
+}
+#s-view-advanced textarea.s-view-spec-adjusted {
+  color:#888;
+}
+
+ul.s-ops {
+  background-color: white;
+  float: right;
+  margin: 3px 0 0 0;
+  padding: 0;
+  list-style-type: none;
+}
+ul.s-ops > li {
+  display: block;
+  float: left;
+  white-space: nowrap;
+  margin: 0 0 0 4px;
+  position: relative;
+}
+#structuremodule.collapsed .s-hide-if-collapsed {
+  display: none;
+}
+
+#st-gh-tab-content #structure .s-gh-hide {
+  display: none;
+}
+
+#s-structure-fixed-empty .st-tb {
+  position: relative;
+}
+
+#s-structure-fixed-empty .st-tbi {
+  position: absolute;
+}
+
+#s-structure-fixed-empty .st-tbt {
+  padding-left: 16px;
+}
+
+.ghx-tab-com-almworks-jira-structure-greenhopper-tab > strong > span {
+  position: relative;
+  top: -1px;
+}
+.s-g-warn-icon {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 16px;
+  width: 16px;
+  background: url(/s/-ypg77/73012/9eb9dd8ae4f919067487c81cb86eaf6d/4.1.0/_/download/resources/com.almworks.jira.structure:widget-css/img/ui-icons_cd0a0a_256x240.png) no-repeat -16px -144px;
+}
+
+.s-foot-restore {
+  font-weight: bolder;
+}
+
+.s-i-loading-failed {
+  color: #999;
+  font-style: italic;
+}
+
+#structure-helper-panel {
+  display: none !important;
+}
+
+.st-col-edit form.aui div.checkbox {
+  padding-left: 0;
+}
+
+.st-col-edit .st-col-buttons {
+  height: 30px;
+  font-size: 12px;
+  line-height: 14px;
+}
+
+.st-col-edit .st-col-buttons > span {
+  display: inline-block;
+  top: 50%;
+  transform: translate(0, -50%);
+  padding: 0 10px;
+  position: relative;
+  color: #3571AF;
+  cursor: pointer;
+}
+
+.st-col-edit .st-col-buttons > span i {
+  margin-right: 5px;
+  font-size: 14px;
+  color: #636363;
+  cursor: pointer;
+}
+
+.st-col-edit .st-col-buttons .st-col-revert {
+  float: right;
+}
+
+.st-col-edit .st-col-scroll {
+  max-height: 383px;
+  overflow: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding: 7px 0 12px 0;
+}
+
+.st-col-edit .st-col-scroll > div {
+  max-width: 350px;
+}
+
+.st-col-edit.s-wide .st-col-scroll > div {
+  max-width: none;
+}
+
+.st-col-edit.s-wide .st-col-scroll {
+  width: 450px;
+}
+
+.st-col-edit .st-col-scroll > div > form.aui fieldset:not(.st-col-opt-custom):not(.s-ae-options) {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.st-col-edit .st-col-scroll > div > form.aui .st-col-opt-custom > .field-group,
+.st-col-edit .st-col-scroll > div > form.aui .s-ae-options > .field-group,
+.st-col-edit .st-col-scroll > div > form.aui .s-formula-vars-section > .field-group
+{
+  padding: 0 10px 0 100px;
+}
+
+.st-col-edit .st-col-scroll > div > form.aui .s-ae-options {
+  width: auto;
+  left: 0;
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 6px;
+}
+
+.st-col-edit .st-col-scroll > form.aui .s-ae-options .s-ae-options-tri {
+  left: 93px;
+}
+
+.st-col-edit .st-col-drag {
+  position: relative;
+  padding-left: 11px;
+}
+
+.st-col-edit .st-col-drag-handle {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 11px;
+  cursor: move;
+}
+
+.st-col-edit .st-col-drag-icon {
+  width: 5px;
+  height: 8px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -4px;
+  margin-left: -3px;
+  background: url(/s/-ypg77/73012/9eb9dd8ae4f919067487c81cb86eaf6d/4.1.0/_/download/resources/com.almworks.jira.structure:widget-css/img/ui-icons_888888_256x240.png) no-repeat -134px -36px;
+}
+
+form.aui.s-short-label .field-group,
+form.aui.s-short-label .group,
+form.aui.s-short-label .date-select,
+form.aui.s-short-label .buttons-container {
+  padding-left: 90px;
+}
+form.aui.s-short-label .field-group > label {
+  margin-left: -90px;
+  width: 80px;
+}
+form.aui.s-short-label legend > span {
+  width: 75px;
+}
+form.aui.s-short-label .group .field-group,
+form.aui.s-short-label .date-select .field-group {
+  padding-left: 0;
+}
+
+form.aui div.checkbox label, form.aui div.radio label {
+  color: #333;
+}
+
+#structure form.aui.s-col-opts-form,
+#structure form.aui.s-col-opts-form input,
+#structure form.aui.s-col-opts-form textarea {
+  font-size: 14px;
+}
+
+#structure form.aui.s-col-opts-form .text,
+#structure form.aui.s-col-opts-form .password,
+#structure form.aui.s-col-opts-form .select {
+  height: 26px;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+#structure.ie form.aui.s-col-opts-form .text,
+#structure.ie form.aui.s-col-opts-form .password,
+#structure.ie form.aui.s-col-opts-form .select {
+  padding-right: 0;
+}
+
+#structure.webkit form.aui.s-col-opts-form .field-group > label,
+#structure.mozilla form.aui.s-col-opts-form .field-group > label,
+#structure.ie form.aui.s-col-opts-form .field-group > label {
+  padding-top: 4px;
+}
+#structure.mozilla.mac form.aui.s-col-opts-form .field-group > label {
+  padding-top: 3px;
+}
+
+#structure form.aui.s-col-opts-form div.checkbox,
+#structure form.aui.s-col-opts-form div.radio {
+  margin-top: 1px;
+}
+#structure.webkit.mac form.aui.s-col-opts-form div.checkbox,
+#structure.webkit.mac form.aui.s-col-opts-form div.radio {
+  margin-top: 3px;
+}
+#structure.mozilla.mac form.aui.s-col-opts-form div.checkbox,
+#structure.mozilla.mac form.aui.s-col-opts-form div.radio,
+#structure.safari.mac form.aui.s-col-opts-form div.checkbox,
+#structure.safari.mac form.aui.s-col-opts-form div.radio {
+  margin-top: 2px;
+}
+
+#structure form.aui.s-col-opts-form div.checkbox input[type="checkbox"],
+#structure form.aui.s-col-opts-form div.radio input[type="radio"] {
+  position: relative;
+  top: 2px;
+}
+#structure.mac form.aui.s-col-opts-form div.checkbox input[type="checkbox"],
+#structure.mac form.aui.s-col-opts-form div.radio input[type="radio"] {
+  position: static;
+  top: auto;
+}
+
+#structure form.aui.s-col-opts-form .st-col-header {
+  padding-left: 10px;
+}
+
+#structure form.aui.s-col-opts-form .st-col-header > div {
+  font-weight: bold;
+  color: #333;
+  font-size: 12px;
+  width: 100%;
+  text-align: left;
+  padding-top: 10px;
+  border-top: 1px solid #ccc;
+  text-transform: uppercase;
+}
+
+#structure .st-col-choose .field-group {
+  margin: 0;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+#structure .st-col-choose .field-group .description {
+  line-height: 14px;
+}
+
+.ajs-layer.s-aui-dd .aui-list .aui-list-item {
+  font-size: 14px;
+}
+
+#structure .st-col-progress-statushist {
+    overflow-x: hidden;
+}
+
+#structure .st-col-progress-statushist .st-sth-row {
+    clear:both;
+    padding-top: 4px;
+    min-width: 170px;
+}
+
+#structure .st-col-progress-statushist img {
+    float:left;
+    padding-top: 4px;
+}
+
+#structure .st-col-progress-statushist .st-sth-name {
+    float:left;
+    max-width:85px;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    padding-top: 5px;
+    padding-left: 5px;
+}
+
+#structure .st-col-progress-statushist .st-sth-input  {
+    float:right;
+    position: relative;
+}
+
+#structure .st-col-progress-statushist input {
+    width: 25px;
+    padding-right: 13px;
+    text-align: right;
+    height: 15px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border: 1px solid #ccc;
+    margin:0;
+    line-height:15px;
+}
+
+#structure .st-col-progress-statushist .st-sth-input span  {
+    position: absolute;
+    right: 2px;
+    color: #999;
+    margin-top: auto;
+    margin-bottom: auto;
+    height: 15px;
+    line-height:15px;
+    padding-top:3px;
+    padding-bottom:3px;
+    border: 1px solid transparent;
+    top:0;
+    bottom: 0;
+}
+
+#structure .st-col-progress-statushist a.st-tb {
+  float: right;
+  height: 21px;
+  width: 20px;
+  margin-left: 1px;
+  top: 0;
+  border-color: transparent;
+}
+
+#structure .st-col-progress-statushist a.st-tb:hover {
+  background: #e6e6e6;
+}
+
+#structure .st-col-progress-statushist-adder {
+    margin-top: 4px;
+}
+
+#structure .st-col-progress-faketimeweight {
+    padding-top: 4px;
+}
+
+li.aui-list-item-li-all-sub-tasks-are-equal a.aui-list-item-link,
+li.aui-list-item-li-time-estimate a.aui-list-item-link
+{
+    color: #707070;
+}
+
+.s-persp-success-title {
+  margin: 0.6em 0;
+  font-weight: bold;
+}
+
+.s-persp-link {
+  width: 420px;
+  padding: 2px 4px;
+  margin: 0;
+}
+
+.s-persp-success-desc {
+  color: #777;
+  margin: 0.6em 0;
+}
+
+.s-persp-error-title {
+  margin: 0.6em 0;
+  font-weight: bold;
+  color: #800;
+}
+
+.s-persp-error-msg {
+  margin-bottom: 0.6em;
+}
+
+#structure .s-editbuttons > a.s-editor-dialog {
+  visibility: visible;
+  float:left;
+}
+
+#structure .s-editbuttons > span.s-editor-right {
+  float:right;
+}
+
+#st-create-buttons {
+  float: left;
+  font-size: 0;
+  padding-left: 10px;
+}
+
+#st-create-nostruct {
+  display: inline-block;
+  padding: 5px 10px;
+  vertical-align: baseline;
+  font-size: 14px;
+}
+
+.st-dp-inner-dlg {
+  padding: 30px 18px 18px 96px;
+  background-color: #F5F5F5;
+}
+
+.st-confluence-dp-inner-dlg {
+  padding: 30px 18px 18px 96px;
+  background-color: #F5F5F5;
+}
+
+.s-confluence-error.st-confluence-dp-inner-dlg {
+  padding: 18px 18px;
+}
+
+.s-confluence-error-text {
+  padding-bottom: 10px;
+}
+
+.s-confluence-retry-loader {
+  margin-right: 10px;
+}
+
+#arrow-stDecisionPanel:after {
+  border-top-color: #F5F5F5;
+}
+
+.st-dp-icon {
+  display: block;
+  float: left;
+  width: 48px;
+  height: 48px;
+  margin: -5px 0 0 -71px;
+  background: url(/s/-ypg77/73012/9eb9dd8ae4f919067487c81cb86eaf6d/4.1.0/_/download/resources/com.almworks.jira.structure:widget-css/img/dp-icons.svg) no-repeat;
+}
+
+.st-dp-icon-err {
+  background-position: 0 -48px;
+}
+
+.st-dp-icon-ask {
+}
+
+.st-dp-message {
+  font-size: 18px;
+  color: #333333;
+  line-height: 21px;
+  padding-bottom: 20px;
+}
+
+.st-dp-options {
+  padding-bottom: 20px;
+}
+
+.aui-button.st-dp-option {
+  margin: 0;
+}
+
+.aui-button.st-dp-option ~ .aui-button.st-dp-option {
+  margin-top: 6px;
+}
+
+.st-dp-options form.aui .select {
+  max-width: none;
+}
+
+.st-dp-buttons {
+  text-align: right;
+}
+
+.st-focus-decoration {
+  position: absolute;
+  top: 0;
+  visibility: hidden;
+  overflow: hidden;
+  width: 100%;
+  height: 1px;
+  background-color: #98d9ff;
+}
+
+.st-focused .st-focus-decoration {
+  visibility: visible;
+}
+
+.single-panel .st-focused .st-focus-decoration {
+  visibility: hidden;
+}
+
+#st-issue-details {
+  /**
+   * Position issue details "on top" of structure panels, docked to the right.
+   * Note that this element is added as a following sibling of structure widget div, so we assume that
+   * structure widget div's parent's right border coincides with that of the structure widget's.
+   * The layout will be broken if widget receives right margin, or its parent right padding.
+   * @see .structureBorder
+   * @see #structure
+   */
+  position: absolute;
+  right: 0;
+
+  /** Copied from #structure .main */
+  min-height: 66px;
+
+  background-color: white;
+
+  border-top: 1px solid #e9e9e9;
+
+  /** Same z-index as for #structure so that the widget is not displayed above and does not steal the mouse events. */
+  z-index: 10;
+}
+
+#st-issue-details.st-sticky {
+  top: 0;
+}
+
+/**
+ * This rule is copied from issuenav.css (JIRA@6.0) to make issue details header appear like on the Issue Navigator
+ */
+#st-issue-details .issue-header-content > .command-bar {
+  border-top: none;
+}
+
+#st-issue-details .issue-header {
+  background-color: white;
+}
+
+#st-issue-details .st-focus-decoration {
+  z-index: 1000;
+}
+
+#st-issue-details .st-issue-details-focus-decoration {
+  visibility: hidden;
+
+  position: absolute;
+  z-index: 108;
+  left: 0;
+  bottom: 0;
+  top: 0;
+
+  width: 4px;
+  overflow: hidden;
+}
+
+#st-issue-details .st-issue-details-focus-decoration > div {
+  position: absolute;
+  left: -1px;
+  height: 100%;
+  box-shadow: -1px 0 4px 4px #92BCF8;
+}
+
+#st-issue-details .st-loading-layer {
+  background: url('/s/-ypg77/73012/9eb9dd8ae4f919067487c81cb86eaf6d/4.1.0/_/download/resources/com.almworks.jira.structure:widget-css/img/wait-large.gif') no-repeat center;
+
+  /* Higher than that for .st-disable-layer */
+  z-index: 108;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  visibility: hidden;
+}
+
+#st-issue-details.st-loading .st-loading-layer {
+  visibility: visible;
+}
+
+#st-issue-details .st-details-viewport {
+  overflow-y: auto;
+  overflow-x: hidden;
+  position: absolute;
+  width: 100%;
+  top: 32px;
+  bottom: 0;
+  left: 0;
+
+  /* Shown by the presence of the class corresponding to the item type on #st-issue-details */
+  display: none;
+}
+
+#st-issue-details .st-issue-details-viewport {
+  /* Avoid duplicate focus indication */
+  outline: none;
+}
+
+#st-issue-details.st-type-issue .st-issue-details-viewport {
+  display: block;
+}
+
+#st-issue-details .st-issue-details-client {
+  position: absolute;
+}
+
+#st-issue-details .st-disable-layer {
+  /* issue details header has z-index 100 */
+  z-index: 104;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  visibility: hidden;
+}
+
+#st-issue-details.st-opaque .st-disable-layer {
+  background-color: white;
+  opacity: 0.5;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+}
+
+#st-issue-details.st-disable .st-disable-layer {
+  visibility: visible;
+}
+
+#st-issue-details.st-type-page .st-page-details-viewport {
+  display: block;
+}
+
+#st-issue-details .st-issue-details-stub {
+  margin: 10px;
+  display: none;
+}
+
+#st-issue-details.st-type-none .st-issue-details-stub,
+#st-issue-details.st-type-page .st-issue-details-stub {
+  display: block;
+}
+
+/* used in form.aui to place something (buttons) at the end of the line without breaking baseline alignment */
+.s-inline-field-tail {
+  /* base position of the element - at the end of the line, in the same inline context */
+  position: relative;
+  margin-left: 4px; /* gap to the input element */
+  height: 1px; /* bigger height might affect how the input is positioned, if only I knew why... */
+  width: 1px; /* override with a specific width if you need to make space for the included absolute elements */
+  vertical-align: top;
+  display: inline-block;
+}
+.s-inline-field-tail > div {
+  position: absolute; /* otherwise it spoils the layout of the main element */
+}
+
+/* .s-ae-options are displayed in a dialog with a darker background and a triangle to show that they are sub-options
+   for the option above */
+form.aui fieldset.s-ae-options {
+  position: relative;
+  left: -20px; /* fragile: relies on dialog's form-body padding value */
+  width: 100%;
+  padding: 12px 20px 12px;
+  background: #f3f3f3;
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+.s-ae-options-tri {
+  /* triangle taking the color from the main option */
+  position: absolute;
+  border-top: 8px solid #fff;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  width: 0;
+  height: 0;
+  left: 159px; /* fragile: relies on dialog's form-body padding value and form.aui padding for values */
+  top: 0;
+}
+
+/* Used in Attribute Editor to highlight nested parameters with a background */
+form.aui fieldset.s-ae-options.s-lev-1 {
+  background-color: #e7e7e7;
+}
+.s-ae-options-tri.s-lev-1 {
+  border-top-color: #f3f3f3;
+}
+form.aui fieldset.s-ae-options.s-lev-2 {
+  background-color: #d3d9ce;
+}
+.s-ae-options-tri.s-lev-2 {
+  border-top-color: #e7e7e7;
+}
+form.aui fieldset.s-ae-options.s-lev-3 {
+  background-color: #c0d1d1;
+}
+.s-ae-options-tri.s-lev-3 {
+  border-top-color: #d3d9ce;
+}
+form.aui fieldset.s-ae-options.s-lev-max {
+  background-color: #e6dcc3;
+  border-top: 1px solid #bbb;
+  border-bottom: 1px solid #bbb;
+}
+.s-ae-options-tri.s-lev-max {
+  display: none;
+}
+
+.s-subselect2 {
+  margin-top: 4px;
+}
+
+.s-select2-fixed.aui-select2-container .select2-choices .select2-search-choice {
+  /* fixing the vertical padding for selected <li>s that in non-disabled mode for some reason have less padding */
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+.s-select2-fixed.select2-container-multi .select2-choices .select2-search-field {
+  /* fixing the vertical padding for the input field inside selection box */
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+.s-select2-fixed.aui-select2-container .select2-search-choice-close {
+  /* fixing "x" button position and the vertical padding for selected <li>s that in non-disabled mode for some reason have less padding */
+  top: 6px;
+}
+
+#s-board-toolbar {
+  padding: 15px 10px 15px 10px;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+#s-tb-toggle, #s-tb-toggle-border {
+  width: 20px;
+  position: absolute;
+  left: 0;
+  display: none;
+  border-bottom-right-radius: 4px;
+}
+
+#s-tb-toggle {
+  height: 18px;
+  bottom: -10px;
+  z-index: 101;
+}
+
+#s-tb-toggle-border {
+  height: 9px;
+  bottom: -10px;
+  z-index: 100;
+  background: #f5f5f5;
+  border-bottom: 1px solid #e9e9e9;
+  border-right: 1px solid #e9e9e9;
+}
+
+#s-tb-toggle-button {
+  display: block;
+  width: 20px;
+  height: 14px;
+  padding-top: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  color: #636363;
+}
+
+#s-tb-toggle-button:hover {
+  color: #333333;
+}
+
+.s-full-screen-mode #s-tb-toggle,
+.s-full-screen-mode #s-tb-toggle-border {
+  display: block;
+}
+
+#content > header.s-board-header {
+  min-height: 60px;
+  position: relative;
+  width: 100%;
+  background: #f5f5f5;
+}
+
+.s-ph-container {
+  min-width: 250px; /* todo change when final PanelHeader's layout is final */
+}
+
+.s-pb-container {
+  background-color: rgb(245, 245, 245);
+  display: none;
+}
+
+.s-ph-container #s-board-toolbar {
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+  border-bottom: none;
+}
+
+.s-ph-container #s-board-toolbar > div, .s-ph-container #s-board-toolbar .aui-toolbar2 {
+  display: inline-block;
+}
+
+#s-board-toolbar .aui-toolbar2-primary {
+  margin-right: 20px;
+}
+
+#s-board-toolbar .aui-toolbar2-secondary {
+  margin-left: 20px;
+}
+
+#s-board-toolbar .inner-panel {
+  padding-top: 10px;
+}
+
+#s-board-toolbar .aui-button {
+  color: #636363;
+  margin-top: 0;
+}
+
+#s-board-toolbar .tiny-mode {
+  display: none;
+}
+
+#s-board-toolbar .small-right .aui-toolbar2-secondary .aui-button span {
+  display: none;
+}
+
+#s-board-toolbar .tiny .aui-button span.collapsible,
+#s-board-toolbar .small .aui-button span.collapsible {
+  display: none;
+}
+
+#s-board-toolbar > div:not(.s-layouting) .automation-off span.collapsible {
+  display: none;
+}
+
+#s-board-toolbar .tiny .tiny-hide {
+  display: none;
+}
+
+#s-board-toolbar .tiny .tiny-mode {
+  display: inline;
+}
+
+#s-board-toolbar .aui-button[disabled],
+#s-board-toolbar .aui-button[aria-disabled="true"] {
+  color: #999999;
+}
+
+#s-board-toolbar .aui-button.aui-button-subtle[aria-disabled="true"] {
+  border: 1px solid transparent;
+}
+
+#s-board-toolbar .aui-buttons {
+  margin: 0 5px 0 10px
+}
+
+/* fixing drop-down trigger width in JIRA 6.4, copied from JIRA CSS with #s-board-toolbar added for selectivity */
+#s-board-toolbar .aui-button.aui-dropdown2-trigger.aui-button-split-more,
+#s-board-toolbar .aui-button.aui-dropdown2-trigger.aui-button-split-more.active {
+  /* don't touch vertical padding or things jump around, jump around, jump up jump up and get down */
+  padding-left: 5px;
+  padding-right: 10px;
+  text-align: left;
+  text-indent: -9999em;
+}
+
+.s-ae-container {
+  display: inline-block;
+  width: 100%;
+  /* Taken from JIRA CSS (form.aui .aui-ss, .jiraform .aui-ss) */
+  max-width: 250px;
+}
+
+.s-wide .s-ae-container {
+  max-width: 340px;
+}
+
+#structure .s-col-opts-form .s-ae-container.configurable {
+  padding-right: 30px;
+  margin-right: -32px;
+  box-sizing: border-box;
+}
+
+#structure .s-ae-container .s-inline-field-tail {
+  display: none;
+}
+
+#structure .s-ae-container.configurable .s-inline-field-tail {
+  display: inline-block;
+}
+
+/* Used in: Attribute column, Testy column */
+#structure .s-col-opts-form .aui-button {
+  font-size: 14px;
+  line-height: 18px;
+  padding: 3px;
+  height: auto;
+  text-align: center;
+}
+/* Used in: Attribute column, Testy column */
+#structure .s-col-opts-form .aui-button.aui-button-subtle .aui-icon {
+  margin: 0;
+}
+/* Used in: Testy column, overrides default rule .aui-button ~ .aui-button. Can be used in other columns with rows of buttons. */
+.s-col-opts-form .aui-button-subtle ~ .aui-button-subtle {
+  margin-left: 0;
+}
+
+#structure .aui-select2-container {
+  background: transparent;
+}
+
+.s-structure-projectnav-icon {
+  background: url(/s/-ypg77/73012/9eb9dd8ae4f919067487c81cb86eaf6d/4.1.0/_/download/resources/com.almworks.jira.structure:widget-css/img/structure-projectnav.svg) no-repeat;
+}
+
+i.board-fav-link {
+  padding-right: 7px;
+}
+
+.s-project-page .s-hide-on-project-page,
+.s-project-page #footer {
+  display: none;
+}
+
+.s-project-page .aui-page-panel {
+  border-bottom: none;
+}
+
+.st-details-header {
+  height: 22px;
+  padding: 5px;
+  background-color: #e6ebf2;
+}
+
+.st-details-title {
+  float: left;
+  height: 100%;
+  line-height: 20px;
+}
+
+.st-details-title-text {
+  float: left;
+  margin-left: 4px;
+  height: 100%;
+  font-weight: bold;
+  font-size: 14px;
+  color: #333333;
+}
+
+.st-details-title-icon {
+  float: left;
+  margin-left: 1px;
+  width: 15px;
+  height: 100%;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 18px; /* otherwise, issue type icon shifts downward */
+  color: #707070;
+}
+
+.webkit .st-details-title-icon {
+  line-height: 20px; /* for some reason, webkit renders this differently */
+}
+
+.st-details-title-icon > img, .st-details-title-icon > span {
+  vertical-align: text-bottom;
+}
+
+.st-details-title-icon > img {
+  margin-left: 3px;
+}
+
+.st-details-title-icon > .aui-icon {
+  margin-left: 4px;
+}
+
+.st-details-close {
+  float: right;
+  margin-right: 10px;
+}
+
+#st-details-close-btn{
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  right: 9px;
+  top: 4px;
+  background-image: url(/s/-ypg77/73012/9eb9dd8ae4f919067487c81cb86eaf6d/4.1.0/_/download/resources/com.almworks.jira.structure:widget-css/img/structure_close_details_btn_sprite.svg);
+}
+
+#st-details-close-btn:hover {
+  background-position: 0 -24px;
+}
+
+#st-details-close-btn:active {
+  background-position: 0 -48px;
+}
+
+.st-page-details-container iframe {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border: none;
+}
+
+.s-ph-container .st-query-input {
+  position: relative;
+  z-index: 1000;
+}
+
+.s-ph-container .st-query-input textarea {
+  width: 100%;
+  resize: none;
+  overflow: hidden;
+  box-sizing: border-box;
+  padding-left: 24px !important;
+  padding-right: 24px !important;
+  border-radius: 3px;
+  font-size: 14px;
+  line-height: 14px;
+}
+
+.s-ph-container .st-query-input i {
+  position: absolute;
+  z-index: 10;
+  top: 8px; /* = (panelHeader.inputHeight - fontSize) / 2 */
+}
+
+.s-ph-container .st-query-input i.error-status {
+  left: 8px;
+  color: #ccc;
+}
+
+.s-ph-container .st-query-clear {
+  right: 8px;
+  color: #c6c6c6;
+  /* We're changing "right" in the code when scrollbar appears. However, the change cannot be synchronized with the
+     exact time when scrollbar appears, and it looks ugly. With transition it looks a bit weird, but not ugly. */
+  transition: right 0.4s;
+  -webkit-transition: right 0.4s;
+}
+
+.s-ph-container .st-query-clear, .s-ph-container .st-query-clear:before {
+  cursor: pointer;
+}
+.s-ph-container .st-query-clear:hover {
+  color: #888;
+}
+
+.s-ph-container .st-query-input .error-status.s-success {
+  color: #009100;
+}
+
+.s-ph-container .st-query-input .error-status.s-error {
+  color: #880000;
+}
+
+/* display structures */
+.tr.s-type-structure .value {
+  font-weight: bold;
+  color: #555;
+}
+
+/* hide controls for title row */
+#structure .tr.s-sema-title .st-dh, #structure .tr.s-sema-title .s-ms-mark {
+  visibility: hidden;
+  cursor: default;
+}
+
+/* grid header */
+
+.s-ph-right-toolbar {
+  float: right;
+  font-size: 0;  /* fix inline-block space between blocks */
+  margin-left: 16px; /* = 20px (desired gap between left and right parts) - panelHeader.rightToolbar.buttonMargin */
+  white-space: nowrap; /* avoid breaking buttons line into multiple lines, which also breaks layout calculation */
+  overflow: hidden;
+}
+
+.s-ph-right-toolbar .aui-button-compact {
+  outline: none;
+  margin: 0;
+  color: #6f6f6f;
+  text-align: center;
+  line-height: 1;
+  font-size: 14px;
+  height: 30px;
+  padding: 2px 6px;
+}
+
+.s-ph-right-toolbar .aui-button-compact.aui-dropdown2-trigger,
+.s-ph-right-toolbar .aui-button-compact.aui-button-subtle:not(.s-ph-labeled) {
+  padding: 0;
+}
+
+.s-ph-right-toolbar .aui-button-compact:focus:not(:active) {
+  color: #6f6f6f;
+  background-color: #fff;
+  border-color: #fff;
+}
+
+.s-ph-right-toolbar .aui-button-compact:active {
+  border-color: #999;
+  background-color: #f5f5f5;
+}
+
+.s-ph-right-toolbar .aui-button-compact:not([aria-disabled=true]):hover {
+  color: #6f6f6f;
+}
+
+.s-ph-right-toolbar .aui-button-compact i {
+  font-size: 16px;
+}
+
+.s-ph-right-toolbar .aui-button-compact /*~ .aui-button-compact*/ {
+  margin-left: 4px; /* =: panelHeader.rightToolbar.buttonMargin */
+}
+
+.s-ph-right-toolbar .aui-button-compact:not(.s-ph-labeled) {
+  width: 30px;
+}
+
+.s-ph-right-toolbar .aui-button-compact.aui-dropdown2-trigger i {
+  padding: 0 6px;
+}
+
+.s-ph-right-toolbar .aui-button-compact.aui-dropdown2-trigger i.s-fa-fw,
+.s-ph-right-toolbar .aui-button-compact.aui-dropdown2-trigger i.alm-fw {
+  width: 1em;
+}
+
+.s-ph-right-toolbar .aui-button-compact.aui-dropdown2-trigger span {
+  font-size: 14px;
+  vertical-align: top;
+}
+
+.s-ph-right-toolbar .aui-button-compact.aui-dropdown2-trigger span.s-view-name {
+  line-height: 16px;
+}
+
+.s-ph-right-toolbar .aui-button.aui-dropdown2-trigger.aui-button-compact.active {
+  padding-bottom: 0;
+  border-bottom-width: 1px;
+  border-bottom-color: transparent;
+}
+
+.s-ph-right-toolbar .aui-button.aui-button-compact.aui-dropdown2-trigger:not(.aui-dropdown2-trigger-arrowless):after {
+  top: 13px;
+}
+
+.s-ph-right-toolbar .aui-button.s-mode-exclude:not(:active) {
+  color: #3572b0;
+  border-color: #67bcf3;
+}
+
+#structure .s-ph-transforms-active {
+  color: #3572b0;
+}
+
+#structure .s-ph-transforms-active .alm-transform:before {
+  content: "\e60e"; /* filled */
+}
+
+#structure .s-ph-transforms-active:not([aria-pressed="true"]) {
+  border-color: #67bcf3;
+  background-color: transparent;
+}
+
+#structure .s-ph-transforms-active:not([aria-pressed="true"]):hover {
+  background-color: #eee;
+  border-color: #999;
+}
+
+.s-ph-options-selector {
+  float: left;
+  display: block;
+
+  /* Makes the selector stop when it hits float:right panel */
+  max-width: 100%;
+
+  /* Makes structure name end with ellipsis if it doesn't fit. */
+  text-overflow: ellipsis;
+  word-wrap: normal;
+  overflow: hidden;
+
+  /* In case when for some reason the width is larger than needed */
+  text-align: left;
+}
+#structure .s-ph-options-selector-shadow {
+  position: absolute;
+  float: none;
+  left: -99999px;
+  visibility: hidden;
+  text-overflow: clip; /* override .s-ph-options-selector to measure full width */
+}
+
+.s-ph-options-selector.aui-button.aui-button-link {
+  font-size: 18px;
+  line-height: 1;
+  padding: 6px 0;
+  border: none;
+  height: auto;
+  color: #333333;
+  outline: none;
+}
+
+.s-ph-options-selector .alm {
+  color: #6F6F6F;
+}
+
+.s-ph-options-selector .active .alm,
+.s-ph-options-selector:hover .alm{
+  color: #3571AF;
+}
+
+.s-ph-options-selector.aui-button.aui-button-link:hover {
+  color: #3571AF;
+}
+
+.s-ph-options-selector i {
+  padding: 0 4px 0 0;
+}
+
+/*
+  issue page -- override structure selector if there's only one structure
+  the code will add aria-disabled="true", so we need to override disabled color as well
+*/
+.s-single-structure .s-ph-options-selector.aui-button.aui-button-link,
+.s-single-structure .s-ph-options-selector.aui-button.aui-button-link:hover {
+  color: #333333;
+}
+.s-single-structure #gh .s-ph-options-selector.aui-button[aria-disabled="true"] {
+  opacity: 1; /* override GH's opacity: 0.5 for disabled buttons */
+}
+.s-single-structure .s-ph-options-selector.aui-button.aui-button-link:hover .alm {
+  color: #6f6f6f;
+}
+.s-single-structure .s-ph-options-selector.aui-button.aui-button-link:after {
+  display: none; /* hide drop-down arrow */
+}
+
+
+
+.s-ph-option-container {
+  min-height: 30px;
+  overflow: hidden;
+}
+
+
+.s-ph-options-container i {
+  padding-right: 6px;
+  vertical-align: bottom;
+}
+.s-ph-options-container .structure-list i {
+  color: transparent;
+}
+
+.s-ph-options-container .aui-dropdown2-section + .aui-dropdown2-section {
+  border-top: none;
+}
+
+.s-ph-options-container .aui-dropdown2-section:not(.s-ph-search-container):not(:last-of-type) {
+  border-bottom: 1px solid #ccc;
+
+}
+
+.s-ph-options-container .aui-dropdown2-heading {
+  padding: 10px 10px 5px 10px;
+}
+
+/* grid header end */
+
+
+/* panel banners start */
+
+.s-pb-banner .s-fa {
+  cursor: inherit;
+}
+
+.s-pb-container {
+  border-bottom: 1px solid #DDD;
+}
+
+.s-pb-container .s-pb-banner {
+  padding: 12px 17px;
+  min-height: 26px;
+}
+
+.s-pb-container .s-pb-banner[data-visible="true"] ~ .s-pb-banner[data-visible="true"] {
+  border-top: 1px solid #DDD;
+}
+
+.s-pb-container .s-transform {
+  padding: 12px 6px;
+  margin: 0 11px;
+}
+
+.s-pb-container .s-transform[data-visible="true"] ~ .s-transform[data-visible="true"] {
+  border-top: 1px dashed #DDD;
+}
+
+.s-pb-banner-content {
+  margin-right: 60px;
+}
+
+.s-pb-banner {
+  display: none;
+  position: relative;
+  background-color: #f5f5f5;
+}
+
+.s-pb-banner .aui-button {
+  outline: none;
+  font-size: 12px;
+  padding: 0 8px;
+  margin: 0;
+  height: 26px;
+  color: #636363;
+}
+
+.s-pb-banner .aui-button.aui-dropdown2-trigger-arrowless {
+  padding-right: 4px;
+}
+
+.s-pb-banner .aui-button > * {
+  vertical-align: top;
+}
+
+.s-pb-banner.s-transform .aui-button.aui-button-subtle i {
+  margin-right: 0;
+}
+
+.s-pb-banner .aui-button i {
+  line-height: 24px;
+}
+
+.s-pb-banner .aui-button + .aui-button {
+  margin-left: 4px;
+}
+
+.s-pb-banner .aui-button > span:last-of-type:not(:empty) {
+  padding-left: 8px;
+}
+
+.s-pb-banner .aui-button > span:last-of-type:empty {
+  padding-left: 4px;
+}
+
+.s-pb-banner .aui-button span {
+  padding: 0;
+  margin: 0;
+  line-height: 24px;
+}
+
+.s-pb-banner.s-transform .aui-button .s-ph-filter-remove {
+  margin: 0;
+  padding: 0 0 0 4px;
+  color: inherit;
+}
+
+.s-pb-banner.s-transform .s-qf {
+  border-radius: 14px;
+}
+
+.s-ph-transforms {
+  display: table-row;
+  float: left;
+  list-style-type: none;
+  padding: 0;
+}
+
+ul.s-ph-transforms {
+  margin: 0px;
+}
+
+.s-ph-transforms li {
+  float: left;
+  margin: 2px;
+}
+
+.s-ph-transforms-scrollable {
+  max-height: 90px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  margin: -2px;
+}
+
+.s-ph-quick-transformations .s-qf-dropdown {
+  min-width: auto;
+}
+
+.s-ph-quick-transformations .s-qf-dropdown.aui-dropdown2-active {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.edit-qf-popup {
+  z-index: 20;
+}
+
+.s-ph-quick-transformations.edit-mode .s-qf-toggle {
+  display: none;
+}
+
+.s-pb-banner.s-transform .s-ph-quick-transformations .aui-button span:last-child {
+  padding-right: 4px;
+}
+
+.s-ph-filter-container input {
+  height: 20px;
+  width: 500px;
+  padding-left: 5px;
+}
+
+.s-ph-filter-container {
+  display: table;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.s-ph-filter-container > * {
+  display: table-cell;
+  margin: 0;
+  padding: 0;
+  vertical-align: middle;
+}
+
+.s-ph-filter-container .s-ph-textarea-group {
+  width: 100%;
+}
+
+.s-pb-banner.s-transform .s-ph-filter-container > .aui-button.aui-dropdown2-trigger,
+.s-pb-banner.s-transform .s-ph-filter-container > .aui-button.aui-dropdown2-trigger:hover,
+.s-pb-banner.s-transform .s-ph-filter-container > .aui-button.aui-dropdown2-trigger.aui-dropdown2-active {
+  border: none;
+  font-size: 14px;
+}
+
+.s-ph-filter-container > .aui-dropdown2-active {
+  padding-bottom: 0 !important; /* override existing !important */
+}
+
+.s-ph-filter-container .s-ph-filter-empty-space {
+  width: 10px;
+  min-width: 10px;
+}
+
+.s-ph-filter-container .s-ph-filter-saveas {
+  white-space: nowrap;
+}
+
+.s-ph-filter-container a.s-ph-filter-saveas[aria-disabled="true"] {
+  color: #999;
+  text-decoration: none;
+  cursor: default;
+  opacity: .5;
+}
+
+.s-pb-banner .s-ph-textarea {
+  display: table;
+  border-collapse: separate;
+  width: 100%;
+}
+
+.s-pb-banner .s-ph-textarea > * {
+  display: table-cell;
+  margin: 0;
+  vertical-align: middle;
+}
+
+.s-pb-banner .s-ph-textarea .st-query-input {
+  width: 100%;
+}
+
+.s-pb-banner .s-ph-textarea .st-query-input i {
+  top: 6px; /* = (panelBanner.inputHeight - fontSize) / 2 */
+  position: absolute;
+  z-index: 11;
+}
+
+.s-pb-banner .s-ph-textarea .st-query-input .st-query-clear {
+  color: #ccc;
+  right: 8px;
+  /* We're changing "right" in the code when scrollbar appears. However, the change cannot be synchronized with the
+     exact time when scrollbar appears, and it looks ugly. With transition it looks a bit weird, but not ugly. */
+  transition: right 0.4s;
+  -webkit-transition: right 0.4s;
+}
+
+.s-pb-banner .s-ph-textarea .st-query-input .st-query-clear,
+.s-pb-banner .s-ph-textarea .st-query-input .st-query-clear:before {
+  cursor: pointer;
+}
+
+.s-pb-banner .s-ph-textarea .st-query-input .st-query-clear:hover {
+  color: #888;
+}
+
+.s-pb-banner .s-ph-textarea .error-status {
+  left: 8px;
+  color: #ccc;
+}
+
+.s-pb-banner .s-ph-textarea .error-status.s-error {
+  color: #880000;
+}
+
+.s-pb-banner .s-ph-textarea .error-status.s-success {
+  color: #009100;
+}
+
+.s-pb-banner .s-ph-textarea .st-query-input > div {
+  position: relative;
+  height: 26px;
+  z-index: 1; /* otherwise, the textarea expanding down will be covered by main area */
+}
+
+.s-pb-banner .s-ph-textarea .aui-button,
+.s-pb-banner .s-ph-textarea .aui-button[aria-pressed="true"] {
+  color: #6f6f6f;
+  background-color: transparent;
+  border: 1px solid #ccc;
+  border-radius: 3px 0 0 3px;
+}
+
+.s-pb-banner .s-ph-textarea .aui-button:hover {
+  color: #6f6f6f;
+  border: 1px solid #999;
+  background-color: #e9e9e9;
+}
+
+.s-pb-banner.s-transform .s-ph-textarea .aui-button:active,
+.s-pb-banner.s-transform .s-ph-textarea .aui-button:hover,
+.s-pb-banner.s-transform .s-ph-textarea .aui-button[aria-pressed="true"]:hover {
+  color: #6f6f6f;
+  border: 1px solid #999;
+  background-color: #e9e9e9;
+}
+
+.s-pb-banner .s-ph-textarea .aui-button[aria-disabled="true"]:not([aria-pressed="true"]) {
+  color: #6f6f6f;
+  border: 1px solid #999;
+  border-right-width: 0;
+  background-color: transparent;
+  opacity: .5;
+}
+
+.s-pb-banner.s-transform .s-ph-textarea .aui-button:not([aria-pressed="true"]):hover,
+.s-pb-banner.s-transform .s-ph-textarea .aui-button:not([aria-pressed="true"]):active {
+  color: #6f6f6f;
+  background-color: #e9e9e9;
+  border: 1px solid #999;
+}
+
+.s-pb-banner.s-transform .s-ph-textarea .aui-button,
+.s-pb-banner.s-transform .s-ph-textarea .aui-button:hover,
+.s-pb-banner.s-transform .s-ph-textarea .aui-button:active,
+.s-pb-banner.s-transform .s-ph-textarea .aui-button[aria-pressed="true"],
+.s-pb-banner.s-transform .s-ph-textarea .aui-button[aria-pressed="true"]:hover,
+.s-pb-banner.s-transform .s-ph-textarea .aui-button:not([aria-pressed="true"]):hover {
+  border-right-width: 0;
+}
+
+.s-pb-banner .s-ph-textarea .aui-button[aria-pressed="true"] i.alm-filter:before {
+  content: "\e605"; /* filled */
+}
+
+.s-pb-banner.s-transform .s-ph-textarea .aui-button[aria-pressed="true"],
+.s-pb-banner.s-transform .s-ph-textarea .aui-button[aria-pressed="true"]:hover {
+  color: #3572b0;
+}
+
+.s-pb-banner .s-ph-textarea .aui-button i {
+  margin-right: 0;
+}
+
+.s-pb-banner .s-ph-textarea textarea {
+  min-height: 26px; /* =: panelBanner.inputHeight */
+  width: 100%;
+  line-height: 17px; /* smaller line height results in parts of second line visible when the textarea is "collapsed" */
+  font-size: 12px;
+  z-index: 10;
+  resize: none;
+  overflow: hidden;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 0 3px 3px 0;
+  padding: 4px 20px 3px 25px;
+  max-height: 78px;
+}
+
+.s-pb-toolbar {
+  position: absolute;
+  right: 17px;
+  top: 16px;
+  z-index: 1;
+}
+
+.s-pb-banner.s-transform .s-pb-toolbar {
+  right: 6px;
+}
+
+.s-pb-toolbar a {
+  color: #aeaeae;
+  margin-left: 4px;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+}
+
+.s-pb-toolbar a > i {
+  color: #6f6f6f;
+}
+
+.s-pb-toolbar a:hover:not([aria-disabled='true']) > i {
+  color: #333;
+}
+
+.s-pb-toolbar a:not([aria-disabled='true']) > i,
+.s-pb-toolbar a:not([aria-disabled='true']) > i:before {
+  cursor: pointer;
+}
+
+.s-pb-toolbar .s-pb-edit {
+  box-sizing: border-box;
+  border-radius: 4px;
+  border: 1px solid transparent;
+}
+
+.s-pb-toolbar .s-pb-edit:hover {
+  background-color: #e9e9e9;
+  border-color: #ccc;
+}
+
+.s-pb-toolbar .s-pb-edit.pressed:hover {
+  background-color: #dadada;
+}
+
+.s-pb-toolbar .s-pb-edit[aria-disabled='true'],
+.s-pb-toolbar .s-pb-edit[aria-disabled='true']:hover {
+  border-color: transparent;
+  background-color: transparent;
+  opacity: .5;
+  cursor: default;
+}
+
+.s-pb-toolbar .s-pb-edit.pressed {
+  background-color: #ccc;
+}
+
+.s-pb-banner.s-m-selection {
+  background-color: #FFFDE6;
+}
+
+.s-pb-banner.s-m-selection .s-ph-multi-selection > * {
+  display: inline-block;
+}
+
+.s-pb-banner .s-btn-group {
+  margin-left: 15px;
+  height: 26px;
+}
+
+.s-pb-banner.s-m-selection button {
+  border: none;
+  background-color: #eee;
+  line-height: 26px;
+}
+
+.s-pb-banner.s-m-selection button > * {
+  line-height: 26px;
+}
+
+.s-pb-banner.s-m-selection button:hover:not([aria-disabled="true"]):not([aria-pressed="true"]) {
+  background-color: #e6e6e6;
+}
+
+.s-pb-banner.s-m-selection button[aria-disabled="true"] {
+  color: #999;
+  background-color: #f5f5f5;
+}
+
+.s-pb-banner.s-m-selection button[aria-pressed="true"] {
+  background: #ccc;
+  color: #474747;
+}
+
+.s-pb-banner.s-m-selection button .s-bn-bulk {
+  padding-right: 4px;
+}
+
+.s-pb-banner.s-m-selection .s-ph-multi-selection > label {
+  font-size: 14px;
+  color: #636363;
+}
+
+.s-ph-dropdown i {
+  width: 18px;
+}
+
+.s-ph-dropdown .s-ph-dd-buttons {
+ border-top: 1px solid #DDD;
+}
+
+.s-ph-dropdown .s-opts-sorting {
+  padding: 10px 10px 0 10px;
+}
+
+.s-ph-dropdown .aui-button {
+  color: #636363;
+}
+
+.s-ph-dropdown .aui-button:focus {
+  outline: none;
+}
+
+.s-ph-dropdown .col-sort {
+  color: #3572b0;
+}
+
+.s-ph-recent-items-warning {
+  padding: 4px 0;
+}
+
+/* transformations */
+
+.s-ph-transforms-container .aui-button:not(.aui-button-subtle) {
+  color: #fff;
+  background-color: #6C8BA8;
+  border-color: #6C8BA8;
+}
+
+.s-ph-transforms-container .aui-button:hover:not(.aui-button-subtle)[aria-disabled="false"] {
+  background-color: #527392;
+  border-color: #527392;
+}
+
+.s-ph-transforms-container .aui-button[aria-disabled="true"] {
+  opacity: .5;
+}
+
+/* quick transformations */
+
+.s-ph-quick-transformations .aui-button {
+  border-color: #ccc;
+  color: #6f6f6f;
+  background-color: #fff;
+}
+
+.s-ph-quick-transformations .aui-button[aria-disabled="true"] {
+  opacity: .5;
+}
+
+.s-ph-quick-transformations .aui-button:hover[aria-disabled="false"] {
+  border-color: #999;
+}
+
+.s-ph-quick-transformations .aui-button[aria-pressed="true"] {
+  color: #fff;
+  background-color: #6C8BA8;
+  border-color: #6C8BA8;
+}
+
+.s-ph-quick-transformations .aui-button[aria-pressed="true"][aria-disabled="false"]:hover {
+  color: #fff;
+  background-color: #527392;
+  border-color: #527392;
+}
+
+/* filter */
+
+.s-ph-filter-container > .aui-button {
+  color: #333;
+}
+
+.s-ph-filter-container > .aui-button[aria-disabled="false"]:hover {
+  color: #333;
+}
+
+.s-ph-filter-container > .aui-button[aria-disabled="true"] {
+  opacity: .5;
+  /*color: #333;*/
+}
+
+/* panel banners end */
+
+/* START: experimenting with text-overflow instead of gradient - set s-ellip-overflow class on body manually */
+body.s-ellip-overflow #structure .grad {
+  display: none;
+}
+body.s-ellip-overflow #structure .celldiv .value {
+  display: inline;
+}
+body.s-ellip-overflow #structure .celldiv {
+  word-wrap: normal;
+  text-overflow: ellipsis;
+}
+/* END: experimenting with text-overflow instead of gradient */
+
+.tr.s-type-loop-marker .value:not(.s-main),
+.tr.s-type-loop-marker .value.s-main .s-summary,
+.tr.s-type-loop-marker .value.s-main .s-ds,
+.tr.s-type-loop-marker .value.s-main .s-item-description {
+  opacity: 0.5;
+  filter: grayscale(100%); /* Firefox 35+ */
+  filter: gray; /* IE6-9 */
+  -webkit-filter: grayscale(100%); /* Chrome 19+, Safari 6+, Safari 6+ iOS */
+}
+#structure .tr.s-type-loop-marker .s-summary-icon {
+  color: #2e83ff;
+}
+
+#structure .tr .celldiv .value .s-summary-icon .alm {
+  font-size: 16px;
+  line-height: 1;
+}
+
+.s-type-project .s-summary {
+  font-weight: bolder;
+  font-kerning: normal;
+}
+
+/* Automation ON warning popup */
+
+#inline-dialog-automation-on-warning .s-tb-a-warn {
+  padding: 15px;
+}
+
+#inline-dialog-automation-on-warning .s-tb-a-warn-btn {
+  margin-top: 10px;
+}
+
+#inline-dialog-automation-on-warning .aui-inline-dialog-contents {
+  border-color: #F79232;
+}
+
+#inline-dialog-automation-on-warning .aui-inline-dialog-arrow:before {
+  border-color: #F79232 transparent;
+}
+
+/* Automation ON warning popup END */
+
+/* Copied from JIRA - no font icons across supported JIRA versions */
+.s-jira-project-config-icon {
+  background: transparent url(/s/-ypg77/73012/9eb9dd8ae4f919067487c81cb86eaf6d/4.1.0/_/download/resources/com.almworks.jira.structure:widget-css/img/jira-projectconfig-sprite.png) no-repeat 0 0;
+  padding: 0 0 0 16px;
+  height: 16px;
+  overflow: hidden;
+  text-indent: -999em;
+}
+.s-jira-project-config-icon-version {
+  background-position: 0 0;
+}
+.s-jira-project-config-icon-version-released {
+  background-position: 0 -16px;
+}
+.s-jira-project-config-icon-version-archived {
+  background-position: 0 -32px;
+}
+.s-jira-project-config-icon-version-released-archived {
+  background-position: 0 -48px;
+}
+.s-jira-project-config-icon-component {
+  background-position: 0 -64px;
+}
+.s-jira-project-config-icon-group {
+  background-position: 0 -80px;
+}
+
+#structure .aui-button > i, #s-board-toolbar .aui-button > i {
+  cursor: pointer;
+}
+#structure .aui-button[disabled] > i, #structure .aui-button[aria-disabled=true] > i,
+#s-board-toolbar .aui-button[disabled] > i, #s-board-toolbar .aui-button[aria-disabled=true] > i {
+  cursor: default;
+}
+
+.s-ph-option-container .atlassian-autocomplete > .suggestions {
+  /*
+     This element is inserted by JIRA's AutoComplete and typically it's absolutely positioned.
+     However, we want the suggestions to extend .s-ph-options container downward, because .s-ph-option must have
+     overflow:hidden in order to be automatically laid out between right and left floats.
+  */
+  position: relative !important;
+  top: 0 !important;
+}
+#structure.mac .s-ph-option-container .atlassian-autocomplete > .suggestions {
+  /* On Mac, textarea has glow, which pushes suggestions down. We can remove the glow by making textarea display:block,
+     but it's pretty. */
+  top: -4px !important;
+}
+
+/* Fixes for JIRA 7 - drag-and-drop files to the issue page */
+.s-show-on-dnd {
+  visibility: hidden;
+  transition: visibility 0.1s;
+}
+body.attachments-drop-zone__window-dragover .s-show-on-dnd {
+  visibility: visible;
+  transition-duration: 0s;
+}
+/* End of fixes for JIRA 7 */
+
+.aui-button-split-more {
+  overflow: visible; /* for some reason, IE takes overflow:hidden somewhere, probably from parent elements; this causes separator border to disappear */
+}
+
+.aui-dropdown2-section .aui-dropdown2-heading.aui-dropdown2-disabled > strong {
+  color: #999999;
+}
+
+.aui-dropdown2-disabled {
+  outline: none;
+}
+
+/* Fix for AUI bug, which leads to Chrome not showing separator in split button if you press the left part,
+   move mouse away and release. Assuming the following rules are in AUI sources:
+
+.aui-buttons .aui-button.aui-button-split-main:not(.aui-button-primary):hover + .aui-button-split-more {
+  border-left: 1px solid #999999;
+  margin-left: -2px;
+}
+.aui-buttons .aui-button.aui-button-split-main + .aui-button-split-more:hover {
+    margin-left: -2px;
+}
+
+   We add the same rule for :active and :focus
+*/
+.aui-buttons .aui-button.aui-button-split-main:not(.aui-button-primary):active + .aui-button-split-more,
+.aui-buttons .aui-button.aui-button-split-main:not(.aui-button-primary):focus + .aui-button-split-more
+{
+  border-left: 1px solid #999999;
+  margin-left: -2px;
+}
+.aui-buttons .aui-button.aui-button-split-main + .aui-button-split-more:active,
+.aui-buttons .aui-button.aui-button-split-main + .aui-button-split-more:focus
+{
+  margin-left: -2px;
+}
+
+#structure #s-loading {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  transform: scale(.5);
+
+  background-image: url(/s/-ypg77/73012/9eb9dd8ae4f919067487c81cb86eaf6d/4.1.0/_/download/resources/com.almworks.jira.structure:widget-css/img/loader_seq.png);
+
+  -webkit-animation: loading .8s steps(29) infinite;
+  -moz-animation: loading .8s steps(29) infinite;
+  -ms-animation: loading .8s steps(29) infinite;
+  -o-animation: loading .8s steps(29) infinite;
+  animation: loading .8s steps(29) infinite;
+}
+
+
+@-webkit-keyframes loading {
+  from { background-position:    0; }
+  to { background-position: -2900px; }
+}
+
+@-moz-keyframes loading {
+  from { background-position:    0; }
+  to { background-position: -2900px; }
+}
+
+@-ms-keyframes loading {
+  from { background-position:    0; }
+  to { background-position: -2900px; }
+}
+
+@-o-keyframes loading {
+  from { background-position:    0; }
+  to { background-position: -2900px; }
+}
+
+@keyframes loading {
+  from { background-position:    0; }
+  to { background-position: -2900px; }
+}
+
+/* quick actions */
+#s-quick-actions {
+  box-sizing: border-box;
+  position: absolute;
+  width: 400px;
+  left: 50%;
+  margin-left: -200px;
+  background-color: #fff;
+  z-index: 9999;
+  top: 20%;
+  box-shadow: 0 3px 10px 0 rgba(0, 0, 0, .3);
+  border-radius: 3px 3px 0 0;
+}
+
+#s-quick-actions .s-qa-search {
+  padding: 7px;
+  background-color: #eee;
+}
+
+#s-quick-actions.go {
+}
+
+#s-quick-actions ul.s-qa-list {
+  margin: 0;
+  list-style: none;
+  padding: 0;
+  overflow-y: auto;
+  cursor: pointer;
+}
+
+#s-quick-actions .s-qa-list li {
+  line-height: 23px;
+  padding: 5px 12px;
+}
+
+#s-quick-actions .s-qa-list li .shortcut {
+  float: right;
+  /*font-size: smaller;*/
+}
+
+#s-quick-actions .s-qa-list li.disabled .shortcut,
+#s-quick-actions .s-qa-list li.disabled .name {
+  opacity: .5;
+}
+
+#s-quick-actions .s-qa-list li .shortcut kbd {
+  /*font-size: smaller;*/
+}
+
+#s-quick-actions .s-qa-list li.selected {
+  background-color: #3b73af;
+  color: #fff;
+}
+
+#s-quick-actions .s-qa-list li b {
+  font-weight: normal;
+  border-bottom: 2px solid #98d9ff;
+}
+
+#s-quick-actions .s-qa-list li.selected b {
+  /*border-bottom-color: #98d9ff;*/
+}
+
+#s-quick-actions input[type="text"]{
+  box-sizing: border-box;
+  padding: 3px 5px;
+  font-size: 14px;
+  width: 100%
+}
+
+/* quick actions end */
+
+/* workaround for JIRA 7.2 wiki-editor intrusive CSS rule */
+#s-board-toolbar .aui-dropdown2-trigger[aria-disabled="true"] {
+  border-left-width: 0 !important;
+  border-color: #dddddd !important;
+}
+#s-board-toolbar .aui-dropdown2-trigger[aria-disabled="true"]:not(.aui-button-link):focus,
+#s-board-toolbar .aui-dropdown2-trigger[aria-disabled="true"]:not(.aui-button-link):hover,
+#s-board-toolbar .aui-dropdown2-trigger[aria-disabled="true"]:not(.aui-button-link):active,
+#s-board-toolbar .aui-buttons .aui-button.aui-button-split-main[aria-disabled="true"]:not(.aui-button-primary):hover + .aui-button-split-more {
+  border-left-width: 1px !important;
+  border-color: #dddddd !important;
+}
+
+#s-board-toolbar .aui-button-split-main[aria-disabled="true"]:not(.aui-button-link):focus,
+#s-board-toolbar .aui-button-split-main[aria-disabled="true"]:not(.aui-button-link):hover,
+#s-board-toolbar .aui-button-split-main[aria-disabled="true"]:not(.aui-button-link):active {
+  border-color: #dddddd !important;
+}
+/* end of workaround */
+
+.aui-dropdown2.aui-style-default .alm-dropdown2-checkbox.aui-dropdown2-checkbox.checked:before {
+  content: "\e90f";
+  font-family: structure;
+  font-size: 16px;
+  color: #333333;
+}
+
+.aui-dropdown2.aui-style-default:hover .alm-dropdown2-checkbox.aui-dropdown2-checkbox.checked:not(.aui-dropdown2-disabled):hover:before {
+  color: #ffffff;
+}
+
+.s-toolbar-container {
+  overflow: hidden;
+}
+
+.s-full-screen-mode #header {
+  display: none;
+}
+
+.s-full-screen-mode #s-board-toolbar {
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+
+.s-full-screen-mode #content > header.s-board-header {
+  min-height: 44px;
+}
+
+.s-full-screen-mode.s-tb-collapsed #content > header.s-board-header {
+  min-height: 6px;
+  height: 6px;
+}
+
+.s-full-screen-mode.s-tb-hover #content > header.s-board-header {
+  border-bottom: 1px solid #e9e9e9;
+  position: absolute;
+  z-index: 100;
+}
+
+.s-full-screen-mode.s-tb-hover .structureBorder {
+  margin-top: 6px;
+}
+
+#s-tb-hover-gl {
+  width: 100%;
+  height: 12px;
+  position: absolute;
+  top: 0;
+  display: none;
+  z-index: 100;
+}
+
+.s-full-screen-mode.s-tb-collapsed #s-tb-hover-gl {
+  display: block;
+}
+
+#s-tb-unhover-gl {
+  width: 100%;
+  height: 5px;
+  position: absolute;
+  top: 45px;
+  display: none;
+  z-index: 90;
+}
+
+.s-full-screen-mode.s-tb-hover #s-tb-unhover-gl {
+  display: block;
+}
+
+#structure form.aui.s-col-opts-form .s-mono-edit {
+  font-family: "Lucida Sans Typewriter", "Consolas", "Lucida Console", "Courier New", monospace;
+  font-size: 12px;
+  line-height: 15px;
+  color: #333333;
+  white-space: pre;
+}
+
+#structure form.aui.s-col-opts-form .s-formula-display {
+  position: relative;
+}
+
+#structure form.aui.s-col-opts-form .s-formula-display textarea {
+  padding: 5px;
+  resize: none;
+  box-sizing: border-box;
+  height: 110px;
+  width: 100%;
+  min-height: 110px;
+  white-space: pre;
+  word-wrap: normal;
+  overflow: auto;
+  /* this comes from the AUI - could be turned on if there's discrepancy with .s-formula-view */
+  /*
+  border: 1px solid #cccccc;
+  border-radius: 3.01px;
+  */
+}
+
+#structure form.aui.s-col-opts-form .s-formula-edit-off .s-formula-display textarea {
+  /* making it invisible in view mode - disable for debug */
+  color: #ffffff;
+}
+
+#structure form.aui.s-col-opts-form .s-formula-view {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 5px;
+  height: 110px;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: auto;
+  border: 1px solid #cccccc;
+  border-radius: 3.01px;
+}
+
+.s-formula-edit-off .s-when-formula-edit-on, .s-formula-edit-on .s-when-formula-edit-off,
+.s-formula-var-edit-off .s-when-formula-var-edit-on, .s-formula-var-edit-on .s-when-formula-var-edit-off
+{
+  display: none;
+}
+
+.s-formula-var-edit-off .s-when-formula-var-edit-on.s-formula-var-ae {
+  /* override inline style from AttributeEditor */
+  display: none !important;
+}
+
+.s-formula-controls .s-right-links > * {
+  float: right;
+  margin: 4px 0 0 12px;
+  font-size: 12px;
+}
+
+.s-formula-vars-section {
+  margin-left: -100px;
+  margin-right: -10px;
+  clear: both;
+}
+
+.s-formula-vars-comment {
+  font-size: 12px;
+  line-height: 14px;
+  display: inline-block;
+  color: #6f6f6f;
+}
+
+.s-formula-vars-back {
+  margin: 7px 0;
+}
+
+.s-formula-vars-list {
+  position: relative;
+  margin-top: 4px;
+  max-width: 310px;
+  overflow: hidden;
+}
+
+.s-var-entry {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.s-formula-var-name, .s-formula-vars-list {
+  font-family: "Lucida Sans Typewriter", "Consolas", "Lucida Console", "Courier New", monospace;
+  font-size: 12px;
+  line-height: 19px;
+}
+
+.s-formula-var-name {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.s-formula-vars-list i.s-defined {
+  font-size: 14px;
+  width: 14px;
+  color: #13882c;
+}
+.s-formula-vars-list i.s-undefined {
+  font-size: 14px;
+  width: 14px;
+  color: #f05c75;
+}
+
+.s-formula-vars-list-cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255,255,255,0.5);
+}
+
+.s-formula-vars-list > div > div:last-child {
+  margin-bottom: 5px;
+}
+
+.s-formula-vars-list > div > div > i {
+  margin-right: 10px;
+}
+
+.s-formula-column {
+  margin-right: 30px;
+  position: relative;
+}
+
+.s-formula-right-icon {
+  display: inline-block;
+  position: absolute;
+  right: -25px;
+}
+
+.st-page a.s-formula-right-icon {
+  color: #707070;
+}
+
+.st-page .s-formula-display .s-formula-view a.s-formula-var.s-formula-var-undefined {
+  color: #e83250;
+}
+.st-page .s-formula-display .s-formula-view span.s-formula-fun.s-formula-fun-unresolved {
+  color: #e83250;
+}
+
+.st-page .s-formula-display .s-formula-view:hover .s-formula-var.s-formula-var-defined,
+.st-page .s-formula-display .s-formula-var.s-formula-var-defined.s-var-edited
+{
+  background-color: #cbf1ba;
+  color: #333333;
+}
+
+.st-page .s-formula-display .s-formula-view:hover .s-formula-var.s-formula-var-undefined,
+.st-page .s-formula-display .s-formula-var.s-formula-var-undefined.s-var-edited
+{
+  background-color: #f3bbc4;
+  color: #333333;
+}
+
+.s-formula-var:hover, .s-formula-var:active, .s-formula-var.s-var-edited {
+  font-weight: bold;
+}
+
+.st-page .s-formula-display a.s-formula-var, .st-page .s-formula-display a.s-formula-var:visited,
+.st-page .s-formula-display a.s-formula-var:active, .st-page .s-formula-display a.s-formula-var:hover {
+  color: #333333;
+}
+
+.s-formula-error {
+  background-color: #f3bbc4;
+}
+
+.s-expr-status {
+  margin-top: -22px;
+  width: 18px;
+  height: 18px;
+  text-align: center;
+  color: #888888;
+}
+
+.s-expr-status > .s-ok {
+  color: #13882c;
+}
+
+.s-expr-status > .s-error,
+.s-expr-status > .s-warn {
+  color: #f05c75;
+}
+
+.s-additional-options {
+  margin-left: -90px;
+}
+
+.s-text-beside-input {
+  line-height: 26px;
+  display: inline-block;
+}
+
+.s-formula-controls i {
+  font-size: 14px;
+  color: #6f6f6f;
+}
+
+.s-formula-cell-error {
+  font-size: 11px;
+  line-height: 18px;
+}
+
+/* used when jquery toggling works badly */
+.s-hidden {
+  display: none;
+}

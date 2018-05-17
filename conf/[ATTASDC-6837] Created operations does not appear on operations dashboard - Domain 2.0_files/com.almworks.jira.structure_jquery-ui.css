@@ -1,0 +1,16 @@
+/* module-key = 'com.almworks.jira.structure:jquery-ui', location = 'js/structure/lib/smoothness/s-jquery-ui-1.9.1.custom.css' */
+/*
+* This file contains CSS rules identical to the rules of jquery UI.
+* If you want to use some jquery UI class, copy it here, add "s-" prefix, and use the new class instead.
+*
+* Original file should not be used because pages may contain extraneous elements that use the same class names,
+* but do so in their own way, unaware of jquery UI. See https://jira.almworks.com/browse/HJ-1448
+*/
+
+.s-ui-icon { display: block; text-indent: -99999px; overflow: hidden; background-repeat: no-repeat; }
+.s-ui-icon { width: 16px; height: 16px; background-image: url(/s/-ypg77/73012/9eb9dd8ae4f919067487c81cb86eaf6d/4.1.0/_/download/resources/com.almworks.jira.structure:jquery-ui/images/ui-icons_222222_256x240.png); }
+
+
+.s-ui-icon-arrowthick-2-n-s { background-position: -128px -48px; }
+.s-ui-icon-alert { background-position: 0 -144px; }
+.s-ui-icon-circle-close { background-position: -32px -192px; }

@@ -1,0 +1,3 @@
+;
+/* module-key = 'com.atlassian.jira.jira-projects-plugin:projects-api', location = 'page/projects-api.js' */
+define("jira/api/projects",["jira/projects/data/WRM"],function(d){var a=d.data.claim("project-key"),c=d.data.claim("project-id"),b=d.data.claim("project-name"),e=d.data.claim("project-type");return{getCurrentProjectId:function(){return c},getCurrentProjectKey:function(){return a},getCurrentProjectName:function(){return b},getCurrentProjectType:function(){return e}}});AJS.namespace("JIRA.API.Projects",null,require("jira/api/projects"));;

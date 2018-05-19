@@ -2,7 +2,7 @@ import os
 import pathlib
 from fnmatch import fnmatch
 import ntpath
-from operating_system import s
+from learn_python.operating_system import s
 
 
 class DummyClass:

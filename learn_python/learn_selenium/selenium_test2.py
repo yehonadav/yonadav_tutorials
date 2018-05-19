@@ -8,8 +8,8 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.common.exceptions import WebDriverException
 
 
-# driver = webdriver.Firefox(executable_path='C:\\Users\\YehonaDb\\PycharmProjects\\learning\\learn_python\\learn_selenium\\geckodriver.exe')
-driver = webdriver.Chrome(executable_path='C:\\Users\\YehonaDb\\PycharmProjects\\learning\\learn_python\\learn_selenium\\chromedriver.exe')
+# driver = webdriver.Firefox(executable_path='C:\\Users\\yonad\\PycharmProjects\\yonadav_tutorials\\learn_python\\learn_selenium\\geckodriver.exe')
+driver = webdriver.Chrome(executable_path='C:\\Users\\yonad\\PycharmProjects\\yonadav_tutorials\\learn_python\\learn_selenium\\chromedriver.exe')
 driver.get("http://www.python.org")
 assert "Python" in driver.title
 elem = driver.find_element_by_name("q")

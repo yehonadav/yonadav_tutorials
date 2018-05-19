@@ -1,4 +1,0 @@
-;
-/* module-key = 'com.almworks.jira.structure:confluence-templates', location = 'js/structure/confluence-templates.js' */
-window.almworks||(window.almworks={});window.almworks.template||(window.almworks.template={});window.almworks.template["structure.widget.confluence.error-banner"]='<div class="s-confluence-error st-confluence-dp-inner-dlg">\n<div class="s-confluence-error-text">\n<p>{message}</p>\n</div>\n<div class="st-dp-buttons">\n<span class="aui-icon aui-icon-wait s-confluence-retry-loader" data-bind-id="retryLoader" style="display: none;">Loading...</span>\n{actionButton:html}\n<button class="aui-button" data-bind-id="retryButton">{s.w.confluence.error.retry.title}</button>\n</div>\n</div>';
-;

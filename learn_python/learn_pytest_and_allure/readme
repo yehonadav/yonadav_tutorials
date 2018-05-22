@@ -8,15 +8,14 @@ Set-ExecutionPolicy RemoteSigned -scope CurrentUser
 iex (new-object net.webclient).downloadstring('https://get.scoop.sh')
 scoop install allure
 exit
- install java + java JDK
+
+install java + java JDK
 
 pip install -U pytest
-cd C:\Users\yonad\PycharmProjects\yonadav_tutorials\learn_python\learn_pytest_and_allure
-python -m pytest
-
 pip install pytest-cov
 pip install pytest-xdist
 pip install pytest-allure-adaptor
 
+cd C:\Users\yonad\PycharmProjects\yonadav_tutorials\learn_python\learn_pytest_and_allure
 python -m pytest tests --cov=mypkg -n 2
 allure serve C:\\Users\\yonad\\PycharmProjects\\yonadav_tutorials\\learn_python\\learn_pytest_and_allure

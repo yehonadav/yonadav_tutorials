@@ -1,5 +1,11 @@
-from mypkg.utils import help_functions
+from mypkg.blob import Blob
+from tests.utils import help_functions
 import pytest
+
+
+def test_blob():
+    assert Blob.say_hi() == "Hi"
+    assert Blob.say_bye() == "Bye"
 
 
 def test_mytest():

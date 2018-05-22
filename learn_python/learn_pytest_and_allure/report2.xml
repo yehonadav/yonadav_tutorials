@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?><testsuite errors="0" failures="3" name="pytest" skips="0" tests="5" time="0.094"><testcase classname="mypkg.tests.foo.test_sample1" file="mypkg\tests\foo\test_sample1.py" line="4" name="test_mytest" time="0.0010409355163574219"></testcase><testcase classname="mypkg.tests.foo.test_sample1" file="mypkg\tests\foo\test_sample1.py" line="9" name="test_answer" time="0.003005504608154297"><failure message="assert 4 == 5
+ +  where 4 = &lt;function inc at 0x000001E1D0487158&gt;(3)
+ +    where &lt;function inc at 0x000001E1D0487158&gt; = help_functions.inc">def test_answer():
+&gt;       assert help_functions.inc(3) == 5
+E       assert 4 == 5
+E        +  where 4 = &lt;function inc at 0x000001E1D0487158&gt;(3)
+E        +    where &lt;function inc at 0x000001E1D0487158&gt; = help_functions.inc
+
+mypkg\tests\foo\test_sample1.py:11: AssertionError</failure></testcase><testcase classname="mypkg.tests.foo.test_sample1.TestClass" file="mypkg\tests\foo\test_sample1.py" line="15" name="test_one" time="0.0009624958038330078"></testcase><testcase classname="mypkg.tests.foo.test_sample1.TestClass" file="mypkg\tests\foo\test_sample1.py" line="19" name="test_two" time="0.0"><failure message="AssertionError: assert False
+ +  where False = hasattr(&apos;hello&apos;, &apos;check&apos;)">self = &lt;learn_python.learn_pytest.mypkg.tests.foo.test_sample1.TestClass object at 0x000001E1D04BC390&gt;
+
+    def test_two(self):
+        x = &quot;hello&quot;
+&gt;       assert hasattr(x, &apos;check&apos;)
+E       AssertionError: assert False
+E        +  where False = hasattr(&apos;hello&apos;, &apos;check&apos;)
+
+mypkg\tests\foo\test_sample1.py:22: AssertionError</failure></testcase><testcase classname="mypkg.tests.foo.test_sample1" file="mypkg\tests\foo\test_sample1.py" line="25" name="test_needsfiles" time="0.008946418762207031"><failure message="assert 0">tmpdir = local(&apos;C:\\Users\\yonad\\AppData\\Local\\Temp\\pytest-of-yonad\\pytest-3\\test_needsfiles0&apos;)
+
+    def test_needsfiles(tmpdir):
+        print (tmpdir)
+&gt;       assert 0
+E       assert 0
+
+mypkg\tests\foo\test_sample1.py:28: AssertionError</failure><system-out>C:\Users\yonad\AppData\Local\Temp\pytest-of-yonad\pytest-3\test_needsfiles0
+</system-out></testcase></testsuite>

@@ -1,5 +1,0 @@
-{
-  "mypkg/tests/foo/test_sample1.py::TestClass::()::test_two": true,
-  "mypkg/tests/foo/test_sample1.py::test_answer": true,
-  "mypkg/tests/foo/test_sample1.py::test_needsfiles": true
-}

@@ -1,8 +1,12 @@
 {
-  "mypkg/tests/foo/test_sample1.py::TestClass::()::test_two": true,
-  "mypkg/tests/foo/test_sample1.py::test_answer": true,
-  "mypkg/tests/foo/test_sample1.py::test_needsfiles": true,
-  "tests/foo/test_sample1.py::TestClass::()::test_two": true,
-  "tests/foo/test_sample1.py::test_answer": true,
-  "tests/foo/test_sample1.py::test_needsfiles": true
+  "mypkg/tests/foo/test_sample1.py::TestClass::()::test_two": true, 
+  "mypkg/tests/foo/test_sample1.py::test_answer": true, 
+  "mypkg/tests/foo/test_sample1.py::test_needsfiles": true, 
+  "tests/foo/test_sample1.py::TestClass::()::test_two": true, 
+  "tests/foo/test_sample1.py::test_answer": true, 
+  "tests/foo/test_sample1.py::test_needsfiles": true, 
+  "tests/tests_for_mypkg/test_sample1.py": true, 
+  "tests/tests_for_mypkg/test_sample1.py::TestClass::()::test_two": true, 
+  "tests/tests_for_mypkg/test_sample1.py::test_answer": true, 
+  "tests/tests_for_mypkg/test_sample1.py::test_needsfiles": true
 }

@@ -1,2 +1,8 @@
 https://www.youtube.com/watch?v=pWbMrx5rVBE
 https://stackoverflow.com/questions/49220245/mongodb-error-as-setup-wizard-ended-prematurely-while-installing-it-on-windows?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa
+
+open cmd as admin
+mongod --directoryperdb --dbpath C:\MongoDB\data\db --logpath C:\MongoDB\log\mongo.log --logappend --install
+net start MongoDB
+
+now cd to the mongo bin directory with cmd and execute mongo to run commands

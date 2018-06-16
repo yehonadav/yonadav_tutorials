@@ -1,31 +1,37 @@
-// object of prototypes
-const bookProtos = {
-    getSummary: function () {
-        return `${this.title} was written by ${this.author} in ${this.year}`
-    },
+class Book{
+    constructor(title, author, year) {
+        this.title = title;
+        this.author = author;
+        this.year = year;
+    }
 
-    getBookAge: function () {
+    getSummary() {
+        return `${this.title} was written by ${this.author} in ${this.year}`
+    }
+
+    getBookAge() {
         const years = new Date().getFullYear() - this.year;
         return `${this.title} is ${years} years old`;
-    },
+    }
 
-    revise: function (newYear) {
+    revise(newYear) {
         this.year = newYear;
         this.revised = true;
     }
-};
 
+    static topBookStore() {
+        return 'Barnes & Noble';
+    }
+}
 
-const book1 = Object.create(bookProtos);
-book1.title = 'book1';
-book1.author = 'bob';
-book1.year = 1715;
+class Magazine extends Book {
+    constructor(title, author, year, month) {
+        super(title, author, year);
+        this.month = month;
+    }
+}
 
-const book2 = Object.create(bookProtos, {
-    title: {value: 'book2'},
-    author: {value: 'bob'},
-    year: {value: 1750}
-});
+const mag1 = new Magazine('mag1', 'bob lazar', 1997, 'Jan');
 
-console.log(book1);
-console.log(book2);
+console.log(mag1.getSummary());
+console.log(Magazine.topBookStore());

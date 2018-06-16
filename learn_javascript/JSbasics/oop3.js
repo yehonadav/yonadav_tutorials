@@ -1,42 +1,31 @@
-// constructor
-function Book(title, author, year) {
-    this.title = title;
-    this.author = author;
-    this.year = year;
-    // this.getSummary = function () {return `${this.title} was written by ${this.author} in ${this.year}`};
-}
+// object of prototypes
+const bookProtos = {
+    getSummary: function () {
+        return `${this.title} was written by ${this.author} in ${this.year}`
+    },
 
-// prototypes
-Book.prototype.getSummary = function () {
-    return `${this.title} was written by ${this.author} in ${this.year}`
+    getBookAge: function () {
+        const years = new Date().getFullYear() - this.year;
+        return `${this.title} is ${years} years old`;
+    },
+
+    revise: function (newYear) {
+        this.year = newYear;
+        this.revised = true;
+    }
 };
 
-Book.prototype.getBookAge = function () {
-    const years = new Date().getFullYear() - this.year;
-    return `${this.title} is ${years} years old`;
-};
 
-Book.prototype.revise = function (newYear) {
-    this.year = newYear;
-    this.revised = true;
-};
+const book1 = Object.create(bookProtos);
+book1.title = 'book1';
+book1.author = 'bob';
+book1.year = 1715;
 
-/////////////////
-// inheritance //
-/////////////////
+const book2 = Object.create(bookProtos, {
+    title: {value: 'book2'},
+    author: {value: 'bob'},
+    year: {value: 1750}
+});
 
-// magazine constructor
-function Magazine(title, author, year, month) {
-    Book.call(this, title, author, year);
-    this.month = month;
-}
-
-// magazine prototypes
-Magazine.prototype = Object.create(Book.prototype);
-Magazine.prototype.constructor = Magazine;
-
-// init
-const mag1 = new Magazine('magma BA', 'john doe', "2018", 'Jan');
-
-console.log(mag1);
-console.log(mag1.getSummary());
+console.log(book1);
+console.log(book2);

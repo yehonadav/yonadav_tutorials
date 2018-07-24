@@ -1,0 +1,455 @@
+/** {*/
+    /*margin: 0;*/
+    /*padding: 0;*/
+/*}*/
+
+body {
+    background-color: #f4f4f4;
+    /*color: coral;*/
+    /*font-family: Arial, Helvetica, sans-serif;*/
+    /*font-size: 16px;*/
+    /*font-weight: 900;*/
+    font: normal 16px Ariel, Helvetica, sans-serif;
+    line-height: 1.6em;
+    margin: 0;
+}
+
+.clr {
+    clear: both;
+}
+.button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 15px;
+    border: solid 1px white;
+    text-decoration: none;
+}
+
+.button:hover {
+    background: red;
+    color: white;
+}
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+.box-1 {
+    background-color: #333;
+    color: #fff;
+    border: 5px red solid;
+    padding: 20px;
+    margin: 20px;
+}
+
+.box-1 h1 {
+    font-family: Tahoma, serif;
+    font-weight: 800;
+    font-style: italic;
+    text-decoration: underline;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    word-spacing: 1em;
+}
+
+.categories {
+    border: 1px #ccc solid;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 15px;
+}
+
+.categories h2{
+    text-align: center;
+}
+
+.categories ul {
+    /*padding:0;*/
+    /*list-style: square;*/
+    list-style: none;
+
+}
+
+.categories a {
+    text-decoration: none;
+    color: #30195b;
+}
+
+.categories a:hover {
+    color: #ff3e2a;
+}
+
+.categories a:active {
+    font-weight: 900;
+    color: rgba(117, 158, 255, 0.74);
+    transform: scale(1.3);
+    transition: transform .2s;
+}
+
+/*.categories a:visited {*/
+    /*color: #cdcdcd;*/
+/*}*/
+
+.categories li {
+    padding-left: 15px;
+    padding-bottom: 6px;
+    border-bottom: dotted 1px #333;
+    list-style: none;
+    background: url('Checkmark.svg') no-repeat left center;
+    background-size: 10px;
+}
+
+.my-form {
+    padding: 20px;
+}
+
+.form-group {
+    padding: 8px;
+}
+
+.my-form label {
+    display: block;
+}
+
+.my-form input[type="text"], .my-form textarea {
+    padding: 8px;
+    width: 70%;
+    max-width: 400px;
+}
+
+.my-form textarea {
+    height: 70px;
+}
+
+.my-form input[type="submit"] {
+    display: block;
+    background-color: #414141;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: medium;
+    margin-top: 20px;
+    /*margin: auto;*/
+    padding: 5px 10px;
+    /*border: none;*/
+    border: solid 2px #000000;
+    border-radius: 15px;
+}
+
+.block {
+    float: left;
+    width: 30%;
+    max-width: 300px;
+    min-width: 150px;
+    border:1px solid #ccc;
+    margin: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+#main-block {
+    float: left;
+    width: 70%;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+#sidebar {
+    float: right;
+    width: 30%;
+    background-color: #333;
+    color: #fff;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.p-box {
+    width: 800px;
+    height: 500px;
+    border: 1px solid black;
+    position: relative;
+    background-image: url("bgimage.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+
+.p-box h1 {
+    position: absolute;
+    top: 40px;
+    left: 200px;
+}
+
+.p-box h2 {
+    position: absolute;
+    bottom: 40px;
+    right: 100px;
+}
+
+.fix-me {
+    position: fixed;
+    top: 400px;
+}
+
+.my-list li:nth-child(even){
+    background: grey;
+}
+
+.my-list li:first-child{
+    background: red;
+}
+
+.my-list li:last-child{
+    background: blue;
+}
+
+.my-list li:nth-child(5){
+    background: yellow;
+}
+
+/*.scrollbar*/
+/*{*/
+    /*margin-left: 30px;*/
+    /*float: left;*/
+    /*height: 300px;*/
+    /*width: 65px;*/
+    /*background: #F5F5F5;*/
+    /*overflow-y: scroll;*/
+    /*margin-bottom: 25px;*/
+/*}*/
+
+/*.force-overflow*/
+/*{*/
+    /*min-height: 450px;*/
+/*}*/
+
+/*#wrapper*/
+/*{*/
+    /*text-align: center;*/
+    /*width: auto;*/
+    /*margin: auto;*/
+/*}*/
+
+/*#style-7::-webkit-scrollbar-track*/
+/*{*/
+    /*-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);*/
+    /*background-color: #F5F5F5;*/
+    /*border-radius: 10px;*/
+/*}*/
+
+/*#style-7::-webkit-scrollbar*/
+/*{*/
+    /*width: 10px;*/
+    /*background-color: #F5F5F5;*/
+/*}*/
+
+/*#style-7::-webkit-scrollbar-thumb*/
+/*{*/
+    /*border-radius: 10px;*/
+    /*background-image: -webkit-gradient(linear,*/
+    /*left bottom,*/
+    /*left top,*/
+    /*color-stop(0.44, rgb(122,153,217)),*/
+    /*color-stop(0.72, rgb(73,125,189)),*/
+    /*color-stop(0.86, rgb(28,58,148)));*/
+/*}*/
+
+/*!*************** TEXTAREA STYLES ***************!*/
+
+/*.textarea-scrollbar {*/
+    /*margin: auto;*/
+    /*height: 250px;*/
+    /*width: 500px;*/
+/*}*/
+
+
+/*!*************** SCROLLBAR BASE CSS ***************!*/
+
+/*.scroll-wrapper {*/
+    /*overflow: hidden !important;*/
+    /*padding: 0 !important;*/
+    /*position: relative;*/
+/*}*/
+
+/*.scroll-wrapper > .scroll-content {*/
+    /*border: none !important;*/
+    /*box-sizing: content-box !important;*/
+    /*height: auto;*/
+    /*left: 0;*/
+    /*margin: 0;*/
+    /*max-height: none;*/
+    /*max-width: none !important;*/
+    /*overflow: scroll !important;*/
+    /*padding: 0;*/
+    /*position: relative !important;*/
+    /*top: 0;*/
+    /*width: auto !important;*/
+/*}*/
+
+/*.scroll-wrapper > .scroll-content::-webkit-scrollbar {*/
+    /*height: 0;*/
+    /*width: 0;*/
+/*}*/
+
+/*.scroll-element {*/
+    /*display: none;*/
+/*}*/
+
+/*.scroll-element,*/
+/*.scroll-element div {*/
+    /*box-sizing: content-box;*/
+/*}*/
+
+/*.scroll-element.scroll-x.scroll-scrollx_visible,*/
+/*.scroll-element.scroll-y.scroll-scrolly_visible {*/
+    /*display: block;*/
+/*}*/
+
+/*.scroll-element .scroll-bar,*/
+/*.scroll-element .scroll-arrow {*/
+    /*cursor: default;*/
+/*}*/
+
+/*.scroll-textarea {*/
+    /*border: 1px solid #cccccc;*/
+    /*border-top-color: #999999;*/
+/*}*/
+
+/*.scroll-textarea > .scroll-content {*/
+    /*overflow: hidden !important;*/
+/*}*/
+
+/*.scroll-textarea > .scroll-content > textarea {*/
+    /*border: none !important;*/
+    /*box-sizing: border-box;*/
+    /*height: 100% !important;*/
+    /*margin: 0;*/
+    /*max-height: none !important;*/
+    /*max-width: none !important;*/
+    /*overflow: scroll !important;*/
+    /*outline: none;*/
+    /*padding: 2px;*/
+    /*position: relative !important;*/
+    /*top: 0;*/
+    /*width: 100% !important;*/
+/*}*/
+
+/*.scroll-textarea > .scroll-content > textarea::-webkit-scrollbar {*/
+    /*height: 0;*/
+    /*width: 0;*/
+/*}*/
+
+
+/*!*************** SIMPLE OUTER SCROLLBAR ***************!*/
+
+/*.scrollbar-outer > .scroll-element,*/
+/*.scrollbar-outer > .scroll-element div {*/
+    /*border: none;*/
+    /*margin: 0;*/
+    /*padding: 0;*/
+    /*position: absolute;*/
+    /*z-index: 10;*/
+/*}*/
+
+/*.scrollbar-outer > .scroll-element {*/
+    /*background-color: #ffffff;*/
+/*}*/
+
+/*.scrollbar-outer > .scroll-element div {*/
+    /*display: block;*/
+    /*height: 100%;*/
+    /*left: 0;*/
+    /*top: 0;*/
+    /*width: 100%;*/
+/*}*/
+
+/*.scrollbar-outer > .scroll-element.scroll-x {*/
+    /*bottom: 0;*/
+    /*height: 12px;*/
+    /*left: 0;*/
+    /*width: 100%;*/
+/*}*/
+
+/*.scrollbar-outer > .scroll-element.scroll-y {*/
+    /*height: 100%;*/
+    /*right: 0;*/
+    /*top: 0;*/
+    /*width: 12px;*/
+/*}*/
+
+/*.scrollbar-outer > .scroll-element.scroll-x .scroll-element_outer {*/
+    /*height: 8px;*/
+    /*top: 2px;*/
+/*}*/
+
+/*.scrollbar-outer > .scroll-element.scroll-y .scroll-element_outer {*/
+    /*left: 2px;*/
+    /*width: 8px;*/
+/*}*/
+
+/*.scrollbar-outer > .scroll-element .scroll-element_outer {*/
+    /*overflow: hidden;*/
+/*}*/
+
+/*.scrollbar-outer > .scroll-element .scroll-element_track {*/
+    /*background-color: #eeeeee;*/
+/*}*/
+
+/*.scrollbar-outer > .scroll-element .scroll-element_outer,*/
+/*.scrollbar-outer > .scroll-element .scroll-element_track,*/
+/*.scrollbar-outer > .scroll-element .scroll-bar {*/
+    /*-webkit-border-radius: 8px;*/
+    /*-moz-border-radius: 8px;*/
+    /*border-radius: 8px;*/
+/*}*/
+
+/*.scrollbar-outer > .scroll-element .scroll-bar {*/
+    /*background-color: #d9d9d9;*/
+/*}*/
+
+/*.scrollbar-outer > .scroll-element .scroll-bar:hover {*/
+    /*background-color: #c2c2c2;*/
+/*}*/
+
+/*.scrollbar-outer > .scroll-element.scroll-draggable .scroll-bar {*/
+    /*background-color: #919191;*/
+/*}*/
+
+
+/*!* scrollbar height/width & offset from container borders *!*/
+
+/*.scrollbar-outer > .scroll-content.scroll-scrolly_visible {*/
+    /*left: -12px;*/
+    /*margin-left: 12px;*/
+/*}*/
+
+/*.scrollbar-outer > .scroll-content.scroll-scrollx_visible {*/
+    /*top: -12px;*/
+    /*margin-top: 12px;*/
+/*}*/
+
+/*.scrollbar-outer > .scroll-element.scroll-x .scroll-bar {*/
+    /*min-width: 10px;*/
+/*}*/
+
+/*.scrollbar-outer > .scroll-element.scroll-y .scroll-bar {*/
+    /*min-height: 10px;*/
+/*}*/
+
+
+/*!* update scrollbar offset if both scrolls are visible *!*/
+
+/*.scrollbar-outer > .scroll-element.scroll-x.scroll-scrolly_visible .scroll-element_track {*/
+    /*left: -14px;*/
+/*}*/
+
+/*.scrollbar-outer > .scroll-element.scroll-y.scroll-scrollx_visible .scroll-element_track {*/
+    /*top: -14px;*/
+/*}*/
+
+/*.scrollbar-outer > .scroll-element.scroll-x.scroll-scrolly_visible .scroll-element_size {*/
+    /*left: -14px;*/
+/*}*/
+
+/*.scrollbar-outer > .scroll-element.scroll-y.scroll-scrollx_visible .scroll-element_size {*/
+    /*top: -14px;*/
+/*}*/

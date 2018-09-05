@@ -1,5 +1,5 @@
 import sqlite3
-from learn_logging.log_function import create_logger
+from learn_python.learn_logging.log_function import create_logger
 
 
 class Commands:

@@ -2,17 +2,15 @@ from appium import webdriver
 from appium import SauceTestCase, on_platforms
 from appium.webdriver.common.touch_action import TouchAction
 from appium.webdriver.common.multi_action import MultiAction
-
+from desired_capabilities import desired_caps
 from time import sleep
 
 app = "http://appium.github.io/appium/assets/ApiDemos-debug.apk"
 platforms = [{
-                "platformName": "Android",
-                "platformVersion": "4.4",
-                "deviceName": "Android Emulator",
                 "appActivity": ".graphics.TouchPaint",
                 "app": app,
-                "appiumVersion": "1.3.4"
+                "appiumVersion": "1.3.4",
+                **desired_caps
             }]
 
 
@@ -26,7 +24,7 @@ class AndroidGesturesSauceTests(SauceTestCase):
         start = self.driver.find_element_by_id("io.appium.android.apis:id/drag_dot_3")
         end = self.driver.find_element_by_id("io.appium.android.apis:id/drag_dot_2")
 
-        action = TouchAction(self.driver);
+        action = TouchAction(self.driver)
         action.long_press(start).move_to(end).release().perform()
 
         sleep(.5)

@@ -20,11 +20,11 @@ import os
 import subprocess
 import sys
 import select
-from SimpleHTTPServer import SimpleHTTPRequestHandler
-from StringIO import StringIO
+from http.server import SimpleHTTPRequestHandler
+from io import StringIO
 from threading import Thread
-from BaseHTTPServer import HTTPServer
-from SocketServer import ThreadingMixIn
+from http.server import HTTPServer
+from socketserver import ThreadingMixIn
 
 
 SAUCE_USERNAME = os.environ.get('SAUCE_USERNAME')
@@ -61,7 +61,7 @@ class Selenium2OnSauce(unittest.TestCase):
         # Setting up a local websever in separate thread on port 9999
         httpd = ThreadedHTTPServer(("", 9999), MyRequestHandler)
         sa = httpd.socket.getsockname()
-        print "[HTTP Server] Serving HTTP on", sa[0], "port", sa[1], "..."
+        print("[HTTP Server] Serving HTTP on", sa[0], "port", sa[1], "...")
         thread = Thread(target=httpd.serve_forever)
         thread.daemon = True  # so server gets killed when we exit
         thread.start()
@@ -72,9 +72,9 @@ class Selenium2OnSauce(unittest.TestCase):
         self.process = subprocess.Popen(['./sc/bin/sc -u $SAUCE_USERNAME -k $SAUCE_ACCESS_KEY'],
                                         shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
         p = self.process
-        print "[Sauce Connect]: Waiting for tunnel setup, this make take up to 30s"
-        print "For detailed documentation on Sauce Connect please refer to " \
-              "http://https://docs.saucelabs.com/reference/sauce-connect/"
+        print("[Sauce Connect]: Waiting for tunnel setup, this make take up to 30s")
+        print("For detailed documentation on Sauce Connect please refer to "
+              "http://https://docs.saucelabs.com/reference/sauce-connect/")
         is_ready = False
         while True:
             reads = [p.stdout.fileno(), p.stderr.fileno()]
@@ -86,7 +86,7 @@ class Selenium2OnSauce(unittest.TestCase):
                     sys.stdout.write("[Sauce Connect]: %s" % read)
 
                     if "Sauce Connect is up, you may start your tests." in read:
-                        print "[Sauce Connect]: Tunnel ready, running the test"
+                        print("[Sauce Connect]: Tunnel ready, running the test")
                         is_ready = True
                         break
 
@@ -137,8 +137,9 @@ class Selenium2OnSauce(unittest.TestCase):
         self.driver.quit()
         self.process.terminate()
 
+
 if __name__ == '__main__':
     if not (SAUCE_USERNAME and SAUCE_ACCESS_KEY):
-        print "Make sure you have SAUCE_USERNAME and SAUCE_ACCESS_KEY set as environment variables."
+        print("Make sure you have SAUCE_USERNAME and SAUCE_ACCESS_KEY set as environment variables.")
     else:
         unittest.main()

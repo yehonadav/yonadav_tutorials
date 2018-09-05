@@ -1,16 +1,15 @@
 from appium import webdriver
 from appium import SauceTestCase, on_platforms
+from desired_capabilities import desired_caps
 
 
 app = "http://appium.s3.amazonaws.com/NotesList.apk"
 platforms = [{
-                "platformName": "Android",
-                "platformVersion": "4.4",
-                "deviceName": "Android Emulator",
                 "appPackage": "com.example.android.notepad",
                 "appActivity": ".NotesList",
                 "app": app,
-                "appiumVersion": "1.3.4"
+                "appiumVersion": "1.3.4",
+                **desired_caps
             }]
 
 @on_platforms(platforms)

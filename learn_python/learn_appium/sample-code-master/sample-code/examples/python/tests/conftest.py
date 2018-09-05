@@ -32,9 +32,7 @@ def device_logger(request):
 
 
 # Returns abs path relative to this file and not cwd
-PATH = lambda p: os.path.abspath(
-    os.path.join(os.path.dirname(__file__), p)
-)
+PATH = lambda p: os.path.abspath(os.path.join(os.path.dirname(__file__), p))
 
 
 DRIVER_URL = 'http://localhost:4723/wd/hub'
@@ -61,3 +59,65 @@ desired_caps_app2 = dict(
     appPackage='com.example.android.contactmanager',
     appActivity='.ContactManager',
     **desired_caps)
+
+
+apps = [
+    PATH('../../../sample-code/apps/ApiDemos/bin/ApiDemos-debug.apk'),
+    PATH('../../../sample-code/apps/ContactManager/ContactManager.apk'),
+    "http://appium.github.io/appium/assets/ApiDemos-debug.apk"
+]
+
+
+
+platforms = {
+    "web": [
+        {
+            "browserName": "android",
+            "version": "",
+            "platform": "ANDROID"
+        },
+        {
+            "browserName": "chrome",
+            "version": "67.0",
+            "platform": "WINDOWS"
+        },
+        {
+            "browserName": "firefox",
+            "version": "58.0",
+            "platform": "WINDOWS"
+        },
+        {
+            "browserName": "internet explorer",
+            "version": "10.0",
+            "platform": "WINDOWS"
+        },
+        {
+            "browserName": "android",
+            "version": "",
+            "platform": "ANDROID"
+        }
+    ],
+
+    "mobile": [
+        {
+            "platformName": "Android",
+            "platformVersion": "6.0",
+            "deviceName": "emulator-5554"
+        },
+        {
+            "platformName": "Android",
+            "platformVersion": "6.0",
+            "deviceName": "emulator-5554",
+            "appPackage": "com.example.android.contactmanager",
+            "appActivity": ".ContactManager"
+        },
+        {
+            "platformName": "Android",
+            "platformVersion": "6.0",
+            "deviceName": "emulator-5554",
+            "appActivity": ".graphics.TouchPaint",
+            "app": apps[0],
+            "appiumVersion": "1.3.4",
+        }
+    ]
+}

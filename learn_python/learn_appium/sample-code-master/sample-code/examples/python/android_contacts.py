@@ -2,18 +2,16 @@ import os
 import unittest
 from appium import webdriver
 from time import sleep
+from desired_capabilities import desired_caps
 
 # Returns abs path relative to this file and not cwd
 PATH = lambda p: os.path.abspath(
     os.path.join(os.path.dirname(__file__), p)
 )
 
+
 class ContactsAndroidTests(unittest.TestCase):
     def setUp(self):
-        desired_caps = {}
-        desired_caps['platformName'] = 'Android'
-        desired_caps['platformVersion'] = '4.2'
-        desired_caps['deviceName'] = 'Android Emulator'
         desired_caps['app'] = PATH(
             '../../../sample-code/apps/ContactManager/ContactManager.apk'
         )
@@ -32,7 +30,7 @@ class ContactsAndroidTests(unittest.TestCase):
         textfields = self.driver.find_elements_by_class_name("android.widget.EditText")
         textfields[0].send_keys("Appium User")
         textfields[2].send_keys("someone@appium.io")
-
+        print(self.driver.page_source)
         self.assertEqual('Appium User', textfields[0].text)
         self.assertEqual('someone@appium.io', textfields[2].text)
 

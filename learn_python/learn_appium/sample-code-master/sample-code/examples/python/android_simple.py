@@ -1,6 +1,6 @@
 import os
 from time import sleep
-
+from desired_capabilities import desired_caps
 import unittest
 
 from appium import webdriver
@@ -12,10 +12,6 @@ PATH = lambda p: os.path.abspath(
 
 class SimpleAndroidTests(unittest.TestCase):
     def setUp(self):
-        desired_caps = {}
-        desired_caps['platformName'] = 'Android'
-        desired_caps['platformVersion'] = '4.2'
-        desired_caps['deviceName'] = 'Android Emulator'
         desired_caps['app'] = PATH(
             '../../../sample-code/apps/ApiDemos/bin/ApiDemos-debug.apk'
         )

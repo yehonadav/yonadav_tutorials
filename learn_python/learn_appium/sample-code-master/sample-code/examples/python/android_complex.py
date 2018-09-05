@@ -1,10 +1,9 @@
 import os
 import unittest
-
 from appium import webdriver
 from appium.webdriver.common.touch_action import TouchAction
 from appium.webdriver.common.multi_action import MultiAction
-
+from desired_capabilities import desired_caps
 from time import sleep
 
 # Returns abs path relative to this file and not cwd
@@ -12,12 +11,9 @@ PATH = lambda p: os.path.abspath(
     os.path.join(os.path.dirname(__file__), p)
 )
 
+
 class ComplexAndroidTests(unittest.TestCase):
     def setUp(self):
-        desired_caps = {}
-        desired_caps['platformName'] = 'Android'
-        desired_caps['platformVersion'] = '4.2'
-        desired_caps['deviceName'] = 'Android Emulator'
         desired_caps['app'] = PATH(
             '../../../sample-code/apps/ApiDemos/bin/ApiDemos-debug.apk'
         )

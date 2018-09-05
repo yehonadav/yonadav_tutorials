@@ -1,7 +1,7 @@
 import os
 from time import sleep
 import unittest
-
+from desired_capabilities import desired_caps
 from appium import webdriver
 
 # Returns abs path relative to this file and not cwd
@@ -14,10 +14,6 @@ THINK_TIME = 5.
 
 class SimpleSalendroidTests(unittest.TestCase):
     def setUp(self):
-        desired_caps = {}
-        desired_caps['platformName'] = 'Android'
-        desired_caps['platformVersion'] = '4.1'
-        desired_caps['deviceName'] = 'Android Emulator'
         desired_caps['automationName'] = "selendroid"
         desired_caps['app'] = PATH(
             '../../../sample-code/apps/ApiDemos/bin/ApiDemos-debug.apk'

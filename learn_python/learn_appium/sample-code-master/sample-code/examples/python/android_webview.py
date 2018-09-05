@@ -2,10 +2,10 @@ import os
 import glob
 import unittest
 from time import sleep
-
+from desired_capabilities import desired_caps
 from appium import webdriver
 
-PLATFORM_VERSION = '4.4'
+PLATFORM_VERSION = desired_caps['platformVersion']
 
 
 class AndroidWebViewTests(unittest.TestCase):
@@ -14,14 +14,9 @@ class AndroidWebViewTests(unittest.TestCase):
         app = os.path.abspath(
                 os.path.join(os.path.dirname(__file__),
                              '../../apps/selendroid-test-app.apk'))
-        desired_caps = {
-            'app': app,
-            'appPackage': 'io.selendroid.testapp',
-            'appActivity': '.HomeScreenActivity',
-            'platformName': 'Android',
-            'platformVersion': PLATFORM_VERSION,
-            'deviceName': 'Android Emulator'
-        }
+        desired_caps['app'] = app
+        desired_caps['appPackage'] = 'io.selendroid.testapp'
+        desired_caps['appActivity'] = '.HomeScreenActivity'
 
         if (PLATFORM_VERSION != '4.4'):
             desired_caps['automationName'] = 'selendroid'

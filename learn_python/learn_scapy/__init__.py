@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 """download this for windows: https://www.winpcap.org/install/
+we should consider using pip install WinPcapy instead
 """
 
 from scapy.all import *
